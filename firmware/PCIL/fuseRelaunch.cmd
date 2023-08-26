@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/PCIL/t_pcil_isim_beh.exe" -prj "C:/PCIL/t_pcil_beh.prj" "work.t_pcil" 

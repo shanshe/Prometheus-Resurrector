@@ -1,0 +1,45 @@
+License for VDHL source code of "Resurrector"
+#############################################
+
+License agreements usually are long and hard to read.
+Let's keep this one small and simple (a good rule for designing
+hardware and code, btw).
+
+The licensor Michael Boehmer permits the usage of this product under the 
+following license conditions:
+
+(1) No warranties, see below. This code has been translated from legacy HDLs, 
+    and just been simulated. It never has been implemented in real hardware,
+    while I tried to simulate it as good as possible.
+
+(2) Use it for free, even for commercial products, as long as your code is 
+    open source, too. You need to mention the source of this design
+    in your release, publish it under the same conditions as this project 
+    and include this license text.
+    No closed source may origin from this project.
+
+(3) If you find bugs, fix them or make other improvements, let me know
+    and include them in your open source publication.
+
+(4) In case you are from Elbox, or affiliated with them, be my guest. 
+    Just one extra rule in that case: the SharkPPC must be on sale first, 
+    if you want to use this project.
+
+Still with me? 
+
+In case you find this project useful, and want to appreciate it, my daughter was
+born in 2012. So guess her age, and send her a present :)
+NO unicorns. Absolutely. Even if they are pink and have glitter.
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS "AS IS" AND ANY 
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, 
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT 
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, 
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGE. 
+
+Michael Boehmer  (mboehmer@e3b.de)  2018.12

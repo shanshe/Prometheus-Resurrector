@@ -1,0 +1,4 @@
+WARNING:Cpld:310 - Cannot apply TIMESPEC TS1000 = PERIOD:PERIOD_I_CFLT:0.000 nS
+   because of one of the following: (a) a signal name was not found; (b) a
+   signal was removed or renamed due to optimization; (c) there is no path
+   between the FROM node and TO node in the TIMESPEC.

@@ -1,0 +1,69 @@
+Documentation for VDHL source code of "Resurrector"
+###################################################
+
+This code originates from the Prometheus upgrade project.
+It is a 1:1 translation from Altera legacy HDLs to modern 
+VHDL code. 
+
+The projects (PCIL and PCIH) are targeted at Xilinx CPLDs, 
+namely the XC95144XL series.
+
+Both projects have been carefully translated and simulated, 
+but never made it into real hardware (I have PCB layouts for
+such a card "on ice", so in case, I can make this public too on
+request).
+
+Please carefully read the license.txt file enclosed in this
+package.
+
+Please use Xilinx ISE 14.6 for the first step. More modern 
+versions may work, too.
+
+In case of questions - ask me. It may take some time for me 
+to answer, as I have always some nerdy projects going on, and 
+last, but not least, some family business (consider this as NMI).
+
+Coding conventions
+##################
+
+All port signals carry "_IN", "_OUT" or "_INOUT" at the end, 
+to designate signal flows (except top level entities, I assume
+that you are familiar with Zorro III and PCI, or at least you
+want to get to).
+
+Top level entity signals starting with "Z_" target the Zorro III
+bus, "P_" the PCI bus, and "I_" signals serve as interconnection 
+between PCIH and PCIL CPLDs.
+
+PCIH CPLD
+#########
+
+This CPLD acts as Zorro III autoconfig slave, and takes care of
+PCI bus accesses. In addition, it features a PCI arbiter which
+is crucial for mixing Zorro III and PCI bus actions.
+Don't be confused - the real Zorro III access is handled in PCIL
+CPLD.
+
+PCIL CPLD
+#########
+
+This CPLD takes basically care of all low level bus timings.
+It seems quite simple, but has a few potential pitfalls.
+Take care especially on how the /SLAVE latch is being constructed,
+the XC95144XL series doesn't have hardware latches, and while it 
+is simply to get all kinds of unwanted latches in VHDL, it's not 
+so straight forward to get a fully functional latch if your really
+need it :)
+
+And at the end...
+#################
+
+Have fun. I'm happy if you can use this code to better understand 
+Zorro III and PCI. 
+For me, the Amiga hardware teached me the basics of my job, and 
+I'm happy every time to see that design approaches made in the 80s 
+still work perfectly nowadays, be it in space, or on the ocean floor.
+
+Thanks, Dave.
+
+Michael Boehmer  (mboehmer@e3b.de)   2018.12
