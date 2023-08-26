@@ -44,6 +44,7 @@ ARCHITECTURE behavior OF t_all IS
          P_NINTB : IN  std_logic;
          P_NINTC : IN  std_logic;
          P_NINTD : IN  std_logic;
+--			I_ADD : IN std_logic_vector(3 downto 0);
          I_DATA : OUT  std_logic;
          I_DAOUT : OUT  std_logic;
          I_PCIENA : OUT  std_logic;
@@ -89,8 +90,8 @@ ARCHITECTURE behavior OF t_all IS
          I_ZLA : OUT  std_logic;
          I_ZMA : OUT  std_logic;
 			I_NINT2 : IN  std_logic;
-			I_NINT6 : IN  std_logic;
-         DEBUG : OUT  std_logic_vector(15 downto 0)
+			I_NINT6 : IN  std_logic--;
+--         DEBUG : OUT  std_logic_vector(15 downto 0)
         );
     END COMPONENT;
 
@@ -122,6 +123,7 @@ ARCHITECTURE behavior OF t_all IS
    signal P_NREQ : std_logic_vector(3 downto 0);
    signal P_NGNT : std_logic_vector(3 downto 0);
    -- interconnections
+	signal I_ADD : std_logic_vector(3 downto 0);
    signal I_PCIDL : std_logic;
    signal I_DATA : std_logic;
    signal I_DAOUT : std_logic;
@@ -191,6 +193,7 @@ BEGIN
           P_NINTB => P_NINTB,
           P_NINTC => P_NINTC,
           P_NINTD => P_NINTD,
+--			 i_ADD => I_ADD,
           I_DATA => I_DATA,
           I_DAOUT => I_DAOUT,
           I_PCIENA => I_PCIENA,
@@ -234,8 +237,8 @@ BEGIN
           I_CFLT => I_CFLT,
           I_PLA => I_PLA,
           I_ZLA => I_ZLA,
-          I_ZMA => I_ZMA,
-          DEBUG => DEBUG_L
+          I_ZMA => I_ZMA--,
+--          DEBUG => DEBUG_L
         );
 		  
    -- Clock process definitions

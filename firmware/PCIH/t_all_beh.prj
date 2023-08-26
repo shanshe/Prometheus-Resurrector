@@ -1,0 +1,6 @@
+vhdl work "pci_seq.vhd"
+vhdl work "pci_arb.vhd"
+vhdl work "acfg_rom.vhd"
+vhdl work "pcil.vhd"
+vhdl work "pcih.vhd"
+vhdl work "t_all.vhd"

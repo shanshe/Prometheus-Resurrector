@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/PCIH/t_all_isim_beh.exe" -prj "C:/PCIH/t_all_beh.prj" "work.t_all" 
+-intstyle "ise" -incremental -o "C:/Users/shanshe/Desktop/PCI/PCIH/t_all_isim_beh.exe" -prj "C:/Users/shanshe/Desktop/PCI/PCIH/t_all_beh.prj" "work.t_all" 

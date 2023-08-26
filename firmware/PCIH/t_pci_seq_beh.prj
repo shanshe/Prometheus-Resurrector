@@ -1,0 +1,2 @@
+vhdl work "pci_seq.vhd"
+vhdl work "t_pci_seq.vhd"

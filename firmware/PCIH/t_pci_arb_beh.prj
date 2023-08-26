@@ -1,0 +1,2 @@
+vhdl work "pci_arb.vhd"
+vhdl work "t_pci_arb.vhd"

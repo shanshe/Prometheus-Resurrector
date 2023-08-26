@@ -166,16 +166,16 @@ begin
 
 -------------------------------------------------------------------------------
 -- debug signals
-debug_x(15) <= idle_x;
-debug_x(14) <= reqz3_x;
-debug_x(13) <= gntz3_x;
-debug_x(12) <= cycout_x;
-debug_x(11) <= ncycstart_x;
-debug_x(10) <= cycend_x;
-debug_x(9)  <= ncfg_x;
-debug_x(8)  <= cbe_ena_x;
+debug_x(15) <= i_pciena_x;--idle_x;
+debug_x(14) <= dtack_pci_x;--reqz3_x;
+debug_x(13) <= dtack_ctrl_x;--gntz3_x;
+debug_x(12) <= dtack_cfg_x;--cycout_x;
+debug_x(11) <= ncycstart_x;--P_NTRDY;--
+debug_x(10) <= P_NDEVSEL;--cycend_x;
+debug_x(9)  <= Z_NSLAVE;--ncfg_x;
+debug_x(8)  <= i_data_x;--cbe_ena_x;
 -------------------------------------------------------------------------------
-
+debug_x(7 downto 4) <= p_cbe_x;
 
 -------------------------------------------------------------------------------
 -- Cycle start / end recognition
@@ -184,7 +184,8 @@ ncycstart_x <= '0' when ((Z_NSLAVE = '0') and (Z_NDS /= b"1111")) else '1';
 -- BUG: could be handled by /SLAVE and sel_ctrl_x alone to gain some ns
 
 -- a Zorro III read access, in general (Autoconfig, control register, PCI).
-read_access_x <= '1' when ((Z_NSLAVE = '0') and (TO_X01(Z_NBERR) = '1') and (Z_READ = '1') and (Z_DOE = '1')) else '0';
+--read_access_x <= '1' when ((Z_NSLAVE = '0') and (TO_X01(Z_NBERR) = '1') and (Z_READ = '1') and (Z_DOE = '1')) else '0';
+read_access_x <= '1' when ((Z_NSLAVE = '0') and (Z_NBERR /= '0') and (Z_READ = '1') and (Z_DOE = '1')) else '0';
 
 -- Zorro requests PCI bus 
 reqz3_x     <= '1' when ((sel_ctrl_x = '0') and (ncycstart_x = '0') and (cycend_x = '1') and (ncfg_xx = '0')) else '0';
@@ -264,13 +265,14 @@ port map(
 	GNTZ3_OUT	=> z3gnt_x,
 	NGNT_OUT		=> p_ngnt_x,
 	TOC_OUT		=> debug_x(3 downto 0), --open,
-	STATE_OUT	=> debug_x(7 downto 4), --open,
+	STATE_OUT	=> open,--debug_x(7 downto 4), --open,
 	NIORST		=> Z_NIORST,
 	PCICLK		=> I_PCICLK2
 );
 
 -- PCI bus is idle when #FRAME and #IRDY are both deasserted
-idle_x  <= TO_X01(P_NFRAME) and TO_X01(P_NIRDY);
+--idle_x  <= TO_X01(P_NFRAME) and TO_X01(P_NIRDY);
+idle_x  <= '1' when (P_NFRAME /= '0') and (P_NIRDY /= '0') else '0';
 
 -- Zorro III gets the PCI bus when BOTH granted by arbiter AND freed by last PCI busmaster
 gntz3_x <= idle_x and z3gnt_x;
@@ -325,7 +327,8 @@ p_cbe_x <= cbp_x when (cbe_ena_x = '1') else (others => 'Z');
 -------------------------------------------------------------------------------
 -- PCI interrupt handling
 -- "or" all PCI ints
-pci_nints_x <= TO_X01(P_NINTA) and TO_X01(P_NINTB) and TO_X01(P_NINTC) and TO_X01(P_NINTD);
+--pci_nints_x <= TO_X01(P_NINTA) and TO_X01(P_NINTB) and TO_X01(P_NINTC) and TO_X01(P_NINTD);
+pci_nints_x <= '1' when (P_NINTA/='0') and (P_NINTB/='0') and (P_NINTC/='0') and (P_NINTD/='0') else '0';
 -- by default no interrupt is enabled
 z_nint2_x   <= pci_nints_x or not pci_int_ena_x;
 -------------------------------------------------------------------------------
