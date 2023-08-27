@@ -6,7 +6,7 @@ I didn't contact to anyone at E3B. As far as I know, there is only information a
 
 Why I do this? The altera version of Prometheus works perfectly, but I like VHDL/verilog and Xilinx (now AMD) FPGA/CPLDs. I have jtags for them so I wanted to play for a while...
 
-I don't have any problem to delete this git if this bothers anyone... but I think that the little work I have done here may be useful to someone, even the original authors (sorry but I don't know their names). Maybe someone can tell me about them so I can update these words ;)
+I don't have any problem to delete this git if this bothers anyone... but I think that the little work I have done here may be useful to someone, even the original author (AFAIK Michael Boehmer mboehmer@e3b.de).
 
 I have done the following:
 
