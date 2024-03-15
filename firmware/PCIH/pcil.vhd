@@ -60,7 +60,7 @@ signal adpa_x				: std_logic_vector(15 downto 0);
 signal adpb_x				: std_logic_vector(15 downto 0);
 signal bar_x				: std_logic_vector(31 downto 29);
 --signal compare_base_x	: std_logic;
-signal compare_fc_x		: std_logic;
+--signal compare_fc_x		: std_logic;
 --signal slave_latch_x		: std_logic;
 signal real_slave_x		: std_logic;
 signal p_ad_x				: std_logic_vector(31 downto 0);
@@ -69,10 +69,10 @@ signal z_ada_x				: std_logic_vector(31 downto 8);
 signal z_sd_x				: std_logic_vector(7 downto 0);
 signal i_datpar_x			: std_logic_vector(1 downto 0);
 
-signal debug_x				: std_logic_vector(15 downto 0);
+--signal debug_x				: std_logic_vector(15 downto 0);
 
-signal zorro_addr_match : std_logic;
-signal autoconfig_addr_match : std_logic;
+--signal zorro_addr_match : std_logic;
+--signal autoconfig_addr_match : std_logic;
 signal match : std_logic;
 
 -- TO_X01()
@@ -105,7 +105,6 @@ begin
 			else
 				match <= '0';
 			end if;
---			compare_fc_x <= (Z_FC(0) xor Z_FC(1));
 		else
 			match <= '0';
       end if;
@@ -114,8 +113,7 @@ end process;
 process(I_PCICLK)
 begin
 	if(I_PCICLK'event and I_PCICLK='1') then
-real_slave_x <= match --and compare_fc_x
- and not Z_NFCS;
+		real_slave_x <= match and not Z_NFCS;
 	end if;
 end process;
 
@@ -147,37 +145,42 @@ end process THE_ADDR_REG_PROC;
 --pcfg0_x <= '1' when ((pmem_x = '0') and (laddr_x(21) = '0') and (laddr_x(20) = '0')) else '0';
 --pcfg1_x <= '1' when ((pmem_x = '0') and (laddr_x(21) = '0') and (laddr_x(20) = '1')) else '0';
 --pio_x   <= '1' when ((pmem_x = '0') and (laddr_x(21) = '1')) else '0';
+-- The above is correct, but I translated it to something like a real decoder...
 process(laddr_x)
 begin
    if(laddr_x(28 downto 22) = b"1111111") then
 		if (laddr_x(21) = '0') then 
-		   if (laddr_x(20) = '0') then
+			if (laddr_x(20) = '0') then
 				pcfg0_x <= '1';
 				pcfg1_x <= '0';
 				pio_x   <= '0';
 				pmem_x  <= '0';
+				i_acc_x <= "01";
 			else
 				pcfg0_x <= '0';
 				pcfg1_x <= '1';
 				pio_x   <= '0';
 				pmem_x  <= '0';
+				i_acc_x <= "10";
 			end if;
 		else
 			pcfg0_x <= '0';
 			pcfg1_x <= '0';
 			pio_x   <= '1';
 			pmem_x  <= '0';
+			i_acc_x <= "11";
 		end if;
 	else
 		pcfg0_x <= '0';
 		pcfg1_x <= '0';
 		pio_x   <= '0';
-	   pmem_x  <= '1';
+		pmem_x  <= '1';
+		i_acc_x <= "00";
 	end if;
 end process;
 -- encoded access type for second CPLD
-i_acc_x(1) <= pcfg1_x or pio_x;
-i_acc_x(0) <= pcfg0_x or pio_x;
+--i_acc_x(1) <= pcfg1_x or pio_x;
+--i_acc_x(0) <= pcfg0_x or pio_x;
 
 -- PCI address lines
 -- A[28:20]

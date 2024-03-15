@@ -1,0 +1,1605 @@
+<html><body>
+<pre>
+ 
+cpldfit:  version P.20131013                        Xilinx Inc.
+                                  Fitter Report
+Design Name: pcil                                Date:  3-15-2024,  4:32PM
+Device Used: XC95144XL-10-TQ144
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+112/144 ( 78%) 409 /720  ( 57%) 215/432 ( 50%)   58 /144 ( 40%) 99 /117 ( 85%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1          17/18       24/54       62/90      11/15
+FB2          17/18       29/54       66/90      12/15
+FB3          14/18       28/54       62/90      13/15
+FB4          18/18*      31/54       54/90      15/15*
+FB5           4/18        8/54        7/90      12/14
+FB6          10/18       29/54       56/90       7/13
+FB7          14/18       34/54       46/90      14/15
+FB8          18/18*      32/54       56/90      15/15*
+             -----       -----       -----      -----    
+            112/144     215/432     409/720     99/117
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Signal 'I_PCICLK' mapped onto global clock net GCK1.
+Signal 'Z_NFCS' mapped onto global clock net GCK3.
+Global output enable net(s) unused.
+Signal 'Z_NIORST' mapped onto global set/reset net GSR.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :   19          19    |  I/O              :    93     109
+Output        :   13          13    |  GCK/IO           :     3       3
+Bidirectional :   64          64    |  GTS/IO           :     2       4
+GCK           :    2           2    |  GSR/IO           :     1       1
+GTS           :    0           0    |
+GSR           :    1           1    |
+                 ----        ----
+        Total     99          99
+
+** Power Data **
+
+There are 112 macrocells in high performance mode (MCHP).
+There are 0 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'pcil.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'I_PCICLK' based upon the LOC
+   constraint 'P30'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+INFO:Cpld - Inferring BUFG constraint for signal 'Z_ADA<30>' based upon the LOC
+   constraint 'P32'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+INFO:Cpld - Inferring BUFG constraint for signal 'Z_NFCS' based upon the LOC
+   constraint 'P38'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+WARNING:Cpld:1239 - The global clock designation (BUFG) on signal 'N41' is
+   ignored. Most likely the signal is gated and therefore cannot be used as a
+   global control signal.
+*************************  Summary of Mapped Logic  ************************
+
+** 77 Outputs **
+
+Signal                                                                                                                           Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                                                                                                                             Pts   Inps          No.  Type    Use     Mode Rate State
+Z_ADA<18>                                                                                                                        4     4     FB1_1   23   I/O     I/O     STD  FAST RESET
+Z_ADA<27>                                                                                                                        4     4     FB1_3   17   I/O     I/O     STD  FAST RESET
+Z_ADA<20>                                                                                                                        4     4     FB1_4   25   I/O     I/O     STD  FAST RESET
+Z_ADA<28>                                                                                                                        4     4     FB1_6   20   I/O     I/O     STD  FAST RESET
+Z_ADA<17>                                                                                                                        4     4     FB1_8   21   I/O     I/O     STD  FAST RESET
+Z_ADA<31>                                                                                                                        4     4     FB1_10  31   I/O     I/O     STD  FAST RESET
+Z_ADA<19>                                                                                                                        4     4     FB1_11  24   I/O     I/O     STD  FAST RESET
+Z_ADA<22>                                                                                                                        4     4     FB1_12  26   I/O     I/O     STD  FAST RESET
+Z_ADA<21>                                                                                                                        4     4     FB1_14  27   I/O     I/O     STD  FAST RESET
+Z_ADA<23>                                                                                                                        4     4     FB1_15  28   I/O     I/O     STD  FAST RESET
+Z_SD<5>                                                                                                                          4     4     FB2_4   4    I/O     I/O     STD  FAST RESET
+Z_SD<6>                                                                                                                          4     4     FB2_8   5    GTS/I/O I/O     STD  FAST RESET
+Z_SD<4>                                                                                                                          4     4     FB2_9   6    GTS/I/O I/O     STD  FAST RESET
+Z_SD<7>                                                                                                                          4     4     FB2_10  7    I/O     I/O     STD  FAST RESET
+Z_SD<3>                                                                                                                          4     4     FB2_11  9    I/O     I/O     STD  FAST RESET
+Z_ADA<24>                                                                                                                        4     4     FB2_12  10   I/O     I/O     STD  FAST RESET
+Z_ADA<25>                                                                                                                        4     4     FB2_13  12   I/O     I/O     STD  FAST RESET
+Z_SD<2>                                                                                                                          4     4     FB2_14  11   I/O     I/O     STD  FAST RESET
+Z_SD<1>                                                                                                                          4     4     FB2_15  13   I/O     I/O     STD  FAST RESET
+Z_ADA<26>                                                                                                                        4     4     FB2_16  14   I/O     I/O     STD  FAST RESET
+Z_SD<0>                                                                                                                          4     4     FB2_17  15   I/O     I/O     STD  FAST RESET
+Z_ADA<30>                                                                                                                        4     4     FB3_2   32   GCK/I/O I/O     STD  FAST RESET
+Z_ADA<15>                                                                                                                        4     4     FB3_3   41   I/O     I/O     STD  FAST RESET
+Z_ADA<13>                                                                                                                        4     4     FB3_4   44   I/O     I/O     STD  FAST RESET
+Z_ADA<29>                                                                                                                        4     4     FB3_6   34   I/O     I/O     STD  FAST RESET
+Z_ADA<11>                                                                                                                        4     4     FB3_7   46   I/O     I/O     STD  FAST RESET
+Z_ADA<16>                                                                                                                        4     4     FB3_9   40   I/O     I/O     STD  FAST RESET
+Z_ADA<10>                                                                                                                        4     4     FB3_10  48   I/O     I/O     STD  FAST RESET
+Z_ADA<14>                                                                                                                        4     4     FB3_11  43   I/O     I/O     STD  FAST RESET
+Z_ADA<12>                                                                                                                        4     4     FB3_12  45   I/O     I/O     STD  FAST RESET
+Z_ADA<9>                                                                                                                         4     4     FB3_15  50   I/O     I/O     STD  FAST RESET
+I_ADD<0>                                                                                                                         0     0     FB4_2   126  I/O     O       STD  FAST 
+I_ZMA                                                                                                                            1     1     FB4_5   128  I/O     O       STD  FAST RESET
+I_ZLA                                                                                                                            1     1     FB4_6   129  I/O     O       STD  FAST RESET
+I_DATPAR<0>                                                                                                                      9     5     FB4_13  137  I/O     O       STD  FAST 
+I_DATPAR<1>                                                                                                                      9     5     FB4_15  138  I/O     O       STD  FAST 
+I_ACC<0>                                                                                                                         2     9     FB4_16  139  I/O     O       STD  FAST 
+I_ACC<1>                                                                                                                         2     9     FB4_17  140  I/O     O       STD  FAST 
+Z_ADA<8>                                                                                                                         4     4     FB5_2   52   I/O     I/O     STD  FAST RESET
+Z_NSLAVE                                                                                                                         1     2     FB5_10  68   I/O     O       STD  FAST SET
+
+Signal                                                                                                                           Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                                                                                                                             Pts   Inps          No.  Type    Use     Mode Rate State
+Z_NINT2                                                                                                                          1     1     FB5_13  70   I/O     O       STD  FAST 
+Z_NINT6                                                                                                                          1     1     FB5_17  69   I/O     O       STD  FAST 
+P_AD<6>                                                                                                                          3     4     FB6_2   106  I/O     I/O     STD  FAST 
+P_AD<0>                                                                                                                          3     4     FB6_4   111  I/O     I/O     STD  FAST 
+P_AD<2>                                                                                                                          3     4     FB6_5   110  I/O     I/O     STD  FAST 
+I_ADD<3>                                                                                                                         2     2     FB6_14  121  I/O     O       STD  FAST RESET
+I_ADD<2>                                                                                                                         2     2     FB6_15  124  I/O     O       STD  FAST RESET
+I_ADD<1>                                                                                                                         2     2     FB6_17  125  I/O     O       STD  FAST RESET
+P_AD<5>                                                                                                                          3     4     FB7_3   75   I/O     I/O     STD  FAST 
+P_AD<7>                                                                                                                          3     4     FB7_5   74   I/O     I/O     STD  FAST 
+P_AD<3>                                                                                                                          3     4     FB7_6   76   I/O     I/O     STD  FAST 
+P_AD<1>                                                                                                                          3     4     FB7_7   77   I/O     I/O     STD  FAST 
+P_AD<8>                                                                                                                          3     4     FB7_8   78   I/O     I/O     STD  FAST 
+P_AD<12>                                                                                                                         3     4     FB7_9   80   I/O     I/O     STD  FAST 
+P_AD<10>                                                                                                                         3     4     FB7_10  79   I/O     I/O     STD  FAST 
+P_AD<17>                                                                                                                         3     4     FB7_11  82   I/O     I/O     STD  FAST 
+P_AD<21>                                                                                                                         4     11    FB7_12  85   I/O     I/O     STD  FAST 
+P_AD<14>                                                                                                                         3     4     FB7_13  81   I/O     I/O     STD  FAST 
+P_AD<23>                                                                                                                         4     10    FB7_14  86   I/O     I/O     STD  FAST 
+P_AD<25>                                                                                                                         4     10    FB7_15  87   I/O     I/O     STD  FAST 
+P_AD<19>                                                                                                                         3     4     FB7_16  83   I/O     I/O     STD  FAST 
+P_AD<27>                                                                                                                         4     10    FB7_17  88   I/O     I/O     STD  FAST 
+P_AD<29>                                                                                                                         2     3     FB8_2   91   I/O     I/O     STD  FAST 
+P_AD<26>                                                                                                                         4     10    FB8_3   95   I/O     I/O     STD  FAST 
+P_AD<22>                                                                                                                         4     10    FB8_4   97   I/O     I/O     STD  FAST 
+P_AD<31>                                                                                                                         2     3     FB8_5   92   I/O     I/O     STD  FAST 
+P_AD<30>                                                                                                                         2     3     FB8_6   93   I/O     I/O     STD  FAST 
+P_AD<28>                                                                                                                         4     10    FB8_8   94   I/O     I/O     STD  FAST 
+P_AD<24>                                                                                                                         4     10    FB8_9   96   I/O     I/O     STD  FAST 
+P_AD<16>                                                                                                                         3     4     FB8_10  101  I/O     I/O     STD  FAST 
+P_AD<20>                                                                                                                         4     11    FB8_11  98   I/O     I/O     STD  FAST 
+P_AD<18>                                                                                                                         3     4     FB8_12  100  I/O     I/O     STD  FAST 
+P_AD<13>                                                                                                                         3     4     FB8_13  103  I/O     I/O     STD  FAST 
+P_AD<15>                                                                                                                         3     4     FB8_14  102  I/O     I/O     STD  FAST 
+P_AD<11>                                                                                                                         3     4     FB8_15  104  I/O     I/O     STD  FAST 
+P_AD<4>                                                                                                                          3     4     FB8_16  107  I/O     I/O     STD  FAST 
+P_AD<9>                                                                                                                          3     4     FB8_17  105  I/O     I/O     STD  FAST 
+
+** 35 Buried Nodes **
+
+Signal                                                                                                                           Total Total Loc     Pwr  Reg Init
+Name                                                                                                                             Pts   Inps          Mode State
+laddr_x_6                                                                                                                        1     1     FB1_2   STD  RESET
+laddr_x_2                                                                                                                        1     1     FB1_5   STD  RESET
+laddr_x<9>                                                                                                                       1     1     FB1_7   STD  RESET
+laddr_x<12>                                                                                                                      1     1     FB1_9   STD  RESET
+laddr_x<11>                                                                                                                      1     1     FB1_13  STD  RESET
+laddr_x<10>                                                                                                                      1     1     FB1_16  STD  RESET
+Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D                                            16    8     FB1_17  STD  
+match                                                                                                                            17    15    FB2_1   STD  RESET
+laddr_x<17>                                                                                                                      1     1     FB2_3   STD  RESET
+laddr_x<18>                                                                                                                      1     1     FB2_5   STD  RESET
+laddr_x<19>                                                                                                                      1     1     FB2_6   STD  RESET
+laddr_x<20>                                                                                                                      1     1     FB2_7   STD  RESET
+laddr_x<16>                                                                                                                      1     1     FB2_18  STD  RESET
+laddr_x_5                                                                                                                        1     1     FB3_14  STD  RESET
+laddr_x_4                                                                                                                        1     1     FB3_16  STD  RESET
+Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D                4     5     FB3_17  STD  
+Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D                                            16    9     FB3_18  STD  
+laddr_x_3                                                                                                                        1     1     FB4_1   STD  RESET
+laddr_x_1                                                                                                                        1     1     FB4_3   STD  RESET
+laddr_x<8>                                                                                                                       1     1     FB4_4   STD  RESET
+laddr_x<15>                                                                                                                      1     1     FB4_7   STD  RESET
+laddr_x<14>                                                                                                                      1     1     FB4_8   STD  RESET
+laddr_x<13>                                                                                                                      1     1     FB4_9   STD  RESET
+$OpTx$INV$30                                                                                                                     3     9     FB4_10  STD  
+$OpTx$INV$28                                                                                                                     3     9     FB4_11  STD  
+Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D                4     5     FB4_12  STD  
+$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248  5     11    FB4_14  STD  
+Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001_D                                            9     6     FB4_18  STD  
+Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D                                            16    9     FB6_1   STD  
+Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D                4     5     FB6_11  STD  
+Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001_D                                            16    9     FB6_12  STD  
+Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D                                            5     4     FB6_16  STD  
+$OpTx$INV$31                                                                                                                     3     10    FB8_1   STD  
+$OpTx$INV$29                                                                                                                     3     9     FB8_7   STD  
+$OpTx$INV$27                                                                                                                     3     9     FB8_18  STD  
+
+** 22 Inputs **
+
+Signal                                                                                                                           Loc     Pin  Pin     Pin     
+Name                                                                                                                                     No.  Type    Use     
+I_PCICLK                                                                                                                         FB1_17  30   GCK/I/O GCK
+Z_NIORST                                                                                                                         FB2_2   143  GSR/I/O GSR
+Z_NFCS                                                                                                                           FB3_8   38   GCK/I/O GCK/I
+Z_FC<1>                                                                                                                          FB3_14  49   I/O     I
+Z_FC<0>                                                                                                                          FB3_17  51   I/O     I
+I_NINT2                                                                                                                          FB4_1   118  I/O     I
+I_DATA                                                                                                                           FB4_3   133  I/O     I
+I_PLA<0>                                                                                                                         FB4_8   130  I/O     I
+I_PLA<1>                                                                                                                         FB4_9   131  I/O     I
+I_PCIENA                                                                                                                         FB4_10  135  I/O     I
+I_CFLT                                                                                                                           FB4_11  132  I/O     I
+I_PCIDL                                                                                                                          FB4_12  134  I/O     I
+I_DAOUT                                                                                                                          FB4_14  136  I/O     I
+Z_AA<5>                                                                                                                          FB5_3   59   I/O     I
+Z_AA<7>                                                                                                                          FB5_5   53   I/O     I
+Z_AA<2>                                                                                                                          FB5_6   54   I/O     I
+Z_AA<3>                                                                                                                          FB5_8   56   I/O     I
+Z_AA<4>                                                                                                                          FB5_9   57   I/O     I
+Z_AA<6>                                                                                                                          FB5_11  58   I/O     I
+Z_NCFGIN                                                                                                                         FB5_12  60   I/O     I
+Z_NCFGOUT                                                                                                                        FB5_14  61   I/O     I
+I_NINT6                                                                                                                          FB6_11  119  I/O     I
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X            - Signal used as input to the macrocell logic.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               24/30
+Number of signals used by logic mapping into function block:  24
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+Z_ADA<18>             4       0   /\1   0     FB1_1   23    I/O     I/O
+laddr_x_6             1       0     0   4     FB1_2   16    I/O     (b)
+Z_ADA<27>             4       0     0   1     FB1_3   17    I/O     I/O
+Z_ADA<20>             4       0     0   1     FB1_4   25    I/O     I/O
+laddr_x_2             1       0     0   4     FB1_5   19    I/O     (b)
+Z_ADA<28>             4       0     0   1     FB1_6   20    I/O     I/O
+laddr_x<9>            1       0     0   4     FB1_7         (b)     (b)
+Z_ADA<17>             4       0     0   1     FB1_8   21    I/O     I/O
+laddr_x<12>           1       0     0   4     FB1_9   22    I/O     (b)
+Z_ADA<31>             4       0     0   1     FB1_10  31    I/O     I/O
+Z_ADA<19>             4       0     0   1     FB1_11  24    I/O     I/O
+Z_ADA<22>             4       0     0   1     FB1_12  26    I/O     I/O
+laddr_x<11>           1       0     0   4     FB1_13        (b)     (b)
+Z_ADA<21>             4       0     0   1     FB1_14  27    I/O     I/O
+Z_ADA<23>             4       0   \/1   0     FB1_15  28    I/O     I/O
+laddr_x<10>           1       1<- \/5   0     FB1_16  35    I/O     (b)
+Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D
+                     16      11<-   0   0     FB1_17  30    GCK/I/O GCK
+(unused)              0       0   /\5   0     FB1_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$INV$31       9: P_AD<19>.PIN      17: Z_ADA<18>.PIN 
+  2: I_DAOUT           10: P_AD<18>.PIN      18: Z_ADA<17>.PIN 
+  3: I_DATA            11: P_AD<17>.PIN      19: Z_ADA<14>.PIN 
+  4: I_PCIDL           12: P_AD<7>.PIN       20: Z_ADA<10>.PIN 
+  5: P_AD<23>.PIN      13: P_AD<4>.PIN       21: Z_NSLAVE 
+  6: P_AD<22>.PIN      14: P_AD<3>.PIN       22: laddr_x<10> 
+  7: P_AD<21>.PIN      15: Z_ADA<20>.PIN     23: laddr_x<11> 
+  8: P_AD<20>.PIN      16: Z_ADA<19>.PIN     24: laddr_x<9> 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+Z_ADA<18>            ..XX.....X..........X................... 4
+laddr_x_6            ..................X..................... 1
+Z_ADA<27>            ..XX.........X......X................... 4
+Z_ADA<20>            ..XX...X............X................... 4
+laddr_x_2            ...................X.................... 1
+Z_ADA<28>            ..XX........X.......X................... 4
+laddr_x<9>           .................X...................... 1
+Z_ADA<17>            ..XX......X.........X................... 4
+laddr_x<12>          ..............X......................... 1
+Z_ADA<31>            ..XX.......X........X................... 4
+Z_ADA<19>            ..XX....X...........X................... 4
+Z_ADA<22>            ..XX.X..............X................... 4
+laddr_x<11>          ...............X........................ 1
+Z_ADA<21>            ..XX..X.............X................... 4
+Z_ADA<23>            ..XXX...............X................... 4
+laddr_x<10>          ................X....................... 1
+Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D 
+                     XX.............XXX...XXX................ 8
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               29/25
+Number of signals used by logic mapping into function block:  29
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+match                17      12<-   0   0     FB2_1   142   I/O     (b)
+(unused)              0       0   /\5   0     FB2_2   143   GSR/I/O GSR
+laddr_x<17>           1       0   /\2   2     FB2_3         (b)     (b)
+Z_SD<5>               4       0     0   1     FB2_4   4     I/O     I/O
+laddr_x<18>           1       0     0   4     FB2_5   2     GTS/I/O (b)
+laddr_x<19>           1       0     0   4     FB2_6   3     GTS/I/O (b)
+laddr_x<20>           1       0     0   4     FB2_7         (b)     (b)
+Z_SD<6>               4       0     0   1     FB2_8   5     GTS/I/O I/O
+Z_SD<4>               4       0     0   1     FB2_9   6     GTS/I/O I/O
+Z_SD<7>               4       0     0   1     FB2_10  7     I/O     I/O
+Z_SD<3>               4       0     0   1     FB2_11  9     I/O     I/O
+Z_ADA<24>             4       0     0   1     FB2_12  10    I/O     I/O
+Z_ADA<25>             4       0     0   1     FB2_13  12    I/O     I/O
+Z_SD<2>               4       0     0   1     FB2_14  11    I/O     I/O
+Z_SD<1>               4       0     0   1     FB2_15  13    I/O     I/O
+Z_ADA<26>             4       0     0   1     FB2_16  14    I/O     I/O
+Z_SD<0>               4       0   \/1   0     FB2_17  15    I/O     I/O
+laddr_x<16>           1       1<- \/5   0     FB2_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: I_ADD<1>          11: P_AD<10>.PIN      21: Z_ADA<27>.PIN 
+  2: I_ADD<2>          12: P_AD<9>.PIN       22: Z_ADA<26>.PIN 
+  3: I_ADD<3>          13: P_AD<8>.PIN       23: Z_ADA<25>.PIN 
+  4: I_DATA            14: P_AD<2>.PIN       24: Z_ADA<24>.PIN 
+  5: I_PCIDL           15: P_AD<1>.PIN       25: Z_FC<0> 
+  6: P_AD<15>.PIN      16: P_AD<0>.PIN       26: Z_FC<1> 
+  7: P_AD<14>.PIN      17: Z_ADA<31>.PIN     27: Z_NCFGIN 
+  8: P_AD<13>.PIN      18: Z_ADA<30>.PIN     28: Z_NCFGOUT 
+  9: P_AD<12>.PIN      19: Z_ADA<29>.PIN     29: Z_NSLAVE 
+ 10: P_AD<11>.PIN      20: Z_ADA<28>.PIN    
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+match                XXX.............XXXXXXXXXXXX............ 15
+laddr_x<17>          ......................X................. 1
+Z_SD<5>              ...XX..X....................X........... 4
+laddr_x<18>          .....................X.................. 1
+laddr_x<19>          ....................X................... 1
+laddr_x<20>          ...................X.................... 1
+Z_SD<6>              ...XX.X.....................X........... 4
+Z_SD<4>              ...XX...X...................X........... 4
+Z_SD<7>              ...XXX......................X........... 4
+Z_SD<3>              ...XX....X..................X........... 4
+Z_ADA<24>            ...XX..........X............X........... 4
+Z_ADA<25>            ...XX.........X.............X........... 4
+Z_SD<2>              ...XX.....X.................X........... 4
+Z_SD<1>              ...XX......X................X........... 4
+Z_ADA<26>            ...XX........X..............X........... 4
+Z_SD<0>              ...XX.......X...............X........... 4
+laddr_x<16>          .......................X................ 1
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               28/26
+Number of signals used by logic mapping into function block:  28
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0   /\5   0     FB3_1   39    I/O     (b)
+Z_ADA<30>             4       0   /\1   0     FB3_2   32    GCK/I/O I/O
+Z_ADA<15>             4       0     0   1     FB3_3   41    I/O     I/O
+Z_ADA<13>             4       0     0   1     FB3_4   44    I/O     I/O
+(unused)              0       0     0   5     FB3_5   33    I/O     
+Z_ADA<29>             4       0     0   1     FB3_6   34    I/O     I/O
+Z_ADA<11>             4       0     0   1     FB3_7   46    I/O     I/O
+(unused)              0       0     0   5     FB3_8   38    GCK/I/O GCK/I
+Z_ADA<16>             4       0     0   1     FB3_9   40    I/O     I/O
+Z_ADA<10>             4       0     0   1     FB3_10  48    I/O     I/O
+Z_ADA<14>             4       0     0   1     FB3_11  43    I/O     I/O
+Z_ADA<12>             4       0     0   1     FB3_12  45    I/O     I/O
+(unused)              0       0     0   5     FB3_13        (b)     
+laddr_x_5             1       0     0   4     FB3_14  49    I/O     I
+Z_ADA<9>              4       0     0   1     FB3_15  50    I/O     I/O
+laddr_x_4             1       0   \/4   0     FB3_16        (b)     (b)
+Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+                      4       4<- \/5   0     FB3_17  51    I/O     I
+Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D
+                     16      11<-   0   0     FB3_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: I_DAOUT           11: Z_SD<4>.PIN       20: Z_SD<1>.PIN 
+  2: I_DATA            12: P_AD<6>.PIN       21: P_AD<31>.PIN 
+  3: I_PCIDL           13: P_AD<5>.PIN       22: P_AD<30>.PIN 
+  4: I_PLA<1>          14: Z_SD<3>.PIN       23: Z_AA<2> 
+  5: P_AD<29>.PIN      15: Z_ADA<26>.PIN     24: Z_NSLAVE 
+  6: P_AD<28>.PIN      16: Z_ADA<25>.PIN     25: laddr_x_1 
+  7: P_AD<27>.PIN      17: Z_SD<2>.PIN       26: laddr_x_2 
+  8: P_AD<26>.PIN      18: Z_ADA<13>.PIN     27: laddr_x_3 
+  9: P_AD<25>.PIN      19: Z_ADA<12>.PIN     28: laddr_x_4 
+ 10: P_AD<16>.PIN     
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+Z_ADA<30>            .XX........X...........X................ 4
+Z_ADA<15>            .XX.................X..X................ 4
+Z_ADA<13>            .XX.X..................X................ 4
+Z_ADA<29>            .XX.........X..........X................ 4
+Z_ADA<11>            .XX...X................X................ 4
+Z_ADA<16>            .XX......X.............X................ 4
+Z_ADA<10>            .XX....X...............X................ 4
+Z_ADA<14>            .XX..................X.X................ 4
+Z_ADA<12>            .XX..X.................X................ 4
+laddr_x_5            .................X...................... 1
+Z_ADA<9>             .XX.....X..............X................ 4
+laddr_x_4            ..................X..................... 1
+Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D 
+                     X..X..........XX......X................. 5
+Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D 
+                     X.........X..X..X..X....XXXX............ 9
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB4  ***********************************
+Number of function block inputs used/remaining:               31/23
+Number of signals used by logic mapping into function block:  31
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+laddr_x_3             1       0   /\4   0     FB4_1   118   I/O     I
+I_ADD<0>              0       0     0   5     FB4_2   126   I/O     O
+laddr_x_1             1       0     0   4     FB4_3   133   I/O     I
+laddr_x<8>            1       0     0   4     FB4_4         (b)     (b)
+I_ZMA                 1       0     0   4     FB4_5   128   I/O     O
+I_ZLA                 1       0     0   4     FB4_6   129   I/O     O
+laddr_x<15>           1       0     0   4     FB4_7         (b)     (b)
+laddr_x<14>           1       0     0   4     FB4_8   130   I/O     I
+laddr_x<13>           1       0     0   4     FB4_9   131   I/O     I
+$OpTx$INV$30          3       0   \/1   1     FB4_10  135   I/O     I
+$OpTx$INV$28          3       1<- \/3   0     FB4_11  132   I/O     I
+Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D
+                      4       3<- \/4   0     FB4_12  134   I/O     I
+I_DATPAR<0>           9       4<-   0   0     FB4_13  137   I/O     O
+$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+                      5       0     0   0     FB4_14  136   I/O     I
+I_DATPAR<1>           9       4<-   0   0     FB4_15  138   I/O     O
+I_ACC<0>              2       1<- /\4   0     FB4_16  139   I/O     O
+I_ACC<1>              2       0   /\1   2     FB4_17  140   I/O     O
+Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001_D
+                      9       4<-   0   0     FB4_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248  12: Z_ADA<23>.PIN     22: laddr_x<12> 
+  2: I_DAOUT                                                                                                                          13: Z_ADA<22>.PIN     23: laddr_x<13> 
+  3: Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D                                            14: Z_ADA<21>.PIN     24: laddr_x<14> 
+  4: Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001_D                                            15: Z_ADA<16>.PIN     25: laddr_x<15> 
+  5: Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D                16: Z_ADA<15>.PIN     26: laddr_x<16> 
+  6: Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D                                            17: Z_ADA<14>.PIN     27: laddr_x<17> 
+  7: Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D                18: Z_ADA<13>.PIN     28: laddr_x<18> 
+  8: Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D                19: Z_ADA<11>.PIN     29: laddr_x<19> 
+  9: Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D                                            20: Z_ADA<9>.PIN      30: laddr_x<20> 
+ 10: Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D                                            21: Z_ADA<8>.PIN      31: laddr_x<8> 
+ 11: Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001_D                                           
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+laddr_x_3            ..................X..................... 1
+I_ADD<0>             ........................................ 0
+laddr_x_1            ...................X.................... 1
+laddr_x<8>           ..............X......................... 1
+I_ZMA                ...............X........................ 1
+I_ZLA                ....................X................... 1
+laddr_x<15>          ...........X............................ 1
+laddr_x<14>          ............X........................... 1
+laddr_x<13>          .............X.......................... 1
+$OpTx$INV$30         .X.................X...XXXXXXX.......... 9
+$OpTx$INV$28         .X................X....XXXXXXX.......... 9
+Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D 
+                     .X.........X........X...XX.............. 5
+I_DATPAR<0>          X.XXXX.................................. 5
+$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248 
+                     .X..........XX........XXXXXXXX.......... 11
+I_DATPAR<1>          ......XXXXX............................. 5
+I_ACC<0>             .....................XXXXXXXXX.......... 9
+I_ACC<1>             .....................XXXXXXXXX.......... 9
+Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001_D 
+                     .X............XXXX............X......... 6
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB5  ***********************************
+Number of function block inputs used/remaining:               8/46
+Number of signals used by logic mapping into function block:  8
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB5_1         (b)     
+Z_ADA<8>              4       0     0   1     FB5_2   52    I/O     I/O
+(unused)              0       0     0   5     FB5_3   59    I/O     I
+(unused)              0       0     0   5     FB5_4         (b)     
+(unused)              0       0     0   5     FB5_5   53    I/O     I
+(unused)              0       0     0   5     FB5_6   54    I/O     I
+(unused)              0       0     0   5     FB5_7   66    I/O     
+(unused)              0       0     0   5     FB5_8   56    I/O     I
+(unused)              0       0     0   5     FB5_9   57    I/O     I
+Z_NSLAVE              1       0     0   4     FB5_10  68    I/O     O
+(unused)              0       0     0   5     FB5_11  58    I/O     I
+(unused)              0       0     0   5     FB5_12  60    I/O     I
+Z_NINT2               1       0     0   4     FB5_13  70    I/O     O
+(unused)              0       0     0   5     FB5_14  61    I/O     I
+(unused)              0       0     0   5     FB5_15  64    I/O     
+(unused)              0       0     0   5     FB5_16        (b)     
+Z_NINT6               1       0     0   4     FB5_17  69    I/O     O
+(unused)              0       0     0   5     FB5_18        (b)     
+
+Signals Used by Logic in Function Block
+  1: I_DATA             4: I_PCIDL            7: Z_NSLAVE 
+  2: I_NINT2            5: P_AD<24>.PIN       8: match 
+  3: I_NINT6            6: Z_NFCS           
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+Z_ADA<8>             X..XX.X................................. 4
+Z_NSLAVE             .....X.X................................ 2
+Z_NINT2              .X...................................... 1
+Z_NINT6              ..X..................................... 1
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB6  ***********************************
+Number of function block inputs used/remaining:               29/25
+Number of signals used by logic mapping into function block:  29
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D
+                     16      11<-   0   0     FB6_1         (b)     (b)
+P_AD<6>               3       1<- /\3   0     FB6_2   106   I/O     I/O
+(unused)              0       0   /\1   4     FB6_3         (b)     (b)
+P_AD<0>               3       0     0   2     FB6_4   111   I/O     I/O
+P_AD<2>               3       0     0   2     FB6_5   110   I/O     I/O
+(unused)              0       0     0   5     FB6_6   112   I/O     
+(unused)              0       0     0   5     FB6_7         (b)     
+(unused)              0       0     0   5     FB6_8   113   I/O     
+(unused)              0       0     0   5     FB6_9   116   I/O     
+(unused)              0       0   \/3   2     FB6_10  115   I/O     (b)
+Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D
+                      4       3<- \/4   0     FB6_11  119   I/O     I
+Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001_D
+                     16      11<-   0   0     FB6_12  120   I/O     (b)
+(unused)              0       0   /\5   0     FB6_13        (b)     (b)
+I_ADD<3>              2       0   /\2   1     FB6_14  121   I/O     O
+I_ADD<2>              2       0     0   3     FB6_15  124   I/O     O
+Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D
+                      5       0     0   0     FB6_16  117   I/O     (b)
+I_ADD<1>              2       0   \/3   0     FB6_17  125   I/O     O
+(unused)              0       0   \/5   0     FB6_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$INV$27      11: Z_SD<7>.PIN       21: Z_SD<0>.PIN 
+  2: $OpTx$INV$28      12: Z_SD<6>.PIN       22: Z_AA<2> 
+  3: $OpTx$INV$29      13: Z_SD<5>.PIN       23: Z_AA<3> 
+  4: $OpTx$INV$30      14: Z_ADA<31>.PIN     24: Z_AA<4> 
+  5: I_CFLT            15: Z_ADA<30>.PIN     25: Z_AA<5> 
+  6: I_DAOUT           16: Z_ADA<29>.PIN     26: Z_AA<6> 
+  7: I_PCIENA          17: Z_ADA<28>.PIN     27: Z_AA<7> 
+  8: I_PLA<0>          18: Z_ADA<27>.PIN     28: laddr_x_5 
+  9: I_ZLA             19: Z_ADA<26>.PIN     29: laddr_x_6 
+ 10: I_ZMA             20: Z_ADA<24>.PIN    
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D 
+                     .....X.X.XXXX......X.......XX........... 9
+P_AD<6>              .....XX.......X..........X.............. 4
+P_AD<0>              .....XXX...........X.................... 4
+P_AD<2>              .....XX...........X..X.................. 4
+Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D 
+                     .....X..........XX....XX................ 5
+Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001_D 
+                     .....X..X....XXX....X...XXX............. 9
+I_ADD<3>             ....X........X.......................... 2
+I_ADD<2>             ....X.........X......................... 2
+Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D 
+                     XXXX.................................... 4
+I_ADD<1>             ....X..........X........................ 2
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB7  ***********************************
+Number of function block inputs used/remaining:               34/20
+Number of signals used by logic mapping into function block:  34
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB7_1         (b)     
+(unused)              0       0     0   5     FB7_2   71    I/O     
+P_AD<5>               3       0     0   2     FB7_3   75    I/O     I/O
+(unused)              0       0     0   5     FB7_4         (b)     
+P_AD<7>               3       0     0   2     FB7_5   74    I/O     I/O
+P_AD<3>               3       0     0   2     FB7_6   76    I/O     I/O
+P_AD<1>               3       0     0   2     FB7_7   77    I/O     I/O
+P_AD<8>               3       0     0   2     FB7_8   78    I/O     I/O
+P_AD<12>              3       0     0   2     FB7_9   80    I/O     I/O
+P_AD<10>              3       0     0   2     FB7_10  79    I/O     I/O
+P_AD<17>              3       0     0   2     FB7_11  82    I/O     I/O
+P_AD<21>              4       0     0   1     FB7_12  85    I/O     I/O
+P_AD<14>              3       0     0   2     FB7_13  81    I/O     I/O
+P_AD<23>              4       0     0   1     FB7_14  86    I/O     I/O
+P_AD<25>              4       0     0   1     FB7_15  87    I/O     I/O
+P_AD<19>              3       0     0   2     FB7_16  83    I/O     I/O
+P_AD<27>              4       0     0   1     FB7_17  88    I/O     I/O
+(unused)              0       0     0   5     FB7_18        (b)     
+
+Signals Used by Logic in Function Block
+  1: I_DAOUT           13: Z_ADA<21>.PIN     24: laddr_x<14> 
+  2: I_PCIENA          14: Z_ADA<19>.PIN     25: laddr_x<15> 
+  3: I_PLA<1>          15: Z_ADA<17>.PIN     26: laddr_x<16> 
+  4: I_ZLA             16: Z_ADA<11>.PIN     27: laddr_x<17> 
+  5: Z_SD<6>.PIN       17: Z_ADA<9>.PIN      28: laddr_x<18> 
+  6: Z_SD<4>.PIN       18: Z_SD<0>.PIN       29: laddr_x<19> 
+  7: Z_ADA<31>.PIN     19: Z_AA<3>           30: laddr_x<20> 
+  8: Z_ADA<29>.PIN     20: Z_AA<5>           31: laddr_x<9> 
+  9: Z_ADA<27>.PIN     21: Z_AA<7>           32: laddr_x_2 
+ 10: Z_ADA<25>.PIN     22: laddr_x<11>       33: laddr_x_4 
+ 11: Z_ADA<23>.PIN     23: laddr_x<13>       34: laddr_x_6 
+ 12: Z_SD<2>.PIN      
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+P_AD<5>              XX.....X...........X.................... 4
+P_AD<7>              XX....X.............X................... 4
+P_AD<3>              XX......X.........X..................... 4
+P_AD<1>              XXX......X.............................. 4
+P_AD<8>              XX.X.............X...................... 4
+P_AD<12>             XX...X..........................X....... 4
+P_AD<10>             XX.........X...................X........ 4
+P_AD<17>             XX............X...............X......... 4
+P_AD<21>             XX..........X.........XXXXXXXX.......... 11
+P_AD<14>             XX..X............................X...... 4
+P_AD<23>             XX........X............XXXXXXX.......... 10
+P_AD<25>             XX..............X......XXXXXXX.......... 10
+P_AD<19>             XX...........X.......X.................. 4
+P_AD<27>             XX.............X.......XXXXXXX.......... 10
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB8  ***********************************
+Number of function block inputs used/remaining:               32/22
+Number of signals used by logic mapping into function block:  32
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+$OpTx$INV$31          3       0     0   2     FB8_1         (b)     (b)
+P_AD<29>              2       0     0   3     FB8_2   91    I/O     I/O
+P_AD<26>              4       0     0   1     FB8_3   95    I/O     I/O
+P_AD<22>              4       0     0   1     FB8_4   97    I/O     I/O
+P_AD<31>              2       0     0   3     FB8_5   92    I/O     I/O
+P_AD<30>              2       0     0   3     FB8_6   93    I/O     I/O
+$OpTx$INV$29          3       0     0   2     FB8_7         (b)     (b)
+P_AD<28>              4       0     0   1     FB8_8   94    I/O     I/O
+P_AD<24>              4       0     0   1     FB8_9   96    I/O     I/O
+P_AD<16>              3       0     0   2     FB8_10  101   I/O     I/O
+P_AD<20>              4       0     0   1     FB8_11  98    I/O     I/O
+P_AD<18>              3       0     0   2     FB8_12  100   I/O     I/O
+P_AD<13>              3       0     0   2     FB8_13  103   I/O     I/O
+P_AD<15>              3       0     0   2     FB8_14  102   I/O     I/O
+P_AD<11>              3       0     0   2     FB8_15  104   I/O     I/O
+P_AD<4>               3       0     0   2     FB8_16  107   I/O     I/O
+P_AD<9>               3       0     0   2     FB8_17  105   I/O     I/O
+$OpTx$INV$27          3       0     0   2     FB8_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: I_DAOUT           12: Z_ADA<15>.PIN     23: laddr_x<15> 
+  2: I_PCIENA          13: Z_ADA<14>.PIN     24: laddr_x<16> 
+  3: I_ZMA             14: Z_ADA<13>.PIN     25: laddr_x<17> 
+  4: Z_SD<7>.PIN       15: Z_ADA<12>.PIN     26: laddr_x<18> 
+  5: Z_SD<5>.PIN       16: Z_SD<1>.PIN       27: laddr_x<19> 
+  6: Z_SD<3>.PIN       17: Z_ADA<10>.PIN     28: laddr_x<20> 
+  7: Z_ADA<28>.PIN     18: Z_ADA<8>.PIN      29: laddr_x<8> 
+  8: Z_ADA<22>.PIN     19: Z_AA<4>           30: laddr_x_1 
+  9: Z_ADA<20>.PIN     20: laddr_x<10>       31: laddr_x_3 
+ 10: Z_ADA<18>.PIN     21: laddr_x<12>       32: laddr_x_5 
+ 11: Z_ADA<16>.PIN     22: laddr_x<14>      
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+$OpTx$INV$31         X.......X...........XXXXXXXX............ 10
+P_AD<29>             XX...........X.......................... 3
+P_AD<26>             XX..............X....XXXXXXX............ 10
+P_AD<22>             XX.....X.............XXXXXXX............ 10
+P_AD<31>             XX.........X............................ 3
+P_AD<30>             XX..........X........................... 3
+$OpTx$INV$29         X...............X....XXXXXXX............ 9
+P_AD<28>             XX............X......XXXXXXX............ 10
+P_AD<24>             XX...............X...XXXXXXX............ 10
+P_AD<16>             XX........X.................X........... 4
+P_AD<20>             XX......X...........XXXXXXXX............ 11
+P_AD<18>             XX.......X.........X.................... 4
+P_AD<13>             XX..X..........................X........ 4
+P_AD<15>             XXXX.................................... 4
+P_AD<11>             XX...X........................X......... 4
+P_AD<4>              XX....X...........X..................... 4
+P_AD<9>              XX.............X.............X.......... 4
+$OpTx$INV$27         X.............X......XXXXXXX............ 9
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+$OpTx$INV$27 = I_DAOUT & !Z_ADA<12>.PIN
+	# !I_DAOUT & !laddr_x<20>
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19>;    
+
+$OpTx$INV$28 = I_DAOUT & !Z_ADA<11>.PIN
+	# !I_DAOUT & !laddr_x<19>
+;Imported pterms FB4_10
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<20>;    
+
+$OpTx$INV$29 = I_DAOUT & !Z_ADA<10>.PIN
+	# !I_DAOUT & !laddr_x<18>
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<19> & laddr_x<20>;    
+
+$OpTx$INV$30 = I_DAOUT & !Z_ADA<9>.PIN
+	# !I_DAOUT & !laddr_x<17>
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<18> & laddr_x<19> & laddr_x<20>;    
+
+$OpTx$INV$31 = I_DAOUT & !Z_ADA<20>.PIN
+	# !I_DAOUT & !laddr_x<12>
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+	laddr_x<20>;    
+
+$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248 = I_DAOUT & Z_ADA<21>.PIN & Z_ADA<22>.PIN
+	# I_DAOUT & !Z_ADA<21>.PIN & !Z_ADA<22>.PIN
+	# !I_DAOUT & laddr_x<13> & laddr_x<14>
+	# !I_DAOUT & !laddr_x<13> & !laddr_x<14>
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+	laddr_x<20>;    
+
+I_ACC<0> = laddr_x<13> & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+	laddr_x<20>
+;Imported pterms FB4_17
+	# !laddr_x<12> & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+	laddr_x<20>;    
+
+I_ACC<1> = laddr_x<12> & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+	laddr_x<20>
+	# laddr_x<13> & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+	laddr_x<20>;    
+
+I_ADD<0> = Gnd;    
+
+I_ADD<1>.D = Z_ADA<29>.PIN;
+   I_ADD<1>.CLK = I_CFLT;
+   !I_ADD<1>.AP = Z_NIORST;	// GSR    
+
+I_ADD<2>.D = Z_ADA<30>.PIN;
+   I_ADD<2>.CLK = I_CFLT;
+   !I_ADD<2>.AP = Z_NIORST;	// GSR    
+
+I_ADD<3>.D = Z_ADA<31>.PIN;
+   I_ADD<3>.CLK = I_CFLT;
+   !I_ADD<3>.AP = Z_NIORST;	// GSR    
+
+!I_DATPAR<0> = 
+	Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001_D
+	$ 
+	Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+	Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+	Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+	!$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+	# 
+	Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+	Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+	!Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+	$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+	# 
+	Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+	!Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+	Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+	$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+	# 
+	Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+	!Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+	!Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+	!$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+;Imported pterms FB4_12
+	# 
+	!Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+	Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+	Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+	$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+	# 
+	!Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+	Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+	!Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+	!$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+	# 
+	!Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+	!Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+	Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+	!$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+	# 
+	!Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+	!Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+	!Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+	$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248;    
+
+!I_DATPAR<1> = 
+	Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001_D
+	$ 
+	Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+	Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+	# 
+	Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+	Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+	# 
+	Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+	!Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+	# 
+	Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+	!Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+;Imported pterms FB4_16
+	# 
+	!Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+	Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+	# 
+	!Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+	Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+	# 
+	!Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+	!Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+	# 
+	!Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+	!Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D;    
+
+I_ZLA.D = Z_ADA<8>.PIN;
+   !I_ZLA.CLK = Z_NFCS;	// GCK
+   !I_ZLA.AP = Z_NIORST;	// GSR    
+
+I_ZMA.D = Z_ADA<15>.PIN;
+   !I_ZMA.CLK = Z_NFCS;	// GCK
+   !I_ZMA.AP = Z_NIORST;	// GSR    
+
+Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D = !I_DAOUT & laddr_x<10> & laddr_x<11> & 
+	laddr_x<9> & $OpTx$INV$31
+	# !I_DAOUT & laddr_x<10> & !laddr_x<11> & 
+	laddr_x<9> & !$OpTx$INV$31
+	# !I_DAOUT & !laddr_x<10> & laddr_x<11> & 
+	laddr_x<9> & !$OpTx$INV$31
+	# !I_DAOUT & !laddr_x<10> & laddr_x<11> & 
+	!laddr_x<9> & $OpTx$INV$31
+	# !I_DAOUT & !laddr_x<10> & !laddr_x<11> & 
+	laddr_x<9> & $OpTx$INV$31
+;Imported pterms FB1_16
+	# I_DAOUT & Z_ADA<18>.PIN & Z_ADA<19>.PIN & 
+	Z_ADA<17>.PIN & $OpTx$INV$31
+	# I_DAOUT & !Z_ADA<18>.PIN & Z_ADA<19>.PIN & 
+	Z_ADA<17>.PIN & !$OpTx$INV$31
+	# !I_DAOUT & laddr_x<10> & laddr_x<11> & 
+	!laddr_x<9> & !$OpTx$INV$31
+	# !I_DAOUT & laddr_x<10> & !laddr_x<11> & 
+	!laddr_x<9> & $OpTx$INV$31
+	# !I_DAOUT & !laddr_x<10> & !laddr_x<11> & 
+	!laddr_x<9> & !$OpTx$INV$31
+;Imported pterms FB1_18
+	# I_DAOUT & Z_ADA<18>.PIN & Z_ADA<19>.PIN & 
+	!Z_ADA<17>.PIN & !$OpTx$INV$31
+	# I_DAOUT & Z_ADA<18>.PIN & !Z_ADA<19>.PIN & 
+	Z_ADA<17>.PIN & !$OpTx$INV$31
+	# I_DAOUT & Z_ADA<18>.PIN & !Z_ADA<19>.PIN & 
+	!Z_ADA<17>.PIN & $OpTx$INV$31
+	# I_DAOUT & !Z_ADA<18>.PIN & Z_ADA<19>.PIN & 
+	!Z_ADA<17>.PIN & $OpTx$INV$31
+	# I_DAOUT & !Z_ADA<18>.PIN & !Z_ADA<19>.PIN & 
+	Z_ADA<17>.PIN & $OpTx$INV$31
+;Imported pterms FB1_1
+	# I_DAOUT & !Z_ADA<18>.PIN & !Z_ADA<19>.PIN & 
+	!Z_ADA<17>.PIN & !$OpTx$INV$31;    
+
+!Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D = $OpTx$INV$28
+	$ $OpTx$INV$27 & $OpTx$INV$30 & !$OpTx$INV$29
+	# $OpTx$INV$27 & !$OpTx$INV$30 & $OpTx$INV$29
+	# !$OpTx$INV$27 & $OpTx$INV$30 & $OpTx$INV$29
+	# !$OpTx$INV$27 & !$OpTx$INV$30 & !$OpTx$INV$29;    
+
+Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001_D = !I_DAOUT & laddr_x<8>
+	# Z_ADA<13>.PIN & I_DAOUT & Z_ADA<14>.PIN & 
+	Z_ADA<15>.PIN & !Z_ADA<16>.PIN
+	# Z_ADA<13>.PIN & I_DAOUT & Z_ADA<14>.PIN & 
+	!Z_ADA<15>.PIN & Z_ADA<16>.PIN
+	# !Z_ADA<13>.PIN & I_DAOUT & Z_ADA<14>.PIN & 
+	Z_ADA<15>.PIN & Z_ADA<16>.PIN
+	# !Z_ADA<13>.PIN & I_DAOUT & Z_ADA<14>.PIN & 
+	!Z_ADA<15>.PIN & !Z_ADA<16>.PIN
+;Imported pterms FB4_1
+	# Z_ADA<13>.PIN & I_DAOUT & !Z_ADA<14>.PIN & 
+	Z_ADA<15>.PIN & Z_ADA<16>.PIN
+	# Z_ADA<13>.PIN & I_DAOUT & !Z_ADA<14>.PIN & 
+	!Z_ADA<15>.PIN & !Z_ADA<16>.PIN
+	# !Z_ADA<13>.PIN & I_DAOUT & !Z_ADA<14>.PIN & 
+	Z_ADA<15>.PIN & !Z_ADA<16>.PIN
+	# !Z_ADA<13>.PIN & I_DAOUT & !Z_ADA<14>.PIN & 
+	!Z_ADA<15>.PIN & Z_ADA<16>.PIN;    
+
+Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D = !I_DAOUT & !laddr_x<15> & laddr_x<16>
+;Imported pterms FB4_11
+	# I_DAOUT & Z_ADA<8>.PIN & !Z_ADA<23>.PIN
+	# I_DAOUT & !Z_ADA<8>.PIN & Z_ADA<23>.PIN
+	# !I_DAOUT & laddr_x<15> & !laddr_x<16>;    
+
+Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001_D = !I_DAOUT & I_ZLA & Z_AA<5> & Z_AA<6> & !Z_AA<7>
+	# !I_DAOUT & I_ZLA & Z_AA<5> & !Z_AA<6> & Z_AA<7>
+	# !I_DAOUT & I_ZLA & !Z_AA<5> & Z_AA<6> & Z_AA<7>
+	# !I_DAOUT & !I_ZLA & Z_AA<5> & Z_AA<6> & Z_AA<7>
+	# !I_DAOUT & !I_ZLA & !Z_AA<5> & !Z_AA<6> & Z_AA<7>
+;Imported pterms FB6_11
+	# Z_ADA<31>.PIN & Z_ADA<30>.PIN & !Z_ADA<29>.PIN & 
+	I_DAOUT & Z_SD<0>.PIN
+	# !I_DAOUT & I_ZLA & !Z_AA<5> & !Z_AA<6> & !Z_AA<7>
+	# !I_DAOUT & !I_ZLA & Z_AA<5> & !Z_AA<6> & !Z_AA<7>
+	# !I_DAOUT & !I_ZLA & !Z_AA<5> & Z_AA<6> & !Z_AA<7>
+;Imported pterms FB6_13
+	# Z_ADA<31>.PIN & Z_ADA<30>.PIN & Z_ADA<29>.PIN & 
+	I_DAOUT & !Z_SD<0>.PIN
+	# Z_ADA<31>.PIN & !Z_ADA<30>.PIN & Z_ADA<29>.PIN & 
+	I_DAOUT & Z_SD<0>.PIN
+	# Z_ADA<31>.PIN & !Z_ADA<30>.PIN & !Z_ADA<29>.PIN & 
+	I_DAOUT & !Z_SD<0>.PIN
+	# !Z_ADA<31>.PIN & Z_ADA<30>.PIN & Z_ADA<29>.PIN & 
+	I_DAOUT & Z_SD<0>.PIN
+	# !Z_ADA<31>.PIN & !Z_ADA<30>.PIN & !Z_ADA<29>.PIN & 
+	I_DAOUT & Z_SD<0>.PIN
+;Imported pterms FB6_14
+	# !Z_ADA<31>.PIN & Z_ADA<30>.PIN & !Z_ADA<29>.PIN & 
+	I_DAOUT & !Z_SD<0>.PIN
+	# !Z_ADA<31>.PIN & !Z_ADA<30>.PIN & Z_ADA<29>.PIN & 
+	I_DAOUT & !Z_SD<0>.PIN;    
+
+Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D = !I_DAOUT & laddr_x_1 & laddr_x_2 & laddr_x_3 & 
+	!laddr_x_4
+	# !I_DAOUT & laddr_x_1 & laddr_x_2 & !laddr_x_3 & 
+	laddr_x_4
+	# !I_DAOUT & laddr_x_1 & !laddr_x_2 & laddr_x_3 & 
+	laddr_x_4
+	# !I_DAOUT & !laddr_x_1 & laddr_x_2 & laddr_x_3 & 
+	laddr_x_4
+	# !I_DAOUT & !laddr_x_1 & !laddr_x_2 & !laddr_x_3 & 
+	laddr_x_4
+;Imported pterms FB3_1
+	# I_DAOUT & Z_SD<1>.PIN & Z_SD<2>.PIN & 
+	Z_SD<3>.PIN & !Z_SD<4>.PIN
+	# I_DAOUT & Z_SD<1>.PIN & Z_SD<2>.PIN & 
+	!Z_SD<3>.PIN & Z_SD<4>.PIN
+	# I_DAOUT & !Z_SD<1>.PIN & Z_SD<2>.PIN & 
+	!Z_SD<3>.PIN & !Z_SD<4>.PIN
+	# I_DAOUT & !Z_SD<1>.PIN & !Z_SD<2>.PIN & 
+	Z_SD<3>.PIN & !Z_SD<4>.PIN
+	# I_DAOUT & !Z_SD<1>.PIN & !Z_SD<2>.PIN & 
+	!Z_SD<3>.PIN & Z_SD<4>.PIN
+;Imported pterms FB3_2
+	# I_DAOUT & Z_SD<1>.PIN & !Z_SD<2>.PIN & 
+	!Z_SD<3>.PIN & !Z_SD<4>.PIN
+;Imported pterms FB3_17
+	# I_DAOUT & Z_SD<1>.PIN & !Z_SD<2>.PIN & 
+	Z_SD<3>.PIN & Z_SD<4>.PIN
+	# I_DAOUT & !Z_SD<1>.PIN & Z_SD<2>.PIN & 
+	Z_SD<3>.PIN & Z_SD<4>.PIN
+	# !I_DAOUT & laddr_x_1 & !laddr_x_2 & !laddr_x_3 & 
+	!laddr_x_4
+	# !I_DAOUT & !laddr_x_1 & laddr_x_2 & !laddr_x_3 & 
+	!laddr_x_4
+	# !I_DAOUT & !laddr_x_1 & !laddr_x_2 & laddr_x_3 & 
+	!laddr_x_4;    
+
+Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D = !I_DAOUT & I_ZMA & laddr_x_5 & laddr_x_6 & 
+	!I_PLA<0>
+	# !I_DAOUT & I_ZMA & laddr_x_5 & !laddr_x_6 & 
+	I_PLA<0>
+	# !I_DAOUT & I_ZMA & !laddr_x_5 & laddr_x_6 & 
+	I_PLA<0>
+	# !I_DAOUT & !I_ZMA & laddr_x_5 & laddr_x_6 & 
+	I_PLA<0>
+	# !I_DAOUT & !I_ZMA & !laddr_x_5 & !laddr_x_6 & 
+	I_PLA<0>
+;Imported pterms FB6_2
+	# Z_ADA<24>.PIN & I_DAOUT & Z_SD<5>.PIN & 
+	Z_SD<6>.PIN & !Z_SD<7>.PIN
+	# Z_ADA<24>.PIN & I_DAOUT & !Z_SD<5>.PIN & 
+	!Z_SD<6>.PIN & !Z_SD<7>.PIN
+	# !Z_ADA<24>.PIN & I_DAOUT & Z_SD<5>.PIN & 
+	Z_SD<6>.PIN & Z_SD<7>.PIN
+;Imported pterms FB6_18
+	# Z_ADA<24>.PIN & I_DAOUT & Z_SD<5>.PIN & 
+	!Z_SD<6>.PIN & Z_SD<7>.PIN
+	# Z_ADA<24>.PIN & I_DAOUT & !Z_SD<5>.PIN & 
+	Z_SD<6>.PIN & Z_SD<7>.PIN
+	# !I_DAOUT & I_ZMA & !laddr_x_5 & !laddr_x_6 & 
+	!I_PLA<0>
+	# !I_DAOUT & !I_ZMA & laddr_x_5 & !laddr_x_6 & 
+	!I_PLA<0>
+	# !I_DAOUT & !I_ZMA & !laddr_x_5 & laddr_x_6 & 
+	!I_PLA<0>
+;Imported pterms FB6_17
+	# !Z_ADA<24>.PIN & I_DAOUT & Z_SD<5>.PIN & 
+	!Z_SD<6>.PIN & !Z_SD<7>.PIN
+	# !Z_ADA<24>.PIN & I_DAOUT & !Z_SD<5>.PIN & 
+	Z_SD<6>.PIN & !Z_SD<7>.PIN
+	# !Z_ADA<24>.PIN & I_DAOUT & !Z_SD<5>.PIN & 
+	!Z_SD<6>.PIN & Z_SD<7>.PIN;    
+
+Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D = ;Imported pterms FB3_16
+	  Z_ADA<26>.PIN & !Z_ADA<25>.PIN & I_DAOUT
+	# !Z_ADA<26>.PIN & Z_ADA<25>.PIN & I_DAOUT
+	# !I_DAOUT & Z_AA<2> & !I_PLA<1>
+	# !I_DAOUT & !Z_AA<2> & I_PLA<1>;    
+
+Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D = !I_DAOUT & !Z_AA<3> & Z_AA<4>
+;Imported pterms FB6_10
+	# Z_ADA<28>.PIN & !Z_ADA<27>.PIN & I_DAOUT
+	# !Z_ADA<28>.PIN & Z_ADA<27>.PIN & I_DAOUT
+	# !I_DAOUT & Z_AA<3> & !Z_AA<4>;    
+
+P_AD<0> = Z_ADA<24>.PIN & I_DAOUT
+	# !I_DAOUT & I_PLA<0>;
+   P_AD<0>.OE = I_PCIENA;    
+
+P_AD<1> = Z_ADA<25>.PIN & I_DAOUT
+	# !I_DAOUT & I_PLA<1>;
+   P_AD<1>.OE = I_PCIENA;    
+
+P_AD<2> = Z_ADA<26>.PIN & I_DAOUT
+	# !I_DAOUT & Z_AA<2>;
+   P_AD<2>.OE = I_PCIENA;    
+
+P_AD<3> = Z_ADA<27>.PIN & I_DAOUT
+	# !I_DAOUT & Z_AA<3>;
+   P_AD<3>.OE = I_PCIENA;    
+
+P_AD<4> = Z_ADA<28>.PIN & I_DAOUT
+	# !I_DAOUT & Z_AA<4>;
+   P_AD<4>.OE = I_PCIENA;    
+
+P_AD<5> = Z_ADA<29>.PIN & I_DAOUT
+	# !I_DAOUT & Z_AA<5>;
+   P_AD<5>.OE = I_PCIENA;    
+
+P_AD<6> = !I_DAOUT & Z_AA<6>
+;Imported pterms FB6_3
+	# Z_ADA<30>.PIN & I_DAOUT;
+   P_AD<6>.OE = I_PCIENA;    
+
+P_AD<7> = Z_ADA<31>.PIN & I_DAOUT
+	# !I_DAOUT & Z_AA<7>;
+   P_AD<7>.OE = I_PCIENA;    
+
+P_AD<8> = I_DAOUT & Z_SD<0>.PIN
+	# !I_DAOUT & I_ZLA;
+   P_AD<8>.OE = I_PCIENA;    
+
+P_AD<9> = I_DAOUT & Z_SD<1>.PIN
+	# !I_DAOUT & laddr_x_1;
+   P_AD<9>.OE = I_PCIENA;    
+
+P_AD<10> = I_DAOUT & Z_SD<2>.PIN
+	# !I_DAOUT & laddr_x_2;
+   P_AD<10>.OE = I_PCIENA;    
+
+P_AD<11> = I_DAOUT & Z_SD<3>.PIN
+	# !I_DAOUT & laddr_x_3;
+   P_AD<11>.OE = I_PCIENA;    
+
+P_AD<12> = I_DAOUT & Z_SD<4>.PIN
+	# !I_DAOUT & laddr_x_4;
+   P_AD<12>.OE = I_PCIENA;    
+
+P_AD<13> = I_DAOUT & Z_SD<5>.PIN
+	# !I_DAOUT & laddr_x_5;
+   P_AD<13>.OE = I_PCIENA;    
+
+P_AD<14> = I_DAOUT & Z_SD<6>.PIN
+	# !I_DAOUT & laddr_x_6;
+   P_AD<14>.OE = I_PCIENA;    
+
+P_AD<15> = I_DAOUT & Z_SD<7>.PIN
+	# !I_DAOUT & I_ZMA;
+   P_AD<15>.OE = I_PCIENA;    
+
+P_AD<16> = I_DAOUT & Z_ADA<16>.PIN
+	# !I_DAOUT & laddr_x<8>;
+   P_AD<16>.OE = I_PCIENA;    
+
+P_AD<17> = I_DAOUT & Z_ADA<17>.PIN
+	# !I_DAOUT & laddr_x<9>;
+   P_AD<17>.OE = I_PCIENA;    
+
+P_AD<18> = I_DAOUT & Z_ADA<18>.PIN
+	# !I_DAOUT & laddr_x<10>;
+   P_AD<18>.OE = I_PCIENA;    
+
+P_AD<19> = I_DAOUT & Z_ADA<19>.PIN
+	# !I_DAOUT & laddr_x<11>;
+   P_AD<19>.OE = I_PCIENA;    
+
+!P_AD<20> = I_DAOUT & !Z_ADA<20>.PIN
+	# !I_DAOUT & !laddr_x<12>
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+	laddr_x<20>;
+   P_AD<20>.OE = I_PCIENA;    
+
+!P_AD<21> = I_DAOUT & !Z_ADA<21>.PIN
+	# !I_DAOUT & !laddr_x<13>
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+	laddr_x<20>;
+   P_AD<21>.OE = I_PCIENA;    
+
+!P_AD<22> = I_DAOUT & !Z_ADA<22>.PIN
+	# !I_DAOUT & !laddr_x<14>
+	# !I_DAOUT & laddr_x<15> & laddr_x<16> & 
+	laddr_x<17> & laddr_x<18> & laddr_x<19> & laddr_x<20>;
+   P_AD<22>.OE = I_PCIENA;    
+
+!P_AD<23> = I_DAOUT & !Z_ADA<23>.PIN
+	# !I_DAOUT & !laddr_x<15>
+	# !I_DAOUT & laddr_x<14> & laddr_x<16> & 
+	laddr_x<17> & laddr_x<18> & laddr_x<19> & laddr_x<20>;
+   P_AD<23>.OE = I_PCIENA;    
+
+!P_AD<24> = I_DAOUT & !Z_ADA<8>.PIN
+	# !I_DAOUT & !laddr_x<16>
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<17> & laddr_x<18> & laddr_x<19> & laddr_x<20>;
+   P_AD<24>.OE = I_PCIENA;    
+
+!P_AD<25> = I_DAOUT & !Z_ADA<9>.PIN
+	# !I_DAOUT & !laddr_x<17>
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<18> & laddr_x<19> & laddr_x<20>;
+   P_AD<25>.OE = I_PCIENA;    
+
+!P_AD<26> = I_DAOUT & !Z_ADA<10>.PIN
+	# !I_DAOUT & !laddr_x<18>
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<19> & laddr_x<20>;
+   P_AD<26>.OE = I_PCIENA;    
+
+!P_AD<27> = I_DAOUT & !Z_ADA<11>.PIN
+	# !I_DAOUT & !laddr_x<19>
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<20>;
+   P_AD<27>.OE = I_PCIENA;    
+
+!P_AD<28> = I_DAOUT & !Z_ADA<12>.PIN
+	# !I_DAOUT & !laddr_x<20>
+	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19>;
+   P_AD<28>.OE = I_PCIENA;    
+
+P_AD<29> = Z_ADA<13>.PIN & I_DAOUT;
+   P_AD<29>.OE = I_PCIENA;    
+
+P_AD<30> = I_DAOUT & Z_ADA<14>.PIN;
+   P_AD<30>.OE = I_PCIENA;    
+
+P_AD<31> = I_DAOUT & Z_ADA<15>.PIN;
+   P_AD<31>.OE = I_PCIENA;    
+
+Z_ADA<8>.D = P_AD<24>.PIN;
+   Z_ADA<8>.CLK = I_PCICLK;	// GCK
+   Z_ADA<8>.AP = Z_NSLAVE;
+   Z_ADA<8>.OE = I_DATA;
+   Z_ADA<8>.CE = I_PCIDL;    
+
+Z_ADA<9>.D = P_AD<25>.PIN;
+   Z_ADA<9>.CLK = I_PCICLK;	// GCK
+   Z_ADA<9>.AP = Z_NSLAVE;
+   Z_ADA<9>.OE = I_DATA;
+   Z_ADA<9>.CE = I_PCIDL;    
+
+Z_ADA<10>.D = P_AD<26>.PIN;
+   Z_ADA<10>.CLK = I_PCICLK;	// GCK
+   Z_ADA<10>.AP = Z_NSLAVE;
+   Z_ADA<10>.OE = I_DATA;
+   Z_ADA<10>.CE = I_PCIDL;    
+
+Z_ADA<11>.D = P_AD<27>.PIN;
+   Z_ADA<11>.CLK = I_PCICLK;	// GCK
+   Z_ADA<11>.AP = Z_NSLAVE;
+   Z_ADA<11>.OE = I_DATA;
+   Z_ADA<11>.CE = I_PCIDL;    
+
+Z_ADA<12>.D = P_AD<28>.PIN;
+   Z_ADA<12>.CLK = I_PCICLK;	// GCK
+   Z_ADA<12>.AP = Z_NSLAVE;
+   Z_ADA<12>.OE = I_DATA;
+   Z_ADA<12>.CE = I_PCIDL;    
+
+Z_ADA<13>.D = P_AD<29>.PIN;
+   Z_ADA<13>.CLK = I_PCICLK;	// GCK
+   Z_ADA<13>.AP = Z_NSLAVE;
+   Z_ADA<13>.OE = I_DATA;
+   Z_ADA<13>.CE = I_PCIDL;    
+
+Z_ADA<14>.D = P_AD<30>.PIN;
+   Z_ADA<14>.CLK = I_PCICLK;	// GCK
+   Z_ADA<14>.AP = Z_NSLAVE;
+   Z_ADA<14>.OE = I_DATA;
+   Z_ADA<14>.CE = I_PCIDL;    
+
+Z_ADA<15>.D = P_AD<31>.PIN;
+   Z_ADA<15>.CLK = I_PCICLK;	// GCK
+   Z_ADA<15>.AP = Z_NSLAVE;
+   Z_ADA<15>.OE = I_DATA;
+   Z_ADA<15>.CE = I_PCIDL;    
+
+Z_ADA<16>.D = P_AD<16>.PIN;
+   Z_ADA<16>.CLK = I_PCICLK;	// GCK
+   Z_ADA<16>.AP = Z_NSLAVE;
+   Z_ADA<16>.OE = I_DATA;
+   Z_ADA<16>.CE = I_PCIDL;    
+
+Z_ADA<17>.D = P_AD<17>.PIN;
+   Z_ADA<17>.CLK = I_PCICLK;	// GCK
+   Z_ADA<17>.AP = Z_NSLAVE;
+   Z_ADA<17>.OE = I_DATA;
+   Z_ADA<17>.CE = I_PCIDL;    
+
+Z_ADA<18>.D = P_AD<18>.PIN;
+   Z_ADA<18>.CLK = I_PCICLK;	// GCK
+   Z_ADA<18>.AP = Z_NSLAVE;
+   Z_ADA<18>.OE = I_DATA;
+   Z_ADA<18>.CE = I_PCIDL;    
+
+Z_ADA<19>.D = P_AD<19>.PIN;
+   Z_ADA<19>.CLK = I_PCICLK;	// GCK
+   Z_ADA<19>.AP = Z_NSLAVE;
+   Z_ADA<19>.OE = I_DATA;
+   Z_ADA<19>.CE = I_PCIDL;    
+
+Z_ADA<20>.D = P_AD<20>.PIN;
+   Z_ADA<20>.CLK = I_PCICLK;	// GCK
+   Z_ADA<20>.AP = Z_NSLAVE;
+   Z_ADA<20>.OE = I_DATA;
+   Z_ADA<20>.CE = I_PCIDL;    
+
+Z_ADA<21>.D = P_AD<21>.PIN;
+   Z_ADA<21>.CLK = I_PCICLK;	// GCK
+   Z_ADA<21>.AP = Z_NSLAVE;
+   Z_ADA<21>.OE = I_DATA;
+   Z_ADA<21>.CE = I_PCIDL;    
+
+Z_ADA<22>.D = P_AD<22>.PIN;
+   Z_ADA<22>.CLK = I_PCICLK;	// GCK
+   Z_ADA<22>.AP = Z_NSLAVE;
+   Z_ADA<22>.OE = I_DATA;
+   Z_ADA<22>.CE = I_PCIDL;    
+
+Z_ADA<23>.D = P_AD<23>.PIN;
+   Z_ADA<23>.CLK = I_PCICLK;	// GCK
+   Z_ADA<23>.AP = Z_NSLAVE;
+   Z_ADA<23>.OE = I_DATA;
+   Z_ADA<23>.CE = I_PCIDL;    
+
+Z_ADA<24>.D = P_AD<0>.PIN;
+   Z_ADA<24>.CLK = I_PCICLK;	// GCK
+   Z_ADA<24>.AP = Z_NSLAVE;
+   Z_ADA<24>.OE = I_DATA;
+   Z_ADA<24>.CE = I_PCIDL;    
+
+Z_ADA<25>.D = P_AD<1>.PIN;
+   Z_ADA<25>.CLK = I_PCICLK;	// GCK
+   Z_ADA<25>.AP = Z_NSLAVE;
+   Z_ADA<25>.OE = I_DATA;
+   Z_ADA<25>.CE = I_PCIDL;    
+
+Z_ADA<26>.D = P_AD<2>.PIN;
+   Z_ADA<26>.CLK = I_PCICLK;	// GCK
+   Z_ADA<26>.AP = Z_NSLAVE;
+   Z_ADA<26>.OE = I_DATA;
+   Z_ADA<26>.CE = I_PCIDL;    
+
+Z_ADA<27>.D = P_AD<3>.PIN;
+   Z_ADA<27>.CLK = I_PCICLK;	// GCK
+   Z_ADA<27>.AP = Z_NSLAVE;
+   Z_ADA<27>.OE = I_DATA;
+   Z_ADA<27>.CE = I_PCIDL;    
+
+Z_ADA<28>.D = P_AD<4>.PIN;
+   Z_ADA<28>.CLK = I_PCICLK;	// GCK
+   Z_ADA<28>.AP = Z_NSLAVE;
+   Z_ADA<28>.OE = I_DATA;
+   Z_ADA<28>.CE = I_PCIDL;    
+
+Z_ADA<29>.D = P_AD<5>.PIN;
+   Z_ADA<29>.CLK = I_PCICLK;	// GCK
+   Z_ADA<29>.AP = Z_NSLAVE;
+   Z_ADA<29>.OE = I_DATA;
+   Z_ADA<29>.CE = I_PCIDL;    
+
+Z_ADA<30>.D = P_AD<6>.PIN;
+   Z_ADA<30>.CLK = I_PCICLK;	// GCK
+   Z_ADA<30>.AP = Z_NSLAVE;
+   Z_ADA<30>.OE = I_DATA;
+   Z_ADA<30>.CE = I_PCIDL;    
+
+Z_ADA<31>.D = P_AD<7>.PIN;
+   Z_ADA<31>.CLK = I_PCICLK;	// GCK
+   Z_ADA<31>.AP = Z_NSLAVE;
+   Z_ADA<31>.OE = I_DATA;
+   Z_ADA<31>.CE = I_PCIDL;    
+
+Z_NINT2 = Gnd;
+   Z_NINT2.OE = !I_NINT2;    
+
+Z_NINT6 = Gnd;
+   Z_NINT6.OE = !I_NINT6;    
+
+!Z_NSLAVE.D = !Z_NFCS & match;
+   Z_NSLAVE.CLK = I_PCICLK;	// GCK    
+
+Z_SD<0>.D = P_AD<8>.PIN;
+   Z_SD<0>.CLK = I_PCICLK;	// GCK
+   Z_SD<0>.AP = Z_NSLAVE;
+   Z_SD<0>.OE = I_DATA;
+   Z_SD<0>.CE = I_PCIDL;    
+
+Z_SD<1>.D = P_AD<9>.PIN;
+   Z_SD<1>.CLK = I_PCICLK;	// GCK
+   Z_SD<1>.AP = Z_NSLAVE;
+   Z_SD<1>.OE = I_DATA;
+   Z_SD<1>.CE = I_PCIDL;    
+
+Z_SD<2>.D = P_AD<10>.PIN;
+   Z_SD<2>.CLK = I_PCICLK;	// GCK
+   Z_SD<2>.AP = Z_NSLAVE;
+   Z_SD<2>.OE = I_DATA;
+   Z_SD<2>.CE = I_PCIDL;    
+
+Z_SD<3>.D = P_AD<11>.PIN;
+   Z_SD<3>.CLK = I_PCICLK;	// GCK
+   Z_SD<3>.AP = Z_NSLAVE;
+   Z_SD<3>.OE = I_DATA;
+   Z_SD<3>.CE = I_PCIDL;    
+
+Z_SD<4>.D = P_AD<12>.PIN;
+   Z_SD<4>.CLK = I_PCICLK;	// GCK
+   Z_SD<4>.AP = Z_NSLAVE;
+   Z_SD<4>.OE = I_DATA;
+   Z_SD<4>.CE = I_PCIDL;    
+
+Z_SD<5>.D = P_AD<13>.PIN;
+   Z_SD<5>.CLK = I_PCICLK;	// GCK
+   Z_SD<5>.AP = Z_NSLAVE;
+   Z_SD<5>.OE = I_DATA;
+   Z_SD<5>.CE = I_PCIDL;    
+
+Z_SD<6>.D = P_AD<14>.PIN;
+   Z_SD<6>.CLK = I_PCICLK;	// GCK
+   Z_SD<6>.AP = Z_NSLAVE;
+   Z_SD<6>.OE = I_DATA;
+   Z_SD<6>.CE = I_PCIDL;    
+
+Z_SD<7>.D = P_AD<15>.PIN;
+   Z_SD<7>.CLK = I_PCICLK;	// GCK
+   Z_SD<7>.AP = Z_NSLAVE;
+   Z_SD<7>.OE = I_DATA;
+   Z_SD<7>.CE = I_PCIDL;    
+
+laddr_x<8>.D = Z_ADA<16>.PIN;
+   !laddr_x<8>.CLK = Z_NFCS;	// GCK
+   !laddr_x<8>.AP = Z_NIORST;	// GSR    
+
+laddr_x<9>.D = Z_ADA<17>.PIN;
+   !laddr_x<9>.CLK = Z_NFCS;	// GCK
+   !laddr_x<9>.AP = Z_NIORST;	// GSR    
+
+laddr_x<10>.D = ;Imported pterms FB1_15
+	  Z_ADA<18>.PIN;
+   !laddr_x<10>.CLK = Z_NFCS;	// GCK
+   !laddr_x<10>.AP = Z_NIORST;	// GSR    
+
+laddr_x<11>.D = Z_ADA<19>.PIN;
+   !laddr_x<11>.CLK = Z_NFCS;	// GCK
+   !laddr_x<11>.AP = Z_NIORST;	// GSR    
+
+laddr_x<12>.D = Z_ADA<20>.PIN;
+   !laddr_x<12>.CLK = Z_NFCS;	// GCK
+   !laddr_x<12>.AP = Z_NIORST;	// GSR    
+
+laddr_x<13>.D = Z_ADA<21>.PIN;
+   !laddr_x<13>.CLK = Z_NFCS;	// GCK
+   !laddr_x<13>.AP = Z_NIORST;	// GSR    
+
+laddr_x<14>.D = Z_ADA<22>.PIN;
+   !laddr_x<14>.CLK = Z_NFCS;	// GCK
+   !laddr_x<14>.AP = Z_NIORST;	// GSR    
+
+laddr_x<15>.D = Z_ADA<23>.PIN;
+   !laddr_x<15>.CLK = Z_NFCS;	// GCK
+   !laddr_x<15>.AP = Z_NIORST;	// GSR    
+
+laddr_x<16>.D = ;Imported pterms FB2_17
+	  Z_ADA<24>.PIN;
+   !laddr_x<16>.CLK = Z_NFCS;	// GCK
+   !laddr_x<16>.AP = Z_NIORST;	// GSR    
+
+laddr_x<17>.D = Z_ADA<25>.PIN;
+   !laddr_x<17>.CLK = Z_NFCS;	// GCK
+   !laddr_x<17>.AP = Z_NIORST;	// GSR    
+
+laddr_x<18>.D = Z_ADA<26>.PIN;
+   !laddr_x<18>.CLK = Z_NFCS;	// GCK
+   !laddr_x<18>.AP = Z_NIORST;	// GSR    
+
+laddr_x<19>.D = Z_ADA<27>.PIN;
+   !laddr_x<19>.CLK = Z_NFCS;	// GCK
+   !laddr_x<19>.AP = Z_NIORST;	// GSR    
+
+laddr_x<20>.D = Z_ADA<28>.PIN;
+   !laddr_x<20>.CLK = Z_NFCS;	// GCK
+   !laddr_x<20>.AP = Z_NIORST;	// GSR    
+
+laddr_x_1.D = Z_ADA<9>.PIN;
+   !laddr_x_1.CLK = Z_NFCS;	// GCK
+   !laddr_x_1.AP = Z_NIORST;	// GSR    
+
+laddr_x_2.D = Z_ADA<10>.PIN;
+   !laddr_x_2.CLK = Z_NFCS;	// GCK
+   !laddr_x_2.AP = Z_NIORST;	// GSR    
+
+laddr_x_3.D = Z_ADA<11>.PIN;
+   !laddr_x_3.CLK = Z_NFCS;	// GCK
+   !laddr_x_3.AP = Z_NIORST;	// GSR    
+
+laddr_x_4.D = Z_ADA<12>.PIN;
+   !laddr_x_4.CLK = Z_NFCS;	// GCK
+   !laddr_x_4.AP = Z_NIORST;	// GSR    
+
+laddr_x_5.D = Z_ADA<13>.PIN;
+   !laddr_x_5.CLK = Z_NFCS;	// GCK
+   !laddr_x_5.AP = Z_NIORST;	// GSR    
+
+laddr_x_6.D = Z_ADA<14>.PIN;
+   !laddr_x_6.CLK = Z_NFCS;	// GCK
+   !laddr_x_6.AP = Z_NIORST;	// GSR    
+
+!match.D = !Z_ADA<31>.PIN & Z_NCFGOUT
+	# !Z_ADA<30>.PIN & Z_NCFGOUT
+	# !Z_ADA<29>.PIN & Z_NCFGOUT
+	# !Z_ADA<28>.PIN & Z_NCFGOUT
+	# !Z_ADA<27>.PIN & Z_NCFGOUT
+;Imported pterms FB2_2
+	# !Z_ADA<30>.PIN & I_ADD<2>
+	# !Z_ADA<29>.PIN & I_ADD<1>
+	# Z_FC<0> & Z_FC<1>
+	# !Z_FC<0> & !Z_FC<1>
+	# Z_ADA<31>.PIN & !Z_NCFGOUT & !I_ADD<3>
+;Imported pterms FB2_3
+	# Z_ADA<30>.PIN & !Z_NCFGOUT & !I_ADD<2>
+	# Z_ADA<29>.PIN & !Z_NCFGOUT & !I_ADD<1>
+;Imported pterms FB2_18
+	# !Z_ADA<31>.PIN & I_ADD<3>
+	# !Z_ADA<26>.PIN & Z_NCFGOUT
+	# !Z_ADA<25>.PIN & Z_NCFGOUT
+	# !Z_ADA<24>.PIN & Z_NCFGOUT
+	# Z_NCFGOUT & Z_NCFGIN;
+   !match.CLK = Z_NFCS;	// GCK    
+
+******************************  Device Pin Out *****************************
+
+Device : XC95144XL-10-TQ144
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 VCC                              73 VCC                           
+  2 KPR                              74 P_AD<7>                       
+  3 KPR                              75 P_AD<5>                       
+  4 Z_SD<5>                          76 P_AD<3>                       
+  5 Z_SD<6>                          77 P_AD<1>                       
+  6 Z_SD<4>                          78 P_AD<8>                       
+  7 Z_SD<7>                          79 P_AD<10>                      
+  8 VCC                              80 P_AD<12>                      
+  9 Z_SD<3>                          81 P_AD<14>                      
+ 10 Z_ADA<24>                        82 P_AD<17>                      
+ 11 Z_SD<2>                          83 P_AD<19>                      
+ 12 Z_ADA<25>                        84 VCC                           
+ 13 Z_SD<1>                          85 P_AD<21>                      
+ 14 Z_ADA<26>                        86 P_AD<23>                      
+ 15 Z_SD<0>                          87 P_AD<25>                      
+ 16 KPR                              88 P_AD<27>                      
+ 17 Z_ADA<27>                        89 GND                           
+ 18 GND                              90 GND                           
+ 19 KPR                              91 P_AD<29>                      
+ 20 Z_ADA<28>                        92 P_AD<31>                      
+ 21 Z_ADA<17>                        93 P_AD<30>                      
+ 22 KPR                              94 P_AD<28>                      
+ 23 Z_ADA<18>                        95 P_AD<26>                      
+ 24 Z_ADA<19>                        96 P_AD<24>                      
+ 25 Z_ADA<20>                        97 P_AD<22>                      
+ 26 Z_ADA<22>                        98 P_AD<20>                      
+ 27 Z_ADA<21>                        99 GND                           
+ 28 Z_ADA<23>                       100 P_AD<18>                      
+ 29 GND                             101 P_AD<16>                      
+ 30 I_PCICLK                        102 P_AD<15>                      
+ 31 Z_ADA<31>                       103 P_AD<13>                      
+ 32 Z_ADA<30>                       104 P_AD<11>                      
+ 33 KPR                             105 P_AD<9>                       
+ 34 Z_ADA<29>                       106 P_AD<6>                       
+ 35 KPR                             107 P_AD<4>                       
+ 36 GND                             108 GND                           
+ 37 VCC                             109 VCC                           
+ 38 Z_NFCS                          110 P_AD<2>                       
+ 39 KPR                             111 P_AD<0>                       
+ 40 Z_ADA<16>                       112 KPR                           
+ 41 Z_ADA<15>                       113 KPR                           
+ 42 VCC                             114 GND                           
+ 43 Z_ADA<14>                       115 KPR                           
+ 44 Z_ADA<13>                       116 KPR                           
+ 45 Z_ADA<12>                       117 KPR                           
+ 46 Z_ADA<11>                       118 I_NINT2                       
+ 47 GND                             119 I_NINT6                       
+ 48 Z_ADA<10>                       120 KPR                           
+ 49 Z_FC<1>                         121 I_ADD<3>                      
+ 50 Z_ADA<9>                        122 TDO                           
+ 51 Z_FC<0>                         123 GND                           
+ 52 Z_ADA<8>                        124 I_ADD<2>                      
+ 53 Z_AA<7>                         125 I_ADD<1>                      
+ 54 Z_AA<2>                         126 I_ADD<0>                      
+ 55 VCC                             127 VCC                           
+ 56 Z_AA<3>                         128 I_ZMA                         
+ 57 Z_AA<4>                         129 I_ZLA                         
+ 58 Z_AA<6>                         130 I_PLA<0>                      
+ 59 Z_AA<5>                         131 I_PLA<1>                      
+ 60 Z_NCFGIN                        132 I_CFLT                        
+ 61 Z_NCFGOUT                       133 I_DATA                        
+ 62 GND                             134 I_PCIDL                       
+ 63 TDI                             135 I_PCIENA                      
+ 64 KPR                             136 I_DAOUT                       
+ 65 TMS                             137 I_DATPAR<0>                   
+ 66 KPR                             138 I_DATPAR<1>                   
+ 67 TCK                             139 I_ACC<0>                      
+ 68 Z_NSLAVE                        140 I_ACC<1>                      
+ 69 Z_NINT6                         141 VCC                           
+ 70 Z_NINT2                         142 KPR                           
+ 71 KPR                             143 Z_NIORST                      
+ 72 GND                             144 GND                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc95144xl-10-TQ144
+Optimization Method                         : SPEED
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : STD
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Input Limit                                 : 54
+Pterm Limit                                 : 25
+</pre>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

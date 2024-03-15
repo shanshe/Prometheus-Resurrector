@@ -1,0 +1,28 @@
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn pcil.prj
+-ifmt mixed
+-ofn pcil
+-ofmt NGC
+-p xc9500xl
+-top pcil
+-opt_mode Speed
+-opt_level 2
+-iuc NO
+-keep_hierarchy Yes
+-netlist_hierarchy As_Optimized
+-rtlview Yes
+-hierarchy_separator /
+-bus_delimiter <>
+-case Maintain
+-verilog2001 YES
+-fsm_extract NO
+-mux_extract Yes
+-resource_sharing YES
+-iobuf YES
+-pld_mp YES
+-pld_xp YES
+-pld_ce YES
+-wysiwyg NO
+-equivalent_register_removal YES

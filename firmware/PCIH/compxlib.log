@@ -1,0 +1,61 @@
+    ____  ____
+   /   /\/   /
+  /___/  \  /    VENDOR      : Xilinx Inc.
+  \   \   \/     VERSION     : 14.7 (P.20131013)
+   \   \         APPLICATION : C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\compxlib.exe
+   /   /         CONTENTS    : Compilation Log
+  /___/   /\     FILENAME    : compxlib.log
+  \   \  /  \    
+   \___\/\___\
+
+Release 14.7 - C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\compxlib.exe 14.7 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Processing command line ...
+Reading the compxlib configuration file - 'compxlib.cfg' ...
+Library Source Paths => 'C:/Xilinx/14.7/ISE_DS/ISE'
+Current Working Directory => 'C:\Users\shanshe\Desktop\PCI\PCIH'
+Compilation Mode = FAST
+Execute Mode = ON
+Scheduling library installation & compilation for architectures: acr2 xa9500xl xbr xc9500 xc9500xl xpla3
+
+Scheduling library installation & compilation for libraries: uni9000 coolrunner
+
+Signature:-
+------------------------------------------------------------------------------
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\compxlib.exe -s mti_se -l all -p C:/modeltech_10.1c/win32 -arch cpld -lib unisim -lib simprim -lib uni9000 -lib coolrunner -intstyle ise 
+------------------------------------------------------------------------------
+Get MODELSIM environment variable
+MODELSIM: ( => 'C:\modeltech_10.1c\modelsim.ini' )
+Using MODELSIM ( => 'C:\modeltech_10.1c\modelsim.ini' )
+
+Setting up the simulator 'mti_se' for compilation ...
+The executable path is set to 'C:/modeltech_10.1c/win32' ...
+Setting up the source libraries for simulator 'mti_se' ...
+
+
+
+Compiling Xilinx HDL Libraries for 'mti_se' simulator
+Model Technology ModelSim SE vlog 10.1c Compiler 2012.07 Jul 27 2012
+Language => 'vhdl,verilog'
+Output directory => 'C:\Xilinx\14.7\ISE_DS\ISE'
+
+
+Library verilog.uni9000 will not be compiled, because precompiled info is up to date.
+compxlib[verilog.uni9000]: 0 error(s), 0 warning(s), 33.33 % complete
+
+
+
+Library vhdl.coolrunner will not be compiled, because precompiled info is up to date.
+compxlib[vhdl.coolrunner]: 0 error(s), 0 warning(s), 66.67 % complete
+
+
+
+Library verilog.coolrunner will not be compiled, because precompiled info is up to date.
+compxlib[verilog.coolrunner]: 0 error(s), 0 warning(s), 100.00 % complete
+
+
+Copying setup file 'C:\modeltech_10.1c\modelsim.ini' to 'C:\Xilinx\14.7\ISE_DS\ISE\verilog\mti_se\10.1c\nt/C:\modeltech_10.1c\modelsim.ini' ...
+
+WARNING:Compxlib - Compxlib could not copy 'C:\modeltech_10.1c\modelsim.ini' to 'C:\Xilinx\14.7\ISE_DS\ISE\verilog\mti_se\10.1c\nt/C:\modeltech_10.1c\modelsim.ini' due to some problems in the copyoperation. The compilation will continue without copying.
+

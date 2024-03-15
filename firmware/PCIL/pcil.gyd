@@ -1,0 +1,151 @@
+Pin Freeze File:  version P.20131013
+
+95144XL144TQ XC95144XL-10-TQ144
+I_CFLT S:PIN132
+I_DAOUT S:PIN136
+I_DATA S:PIN133
+I_NINT2 S:PIN118
+I_NINT6 S:PIN119
+I_PCICLK S:PIN30
+I_PCIDL S:PIN134
+I_PCIENA S:PIN135
+I_PLA<0> S:PIN130
+I_PLA<1> S:PIN131
+Z_AA<2> S:PIN54
+Z_AA<3> S:PIN56
+Z_AA<4> S:PIN57
+Z_AA<5> S:PIN59
+Z_AA<6> S:PIN58
+Z_AA<7> S:PIN53
+Z_FC<0> S:PIN51
+Z_FC<1> S:PIN49
+Z_NCFGIN S:PIN60
+Z_NCFGOUT S:PIN61
+Z_NFCS S:PIN38
+Z_NIORST S:PIN143
+I_ACC<0> S:PIN139
+I_ACC<1> S:PIN140
+Z_NINT6 S:PIN69
+Z_NINT2 S:PIN70
+I_ADD<0> S:PIN126
+I_DATPAR<0> S:PIN137
+I_DATPAR<1> S:PIN138
+Z_NSLAVE S:PIN68
+P_AD<24> S:PIN96
+P_AD<25> S:PIN87
+P_AD<26> S:PIN95
+P_AD<27> S:PIN88
+P_AD<28> S:PIN94
+P_AD<29> S:PIN91
+P_AD<30> S:PIN93
+P_AD<31> S:PIN92
+P_AD<16> S:PIN101
+P_AD<17> S:PIN82
+P_AD<18> S:PIN100
+P_AD<19> S:PIN83
+P_AD<20> S:PIN98
+P_AD<21> S:PIN85
+P_AD<22> S:PIN97
+P_AD<23> S:PIN86
+P_AD<8> S:PIN78
+P_AD<9> S:PIN105
+P_AD<10> S:PIN79
+P_AD<11> S:PIN104
+P_AD<12> S:PIN80
+P_AD<13> S:PIN103
+P_AD<14> S:PIN81
+P_AD<15> S:PIN102
+P_AD<0> S:PIN111
+P_AD<1> S:PIN77
+P_AD<2> S:PIN110
+P_AD<3> S:PIN76
+P_AD<4> S:PIN107
+P_AD<5> S:PIN75
+P_AD<6> S:PIN106
+P_AD<7> S:PIN74
+I_ADD<1> S:PIN125
+I_ADD<2> S:PIN124
+I_ADD<3> S:PIN121
+I_ZLA S:PIN129
+I_ZMA S:PIN128
+Z_ADA<24> S:PIN10
+Z_ADA<25> S:PIN12
+Z_ADA<26> S:PIN14
+Z_ADA<27> S:PIN17
+Z_ADA<28> S:PIN20
+Z_ADA<29> S:PIN34
+Z_ADA<30> S:PIN32
+Z_ADA<31> S:PIN31
+Z_SD<0> S:PIN15
+Z_SD<1> S:PIN13
+Z_SD<2> S:PIN11
+Z_SD<3> S:PIN9
+Z_SD<4> S:PIN6
+Z_SD<5> S:PIN4
+Z_SD<6> S:PIN5
+Z_SD<7> S:PIN7
+Z_ADA<16> S:PIN40
+Z_ADA<17> S:PIN21
+Z_ADA<18> S:PIN23
+Z_ADA<19> S:PIN24
+Z_ADA<20> S:PIN25
+Z_ADA<21> S:PIN27
+Z_ADA<22> S:PIN26
+Z_ADA<23> S:PIN28
+Z_ADA<8> S:PIN52
+Z_ADA<9> S:PIN50
+Z_ADA<10> S:PIN48
+Z_ADA<11> S:PIN46
+Z_ADA<12> S:PIN45
+Z_ADA<13> S:PIN44
+Z_ADA<14> S:PIN43
+Z_ADA<15> S:PIN41
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 z_data_x<18> laddr_x_6 z_data_x<3> z_data_x<20>
+		 laddr_x_2 z_data_x<4> laddr_x<9> z_data_x<17>
+		 laddr_x<12> z_data_x<7> z_data_x<19> z_data_x<22>
+		 laddr_x<11> z_data_x<21> z_data_x<23> laddr_x<10>
+		 Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D EXP10_
+PARTITION FB2_1 match EXP11_ laddr_x<17> z_data_x<13>
+		 laddr_x<18> laddr_x<19> laddr_x<20> z_data_x<14>
+		 z_data_x<12> z_data_x<15> z_data_x<11> z_data_x<0>
+		 z_data_x<1> z_data_x<10> z_data_x<9> z_data_x<2>
+		 z_data_x<8> laddr_x<16>
+PARTITION FB3_1 EXP12_ z_data_x<6> z_data_x<31> z_data_x<29>
+		
+PARTITION FB3_6 z_data_x<5> z_data_x<27>
+PARTITION FB3_9 z_data_x<16> z_data_x<26> z_data_x<30> z_data_x<28>
+		
+PARTITION FB3_14 laddr_x_5 z_data_x<25> laddr_x_4 Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+		 Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D
+PARTITION FB4_1 laddr_x_3 I_ADD_0_OBUF$BUF1 laddr_x_1 laddr_x<8>
+		 laddr_x_7 laddr_x_0 laddr_x<15> laddr_x<14>
+		 laddr_x<13> $OpTx$INV$30 $OpTx$INV$28 Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D
+		 I_DATPAR_0_OBUF $OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248 I_DATPAR_1_OBUF I_ACC_0_OBUF
+		 I_ACC_1_OBUF Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001_D
+PARTITION FB5_2 z_data_x<24>
+PARTITION FB5_10 Z_NSLAVE_OBUF
+PARTITION FB5_13 I_ADD_0_OBUF$BUF0
+PARTITION FB5_17 I_ADD_0_OBUF
+
+PARTITION FB6_1 Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D adpb_x<14> EXP13_ adpb_x<8>
+		 adpb_x<10>
+PARTITION FB6_10 EXP14_ Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001_D EXP15_
+		 bar_x_2 bar_x_1 Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D bar_x_0
+		 EXP16_
+PARTITION FB7_3 adpb_x<13>
+PARTITION FB7_5 adpb_x<15> adpb_x<11> adpb_x<9> adpb_x<0>
+		 adpb_x<4> adpb_x<2> adpa_x<9> adpa_x<13>
+		 adpb_x<6> adpa_x<15> adpa_x<1> adpa_x<11>
+		 adpa_x<3>
+
+PARTITION FB8_1 $OpTx$INV$31 adpa_x<5> adpa_x<2> adpa_x<14>
+		 adpa_x<7> adpa_x<6> $OpTx$INV$29 adpa_x<4>
+		 adpa_x<0> adpa_x<8> adpa_x<12> adpa_x<10>
+		 adpb_x<5> adpb_x<7> adpb_x<3> adpb_x<12>
+		 adpb_x<1> $OpTx$INV$27
+

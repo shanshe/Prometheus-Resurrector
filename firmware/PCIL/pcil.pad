@@ -1,0 +1,173 @@
+Release 8.1i - Fit P.20131013
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+ 3-15-2024  4:32PM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  pcil.ngd
+output file: pcil.pad
+Part type:   xc95144xl
+Speed grade: -10
+Package:     tq144
+
+Pinout by Pin Number:
+
+-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
+P1|VCC||VCCIO||||||||||
+P2|TIE||I/O/GTS3||||||||||
+P3|TIE||I/O/GTS4||||||||||
+P4|Z_SD<5>|I/O|I/O|BIDIR|||||||||
+P5|Z_SD<6>|I/O|I/O/GTS1|BIDIR|||||||||
+P6|Z_SD<4>|I/O|I/O/GTS2|BIDIR|||||||||
+P7|Z_SD<7>|I/O|I/O|BIDIR|||||||||
+P8|VCC||VCCINT||||||||||
+P9|Z_SD<3>|I/O|I/O|BIDIR|||||||||
+P10|Z_ADA<24>|I/O|I/O|BIDIR|||||||||
+P11|Z_SD<2>|I/O|I/O|BIDIR|||||||||
+P12|Z_ADA<25>|I/O|I/O|BIDIR|||||||||
+P13|Z_SD<1>|I/O|I/O|BIDIR|||||||||
+P14|Z_ADA<26>|I/O|I/O|BIDIR|||||||||
+P15|Z_SD<0>|I/O|I/O|BIDIR|||||||||
+P16|TIE||I/O||||||||||
+P17|Z_ADA<27>|I/O|I/O|BIDIR|||||||||
+P18|GND||GND||||||||||
+P19|TIE||I/O||||||||||
+P20|Z_ADA<28>|I/O|I/O|BIDIR|||||||||
+P21|Z_ADA<17>|I/O|I/O|BIDIR|||||||||
+P22|TIE||I/O||||||||||
+P23|Z_ADA<18>|I/O|I/O|BIDIR|||||||||
+P24|Z_ADA<19>|I/O|I/O|BIDIR|||||||||
+P25|Z_ADA<20>|I/O|I/O|BIDIR|||||||||
+P26|Z_ADA<22>|I/O|I/O|BIDIR|||||||||
+P27|Z_ADA<21>|I/O|I/O|BIDIR|||||||||
+P28|Z_ADA<23>|I/O|I/O|BIDIR|||||||||
+P29|GND||GND||||||||||
+P30|I_PCICLK|GCK|I/O/GCK1||||||||||
+P31|Z_ADA<31>|I/O|I/O|BIDIR|||||||||
+P32|Z_ADA<30>|I/O|I/O/GCK2|BIDIR|||||||||
+P33|TIE||I/O||||||||||
+P34|Z_ADA<29>|I/O|I/O|BIDIR|||||||||
+P35|TIE||I/O||||||||||
+P36|GND||GND||||||||||
+P37|VCC||VCCIO||||||||||
+P38|Z_NFCS|GCK/I|I/O/GCK3||||||||||
+P39|TIE||I/O||||||||||
+P40|Z_ADA<16>|I/O|I/O|BIDIR|||||||||
+P41|Z_ADA<15>|I/O|I/O|BIDIR|||||||||
+P42|VCC||VCCINT||||||||||
+P43|Z_ADA<14>|I/O|I/O|BIDIR|||||||||
+P44|Z_ADA<13>|I/O|I/O|BIDIR|||||||||
+P45|Z_ADA<12>|I/O|I/O|BIDIR|||||||||
+P46|Z_ADA<11>|I/O|I/O|BIDIR|||||||||
+P47|GND||GND||||||||||
+P48|Z_ADA<10>|I/O|I/O|BIDIR|||||||||
+P49|Z_FC<1>|I|I/O|INPUT|||||||||
+P50|Z_ADA<9>|I/O|I/O|BIDIR|||||||||
+P51|Z_FC<0>|I|I/O|INPUT|||||||||
+P52|Z_ADA<8>|I/O|I/O|BIDIR|||||||||
+P53|Z_AA<7>|I|I/O|INPUT|||||||||
+P54|Z_AA<2>|I|I/O|INPUT|||||||||
+P55|VCC||VCCIO||||||||||
+P56|Z_AA<3>|I|I/O|INPUT|||||||||
+P57|Z_AA<4>|I|I/O|INPUT|||||||||
+P58|Z_AA<6>|I|I/O|INPUT|||||||||
+P59|Z_AA<5>|I|I/O|INPUT|||||||||
+P60|Z_NCFGIN|I|I/O|INPUT|||||||||
+P61|Z_NCFGOUT|I|I/O|INPUT|||||||||
+P62|GND||GND||||||||||
+P63|TDI||TDI||||||||||
+P64|TIE||I/O||||||||||
+P65|TMS||TMS||||||||||
+P66|TIE||I/O||||||||||
+P67|TCK||TCK||||||||||
+P68|Z_NSLAVE|O|I/O|OUTPUT|||||||||
+P69|Z_NINT6|O|I/O|OUTPUT|||||||||
+P70|Z_NINT2|O|I/O|OUTPUT|||||||||
+P71|TIE||I/O||||||||||
+P72|GND||GND||||||||||
+P73|VCC||VCCIO||||||||||
+P74|P_AD<7>|I/O|I/O|BIDIR|||||||||
+P75|P_AD<5>|I/O|I/O|BIDIR|||||||||
+P76|P_AD<3>|I/O|I/O|BIDIR|||||||||
+P77|P_AD<1>|I/O|I/O|BIDIR|||||||||
+P78|P_AD<8>|I/O|I/O|BIDIR|||||||||
+P79|P_AD<10>|I/O|I/O|BIDIR|||||||||
+P80|P_AD<12>|I/O|I/O|BIDIR|||||||||
+P81|P_AD<14>|I/O|I/O|BIDIR|||||||||
+P82|P_AD<17>|I/O|I/O|BIDIR|||||||||
+P83|P_AD<19>|I/O|I/O|BIDIR|||||||||
+P84|VCC||VCCINT||||||||||
+P85|P_AD<21>|I/O|I/O|BIDIR|||||||||
+P86|P_AD<23>|I/O|I/O|BIDIR|||||||||
+P87|P_AD<25>|I/O|I/O|BIDIR|||||||||
+P88|P_AD<27>|I/O|I/O|BIDIR|||||||||
+P89|GND||GND||||||||||
+P90|GND||GND||||||||||
+P91|P_AD<29>|I/O|I/O|BIDIR|||||||||
+P92|P_AD<31>|I/O|I/O|BIDIR|||||||||
+P93|P_AD<30>|I/O|I/O|BIDIR|||||||||
+P94|P_AD<28>|I/O|I/O|BIDIR|||||||||
+P95|P_AD<26>|I/O|I/O|BIDIR|||||||||
+P96|P_AD<24>|I/O|I/O|BIDIR|||||||||
+P97|P_AD<22>|I/O|I/O|BIDIR|||||||||
+P98|P_AD<20>|I/O|I/O|BIDIR|||||||||
+P99|GND||GND||||||||||
+P100|P_AD<18>|I/O|I/O|BIDIR|||||||||
+P101|P_AD<16>|I/O|I/O|BIDIR|||||||||
+P102|P_AD<15>|I/O|I/O|BIDIR|||||||||
+P103|P_AD<13>|I/O|I/O|BIDIR|||||||||
+P104|P_AD<11>|I/O|I/O|BIDIR|||||||||
+P105|P_AD<9>|I/O|I/O|BIDIR|||||||||
+P106|P_AD<6>|I/O|I/O|BIDIR|||||||||
+P107|P_AD<4>|I/O|I/O|BIDIR|||||||||
+P108|GND||GND||||||||||
+P109|VCC||VCCIO||||||||||
+P110|P_AD<2>|I/O|I/O|BIDIR|||||||||
+P111|P_AD<0>|I/O|I/O|BIDIR|||||||||
+P112|TIE||I/O||||||||||
+P113|TIE||I/O||||||||||
+P114|GND||GND||||||||||
+P115|TIE||I/O||||||||||
+P116|TIE||I/O||||||||||
+P117|TIE||I/O||||||||||
+P118|I_NINT2|I|I/O|INPUT|||||||||
+P119|I_NINT6|I|I/O|INPUT|||||||||
+P120|TIE||I/O||||||||||
+P121|I_ADD<3>|O|I/O|OUTPUT|||||||||
+P122|TDO||TDO||||||||||
+P123|GND||GND||||||||||
+P124|I_ADD<2>|O|I/O|OUTPUT|||||||||
+P125|I_ADD<1>|O|I/O|OUTPUT|||||||||
+P126|I_ADD<0>|O|I/O|OUTPUT|||||||||
+P127|VCC||VCCIO||||||||||
+P128|I_ZMA|O|I/O|OUTPUT|||||||||
+P129|I_ZLA|O|I/O|OUTPUT|||||||||
+P130|I_PLA<0>|I|I/O|INPUT|||||||||
+P131|I_PLA<1>|I|I/O|INPUT|||||||||
+P132|I_CFLT|I|I/O|INPUT|||||||||
+P133|I_DATA|I|I/O|INPUT|||||||||
+P134|I_PCIDL|I|I/O|INPUT|||||||||
+P135|I_PCIENA|I|I/O|INPUT|||||||||
+P136|I_DAOUT|I|I/O|INPUT|||||||||
+P137|I_DATPAR<0>|O|I/O|OUTPUT|||||||||
+P138|I_DATPAR<1>|O|I/O|OUTPUT|||||||||
+P139|I_ACC<0>|O|I/O|OUTPUT|||||||||
+P140|I_ACC<1>|O|I/O|OUTPUT|||||||||
+P141|VCC||VCCINT||||||||||
+P142|TIE||I/O||||||||||
+P143|Z_NIORST|GSR|I/O/GSR||||||||||
+P144|GND||GND||||||||||
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

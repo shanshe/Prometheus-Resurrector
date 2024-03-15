@@ -1,0 +1,800 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+$OpTx$INV$27 = I_DAOUT & !Z_ADA<12>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<20>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19>;    
+</td></tr><tr><td>
+$OpTx$INV$28 = I_DAOUT & !Z_ADA<11>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<19>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_10
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<20>;    
+</td></tr><tr><td>
+$OpTx$INV$29 = I_DAOUT & !Z_ADA<10>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<18>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<19> & laddr_x<20>;    
+</td></tr><tr><td>
+$OpTx$INV$30 = I_DAOUT & !Z_ADA<9>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<17>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<18> & laddr_x<19> & laddr_x<20>;    
+</td></tr><tr><td>
+$OpTx$INV$31 = I_DAOUT & !Z_ADA<20>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<12>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<20>;    
+</td></tr><tr><td>
+$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248 = I_DAOUT & Z_ADA<21>.PIN & Z_ADA<22>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & !Z_ADA<21>.PIN & !Z_ADA<22>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<13> & laddr_x<14>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<13> & !laddr_x<14>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<20>;    
+</td></tr><tr><td>
+I_ACC<0> = laddr_x<13> & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<20>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_17
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !laddr_x<12> & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<20>;    
+</td></tr><tr><td>
+I_ACC<1> = laddr_x<12> & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<20>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# laddr_x<13> & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<20>;    
+</td></tr><tr><td>
+I_ADD<0> = Gnd;    
+</td></tr><tr><td>
+I_ADD<1>.D = Z_ADA<29>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   I_ADD<1>.CLK = I_CFLT;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !I_ADD<1>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+I_ADD<2>.D = Z_ADA<30>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   I_ADD<2>.CLK = I_CFLT;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !I_ADD<2>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+I_ADD<3>.D = Z_ADA<31>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   I_ADD<3>.CLK = I_CFLT;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !I_ADD<3>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+!I_DATPAR<0> = 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001_D
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$ 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_12
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0000_D_INV$248;    
+</td></tr><tr><td>
+!I_DATPAR<1> = 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001_D
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$ 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D;    
+</td></tr><tr><td>
+I_ZLA.D = Z_ADA<8>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !I_ZLA.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !I_ZLA.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+I_ZMA.D = Z_ADA<15>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !I_ZMA.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !I_ZMA.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0000_D = !I_DAOUT & laddr_x<10> & laddr_x<11> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<9> & $OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<10> & !laddr_x<11> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<9> & !$OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<10> & laddr_x<11> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<9> & !$OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<10> & laddr_x<11> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!laddr_x<9> & $OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<10> & !laddr_x<11> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<9> & $OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & Z_ADA<18>.PIN & Z_ADA<19>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_ADA<17>.PIN & $OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & !Z_ADA<18>.PIN & Z_ADA<19>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_ADA<17>.PIN & !$OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<10> & laddr_x<11> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!laddr_x<9> & !$OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<10> & !laddr_x<11> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!laddr_x<9> & $OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<10> & !laddr_x<11> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!laddr_x<9> & !$OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_18
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & Z_ADA<18>.PIN & Z_ADA<19>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_ADA<17>.PIN & !$OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & Z_ADA<18>.PIN & !Z_ADA<19>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_ADA<17>.PIN & !$OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & Z_ADA<18>.PIN & !Z_ADA<19>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_ADA<17>.PIN & $OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & !Z_ADA<18>.PIN & Z_ADA<19>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_ADA<17>.PIN & $OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & !Z_ADA<18>.PIN & !Z_ADA<19>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_ADA<17>.PIN & $OpTx$INV$31
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_1
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & !Z_ADA<18>.PIN & !Z_ADA<19>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_ADA<17>.PIN & !$OpTx$INV$31;    
+</td></tr><tr><td>
+!Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<0>_Mxor__xor0001__xor0000_D = $OpTx$INV$28
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$ $OpTx$INV$27 & $OpTx$INV$30 & !$OpTx$INV$29
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# $OpTx$INV$27 & !$OpTx$INV$30 & $OpTx$INV$29
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !$OpTx$INV$27 & $OpTx$INV$30 & $OpTx$INV$29
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !$OpTx$INV$27 & !$OpTx$INV$30 & !$OpTx$INV$29;    
+</td></tr><tr><td>
+Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0000__xor0001_D = !I_DAOUT & laddr_x<8>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<13>.PIN & I_DAOUT & Z_ADA<14>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_ADA<15>.PIN & !Z_ADA<16>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<13>.PIN & I_DAOUT & Z_ADA<14>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_ADA<15>.PIN & Z_ADA<16>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<13>.PIN & I_DAOUT & Z_ADA<14>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_ADA<15>.PIN & Z_ADA<16>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<13>.PIN & I_DAOUT & Z_ADA<14>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_ADA<15>.PIN & !Z_ADA<16>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_1
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<13>.PIN & I_DAOUT & !Z_ADA<14>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_ADA<15>.PIN & Z_ADA<16>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<13>.PIN & I_DAOUT & !Z_ADA<14>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_ADA<15>.PIN & !Z_ADA<16>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<13>.PIN & I_DAOUT & !Z_ADA<14>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_ADA<15>.PIN & !Z_ADA<16>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<13>.PIN & I_DAOUT & !Z_ADA<14>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_ADA<15>.PIN & Z_ADA<16>.PIN;    
+</td></tr><tr><td>
+Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001/Mxor_i_datpar_x<0>_Mxor__xor0001_Mxor__xor0001__xor0001_D = !I_DAOUT & !laddr_x<15> & laddr_x<16>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_11
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & Z_ADA<8>.PIN & !Z_ADA<23>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & !Z_ADA<8>.PIN & Z_ADA<23>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<15> & !laddr_x<16>;    
+</td></tr><tr><td>
+Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0001_D = !I_DAOUT & I_ZLA & Z_AA<5> & Z_AA<6> & !Z_AA<7>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & I_ZLA & Z_AA<5> & !Z_AA<6> & Z_AA<7>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & I_ZLA & !Z_AA<5> & Z_AA<6> & Z_AA<7>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !I_ZLA & Z_AA<5> & Z_AA<6> & Z_AA<7>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !I_ZLA & !Z_AA<5> & !Z_AA<6> & Z_AA<7>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB6_11
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<31>.PIN & Z_ADA<30>.PIN & !Z_ADA<29>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_DAOUT & Z_SD<0>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & I_ZLA & !Z_AA<5> & !Z_AA<6> & !Z_AA<7>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !I_ZLA & Z_AA<5> & !Z_AA<6> & !Z_AA<7>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !I_ZLA & !Z_AA<5> & Z_AA<6> & !Z_AA<7>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB6_13
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<31>.PIN & Z_ADA<30>.PIN & Z_ADA<29>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_DAOUT & !Z_SD<0>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<31>.PIN & !Z_ADA<30>.PIN & Z_ADA<29>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_DAOUT & Z_SD<0>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<31>.PIN & !Z_ADA<30>.PIN & !Z_ADA<29>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_DAOUT & !Z_SD<0>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<31>.PIN & Z_ADA<30>.PIN & Z_ADA<29>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_DAOUT & Z_SD<0>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<31>.PIN & !Z_ADA<30>.PIN & !Z_ADA<29>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_DAOUT & Z_SD<0>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB6_14
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<31>.PIN & Z_ADA<30>.PIN & !Z_ADA<29>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_DAOUT & !Z_SD<0>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<31>.PIN & !Z_ADA<30>.PIN & Z_ADA<29>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_DAOUT & !Z_SD<0>.PIN;    
+</td></tr><tr><td>
+Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0001__xor0000_D = !I_DAOUT & laddr_x_1 & laddr_x_2 & laddr_x_3 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!laddr_x_4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x_1 & laddr_x_2 & !laddr_x_3 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x_4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x_1 & !laddr_x_2 & laddr_x_3 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x_4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x_1 & laddr_x_2 & laddr_x_3 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x_4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x_1 & !laddr_x_2 & !laddr_x_3 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x_4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_1
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & Z_SD<1>.PIN & Z_SD<2>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_SD<3>.PIN & !Z_SD<4>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & Z_SD<1>.PIN & Z_SD<2>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_SD<3>.PIN & Z_SD<4>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & !Z_SD<1>.PIN & Z_SD<2>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_SD<3>.PIN & !Z_SD<4>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & !Z_SD<1>.PIN & !Z_SD<2>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_SD<3>.PIN & !Z_SD<4>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & !Z_SD<1>.PIN & !Z_SD<2>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_SD<3>.PIN & Z_SD<4>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_2
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & Z_SD<1>.PIN & !Z_SD<2>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_SD<3>.PIN & !Z_SD<4>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_17
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & Z_SD<1>.PIN & !Z_SD<2>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_SD<3>.PIN & Z_SD<4>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# I_DAOUT & !Z_SD<1>.PIN & Z_SD<2>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_SD<3>.PIN & Z_SD<4>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x_1 & !laddr_x_2 & !laddr_x_3 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!laddr_x_4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x_1 & laddr_x_2 & !laddr_x_3 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!laddr_x_4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x_1 & !laddr_x_2 & laddr_x_3 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!laddr_x_4;    
+</td></tr><tr><td>
+Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000__xor0001_D = !I_DAOUT & I_ZMA & laddr_x_5 & laddr_x_6 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_PLA<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & I_ZMA & laddr_x_5 & !laddr_x_6 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_PLA<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & I_ZMA & !laddr_x_5 & laddr_x_6 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_PLA<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !I_ZMA & laddr_x_5 & laddr_x_6 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_PLA<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !I_ZMA & !laddr_x_5 & !laddr_x_6 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_PLA<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB6_2
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<24>.PIN & I_DAOUT & Z_SD<5>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_SD<6>.PIN & !Z_SD<7>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<24>.PIN & I_DAOUT & !Z_SD<5>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_SD<6>.PIN & !Z_SD<7>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<24>.PIN & I_DAOUT & Z_SD<5>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_SD<6>.PIN & Z_SD<7>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB6_18
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<24>.PIN & I_DAOUT & Z_SD<5>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_SD<6>.PIN & Z_SD<7>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<24>.PIN & I_DAOUT & !Z_SD<5>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_SD<6>.PIN & Z_SD<7>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & I_ZMA & !laddr_x_5 & !laddr_x_6 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_PLA<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !I_ZMA & laddr_x_5 & !laddr_x_6 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_PLA<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !I_ZMA & !laddr_x_5 & laddr_x_6 & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_PLA<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB6_17
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<24>.PIN & I_DAOUT & Z_SD<5>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_SD<6>.PIN & !Z_SD<7>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<24>.PIN & I_DAOUT & !Z_SD<5>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_SD<6>.PIN & !Z_SD<7>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<24>.PIN & I_DAOUT & !Z_SD<5>.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_SD<6>.PIN & Z_SD<7>.PIN;    
+</td></tr><tr><td>
+Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0000_D = ;Imported pterms FB3_16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	  Z_ADA<26>.PIN & !Z_ADA<25>.PIN & I_DAOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<26>.PIN & Z_ADA<25>.PIN & I_DAOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & Z_AA<2> & !I_PLA<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !Z_AA<2> & I_PLA<1>;    
+</td></tr><tr><td>
+Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001/Mxor_i_datpar_x<1>_Mxor__xor0000_Mxor__xor0000__xor0001_D = !I_DAOUT & !Z_AA<3> & Z_AA<4>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB6_10
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<28>.PIN & !Z_ADA<27>.PIN & I_DAOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<28>.PIN & Z_ADA<27>.PIN & I_DAOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & Z_AA<3> & !Z_AA<4>;    
+</td></tr><tr><td>
+P_AD<0> = Z_ADA<24>.PIN & I_DAOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & I_PLA<0>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<0>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<1> = Z_ADA<25>.PIN & I_DAOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & I_PLA<1>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<1>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<2> = Z_ADA<26>.PIN & I_DAOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & Z_AA<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<2>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<3> = Z_ADA<27>.PIN & I_DAOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & Z_AA<3>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<3>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<4> = Z_ADA<28>.PIN & I_DAOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & Z_AA<4>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<4>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<5> = Z_ADA<29>.PIN & I_DAOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & Z_AA<5>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<5>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<6> = !I_DAOUT & Z_AA<6>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB6_3
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<30>.PIN & I_DAOUT;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<6>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<7> = Z_ADA<31>.PIN & I_DAOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & Z_AA<7>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<7>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<8> = I_DAOUT & Z_SD<0>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & I_ZLA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<8>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<9> = I_DAOUT & Z_SD<1>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x_1;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<9>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<10> = I_DAOUT & Z_SD<2>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x_2;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<10>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<11> = I_DAOUT & Z_SD<3>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x_3;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<11>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<12> = I_DAOUT & Z_SD<4>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x_4;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<12>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<13> = I_DAOUT & Z_SD<5>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x_5;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<13>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<14> = I_DAOUT & Z_SD<6>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x_6;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<14>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<15> = I_DAOUT & Z_SD<7>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & I_ZMA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<15>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<16> = I_DAOUT & Z_ADA<16>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<8>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<16>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<17> = I_DAOUT & Z_ADA<17>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<9>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<17>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<18> = I_DAOUT & Z_ADA<18>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<10>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<18>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<19> = I_DAOUT & Z_ADA<19>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<11>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<19>.OE = I_PCIENA;    
+</td></tr><tr><td>
+!P_AD<20> = I_DAOUT & !Z_ADA<20>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<12>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<20>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<20>.OE = I_PCIENA;    
+</td></tr><tr><td>
+!P_AD<21> = I_DAOUT & !Z_ADA<21>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<13>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<20>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<21>.OE = I_PCIENA;    
+</td></tr><tr><td>
+!P_AD<22> = I_DAOUT & !Z_ADA<22>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<14>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<15> & laddr_x<16> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<17> & laddr_x<18> & laddr_x<19> & laddr_x<20>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<22>.OE = I_PCIENA;    
+</td></tr><tr><td>
+!P_AD<23> = I_DAOUT & !Z_ADA<23>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<15>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<16> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<17> & laddr_x<18> & laddr_x<19> & laddr_x<20>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<23>.OE = I_PCIENA;    
+</td></tr><tr><td>
+!P_AD<24> = I_DAOUT & !Z_ADA<8>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<16>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<17> & laddr_x<18> & laddr_x<19> & laddr_x<20>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<24>.OE = I_PCIENA;    
+</td></tr><tr><td>
+!P_AD<25> = I_DAOUT & !Z_ADA<9>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<17>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<18> & laddr_x<19> & laddr_x<20>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<25>.OE = I_PCIENA;    
+</td></tr><tr><td>
+!P_AD<26> = I_DAOUT & !Z_ADA<10>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<18>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<19> & laddr_x<20>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<26>.OE = I_PCIENA;    
+</td></tr><tr><td>
+!P_AD<27> = I_DAOUT & !Z_ADA<11>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<19>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<20>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<27>.OE = I_PCIENA;    
+</td></tr><tr><td>
+!P_AD<28> = I_DAOUT & !Z_ADA<12>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & !laddr_x<20>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_DAOUT & laddr_x<14> & laddr_x<15> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	laddr_x<16> & laddr_x<17> & laddr_x<18> & laddr_x<19>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<28>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<29> = Z_ADA<13>.PIN & I_DAOUT;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<29>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<30> = I_DAOUT & Z_ADA<14>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<30>.OE = I_PCIENA;    
+</td></tr><tr><td>
+P_AD<31> = I_DAOUT & Z_ADA<15>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_AD<31>.OE = I_PCIENA;    
+</td></tr><tr><td>
+Z_ADA<8>.D = P_AD<24>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<8>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<8>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<8>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<8>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<9>.D = P_AD<25>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<9>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<9>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<9>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<9>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<10>.D = P_AD<26>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<10>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<10>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<10>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<10>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<11>.D = P_AD<27>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<11>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<11>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<11>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<11>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<12>.D = P_AD<28>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<12>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<12>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<12>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<12>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<13>.D = P_AD<29>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<13>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<13>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<13>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<13>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<14>.D = P_AD<30>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<14>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<14>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<14>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<14>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<15>.D = P_AD<31>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<15>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<15>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<15>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<15>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<16>.D = P_AD<16>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<16>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<16>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<16>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<16>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<17>.D = P_AD<17>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<17>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<17>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<17>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<17>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<18>.D = P_AD<18>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<18>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<18>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<18>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<18>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<19>.D = P_AD<19>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<19>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<19>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<19>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<19>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<20>.D = P_AD<20>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<20>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<20>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<20>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<20>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<21>.D = P_AD<21>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<21>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<21>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<21>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<21>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<22>.D = P_AD<22>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<22>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<22>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<22>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<22>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<23>.D = P_AD<23>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<23>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<23>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<23>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<23>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<24>.D = P_AD<0>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<24>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<24>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<24>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<24>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<25>.D = P_AD<1>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<25>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<25>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<25>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<25>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<26>.D = P_AD<2>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<26>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<26>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<26>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<26>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<27>.D = P_AD<3>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<27>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<27>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<27>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<27>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<28>.D = P_AD<4>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<28>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<28>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<28>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<28>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<29>.D = P_AD<5>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<29>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<29>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<29>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<29>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<30>.D = P_AD<6>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<30>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<30>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<30>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<30>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_ADA<31>.D = P_AD<7>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<31>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<31>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<31>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<31>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_NINT2 = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_NINT2.OE = !I_NINT2;    
+</td></tr><tr><td>
+Z_NINT6 = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_NINT6.OE = !I_NINT6;    
+</td></tr><tr><td>
+!Z_NSLAVE.D = !Z_NFCS & match;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_NSLAVE.CLK = I_PCICLK;	// GCK    
+</td></tr><tr><td>
+Z_SD<0>.D = P_AD<8>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<0>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<0>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<0>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<0>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_SD<1>.D = P_AD<9>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<1>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<1>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<1>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<1>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_SD<2>.D = P_AD<10>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<2>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<2>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<2>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<2>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_SD<3>.D = P_AD<11>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<3>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<3>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<3>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<3>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_SD<4>.D = P_AD<12>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<4>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<4>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<4>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<4>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_SD<5>.D = P_AD<13>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<5>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<5>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<5>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<5>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_SD<6>.D = P_AD<14>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<6>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<6>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<6>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<6>.CE = I_PCIDL;    
+</td></tr><tr><td>
+Z_SD<7>.D = P_AD<15>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<7>.CLK = I_PCICLK;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<7>.AP = Z_NSLAVE;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<7>.OE = I_DATA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_SD<7>.CE = I_PCIDL;    
+</td></tr><tr><td>
+laddr_x<8>.D = Z_ADA<16>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<8>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<8>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x<9>.D = Z_ADA<17>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<9>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<9>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x<10>.D = ;Imported pterms FB1_15
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	  Z_ADA<18>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<10>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<10>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x<11>.D = Z_ADA<19>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<11>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<11>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x<12>.D = Z_ADA<20>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<12>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<12>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x<13>.D = Z_ADA<21>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<13>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<13>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x<14>.D = Z_ADA<22>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<14>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<14>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x<15>.D = Z_ADA<23>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<15>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<15>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x<16>.D = ;Imported pterms FB2_17
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	  Z_ADA<24>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<16>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<16>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x<17>.D = Z_ADA<25>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<17>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<17>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x<18>.D = Z_ADA<26>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<18>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<18>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x<19>.D = Z_ADA<27>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<19>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<19>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x<20>.D = Z_ADA<28>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<20>.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x<20>.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x_1.D = Z_ADA<9>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x_1.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x_1.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x_2.D = Z_ADA<10>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x_2.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x_2.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x_3.D = Z_ADA<11>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x_3.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x_3.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x_4.D = Z_ADA<12>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x_4.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x_4.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x_5.D = Z_ADA<13>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x_5.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x_5.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+laddr_x_6.D = Z_ADA<14>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x_6.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !laddr_x_6.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+!match.D = !Z_ADA<31>.PIN & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<30>.PIN & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<29>.PIN & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<28>.PIN & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<27>.PIN & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_2
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<30>.PIN & I_ADD<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<29>.PIN & I_ADD<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_FC<0> & Z_FC<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_FC<0> & !Z_FC<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<31>.PIN & !Z_NCFGOUT & !I_ADD<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_3
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<30>.PIN & !Z_NCFGOUT & !I_ADD<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_ADA<29>.PIN & !Z_NCFGOUT & !I_ADD<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_18
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<31>.PIN & I_ADD<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<26>.PIN & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<25>.PIN & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_ADA<24>.PIN & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & Z_NCFGIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !match.CLK = Z_NFCS;	// GCK    
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

@@ -1,0 +1,391 @@
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+netgen -intstyle ise -rpw 100 -ar Structure -tm pcih -w -dir netgen/fit -ofmt vhdl -sim pcih.nga pcih_timesim.vhd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -ofmt vhdl -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper pcih.ngd 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 
+xst -intstyle ise -ifn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.xst" -ofn "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc pcih.ucf -p xc95144xl-TQ144-10 pcih.ngc pcih.ngd  
+cpldfit -intstyle ise -p xc95144xl-10-TQ144 -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 90 -unused float -power std -terminate keeper pcih.ngd 
+XSLTProcess pcih_build.xml 
+tsim -intstyle ise pcih pcih.nga 
+hprep6 -s IEEE1149 -n pcih -i pcih 

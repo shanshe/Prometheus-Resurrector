@@ -1,0 +1,1045 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+$OpTx$FX_DC$67 = Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB8_14
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_ACC<1> & I_ACC<0> & I_ZMA;    
+</td></tr><tr><td>
+$OpTx$INV$62 = ;Imported pterms FB4_15
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	  Z_NSLAVE
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !I_ACC<1> & I_ACC<0> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0>;    
+</td></tr><tr><td>
+DEBUG<0>.T = Vcc;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   DEBUG<0>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   DEBUG<0>.AR = DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   DEBUG<0>.CE = THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+DEBUG<1>.T = DEBUG<0>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   DEBUG<1>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   DEBUG<1>.AR = DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   DEBUG<1>.CE = THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+DEBUG<2>.T = DEBUG<0> & DEBUG<1>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   DEBUG<2>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   DEBUG<2>.AR = DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   DEBUG<2>.CE = THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+DEBUG<3>.T = DEBUG<0> & DEBUG<1> & DEBUG<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   DEBUG<3>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   DEBUG<3>.AR = DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   DEBUG<3>.CE = THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+DEBUG<4> = P_CBE<0>.PIN;    
+</td></tr><tr><td>
+DEBUG<5> = P_CBE<1>.PIN;    
+</td></tr><tr><td>
+DEBUG<6> = P_CBE<2>.PIN;    
+</td></tr><tr><td>
+DEBUG<7> = P_CBE<3>.PIN;    
+</td></tr><tr><td>
+DEBUG<8> = Z_DOE & Z_READ & !Z_NSLAVE & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_ACC<0> & Z_NBERR
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_9
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_DOE & Z_READ & !Z_NSLAVE & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_ACC<1> & Z_NBERR
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_DOE & Z_READ & !Z_NSLAVE & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NBERR & !I_ZMA;    
+</td></tr><tr><td>
+DEBUG<9> = Z_NSLAVE;    
+</td></tr><tr><td>
+DEBUG<10> = P_NDEVSEL;    
+</td></tr><tr><td>
+DEBUG<11> = Z_NSLAVE
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0>;    
+</td></tr><tr><td>
+!DEBUG<12> = !Z_NSLAVE & !Z_NDS<3> & !Z_NFCS & Z_NCFGOUT;    
+</td></tr><tr><td>
+!DEBUG<13> = !Z_NFCS & !Z_NCFGOUT & !I_ACC<1> & I_ACC<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_ZMA;    
+</td></tr><tr><td>
+!DEBUG<14> = !Z_NFCS & !Z_NCFGOUT & !cycend_x;    
+</td></tr><tr><td>
+DEBUG<15> = !Z_READ & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF = !Z_NIORST
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+I_CFLT = !Z_NSLAVE & !Z_NDS<3> & !Z_AA<4> & !Z_AA<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_AA<2> & Z_AA<6> & !Z_AA<5> & Z_NCFGOUT & !Z_AA<7>;    
+</td></tr><tr><td>
+I_DAOUT = THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+I_DATA = Z_DOE & Z_READ & !Z_NSLAVE & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_ACC<1> & Z_NBERR
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_DOE & Z_READ & !Z_NSLAVE & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_ACC<0> & Z_NBERR
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_DOE & Z_READ & !Z_NSLAVE & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NBERR & !I_ZMA;    
+</td></tr><tr><td>
+I_NINT2 = !pci_int_ena_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# P_NINTD & P_NINTC & P_NINTB & P_NINTA;    
+</td></tr><tr><td>
+I_NINT6 = Vcc;    
+</td></tr><tr><td>
+I_PCICLK = !I_33M;    
+</td></tr><tr><td>
+I_PCIDL = !P_NTRDY & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !P_NTRDY & !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+I_PCIENA = !Z_READ & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_8
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+I_PLA<0> = I_ACC<1> & !I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & !Z_NDS<2> & I_ACC<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<1> & !Z_NDS<0> & I_ACC<1>;    
+</td></tr><tr><td>
+I_PLA<1> = Z_NDS<3> & Z_NDS<2> & !Z_NDS<1> & I_ACC<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & !Z_NDS<0> & I_ACC<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_ACC<0>;    
+</td></tr><tr><td>
+N0/N0_TRST = ;Imported pterms FB4_14
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	  !Z_NFCS & !Z_NCFGOUT & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<3> & !Z_NFCS & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NFCS & !Z_NCFGOUT & !I_ACC<1> & I_ACC<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_ZMA;    
+</td></tr><tr><td>
+P_CBE<0> = !Z_READ & THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_READ & !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB8_15
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_READ & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_READ & !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_CBE<0>.OE = cbp_x<2>/cbp_x<2>_TRST;    
+</td></tr><tr><td>
+!P_CBE<1> = !Z_NDS<2> & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NDS<2> & !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_CBE<1>.OE = cbp_x<2>/cbp_x<2>_TRST;    
+</td></tr><tr><td>
+P_CBE<2> = THE_PCI_SEQ/CURRENT_STATE<3> & !I_ACC<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !I_ACC<1> & !I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !I_ACC<1> & !I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & !I_ACC<1> & !I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB7_8
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<1> & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB7_10
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<1> & !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_CBE<2>.OE = cbp_x<2>/cbp_x<2>_TRST;    
+</td></tr><tr><td>
+P_CBE<3> = THE_PCI_SEQ/CURRENT_STATE<3> & I_ACC<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<3> & !I_ACC<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !I_ACC<1> & I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !I_ACC<1> & I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB7_12
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & I_ACC<1> & !I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & !I_ACC<1> & I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB7_14
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<0> & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & I_ACC<1> & !I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & I_ACC<1> & !I_ACC<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<0> & !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_CBE<3>.OE = cbp_x<2>/cbp_x<2>_TRST;    
+</td></tr><tr><td>
+P_CLKOUT<0> = !I_33M;    
+</td></tr><tr><td>
+P_CLKOUT<1> = !I_33M;    
+</td></tr><tr><td>
+P_CLKOUT<2> = !I_33M;    
+</td></tr><tr><td>
+P_CLKOUT<3> = ;Imported pterms FB8_10
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	  !I_33M;    
+</td></tr><tr><td>
+!P_NFRAME = !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_NFRAME.OE = THE_PCI_SEQ/nirdy_x/THE_PCI_SEQ/nirdy_x_TRST;    
+</td></tr><tr><td>
+!P_NGNT<0> = !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+!P_NGNT<1> = !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+!P_NGNT<2> = THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+!P_NGNT<3> = ;Imported pterms FB8_3
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	  THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+!P_NIRDY = THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_NIRDY.OE = THE_PCI_SEQ/nirdy_x/THE_PCI_SEQ/nirdy_x_TRST;    
+</td></tr><tr><td>
+P_NLOCK = Vcc;    
+</td></tr><tr><td>
+P_NRESET.D = Z_ADA<31>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_NRESET.CLK = Z_DOE & !Z_READ & !Z_NSLAVE & !Z_NDS<3>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !P_NRESET.AP = Z_NIORST;	// GSR
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_NRESET.CE = !Z_NCFGOUT & !I_ACC<1> & I_ACC<0> & I_ZMA;    
+</td></tr><tr><td>
+P_PAR = dat_p
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$ cbe_p;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   P_PAR.OE = p_par_ena;    
+</td></tr><tr><td>
+THE_PCI_ARB/CURRENT_STATE<0>.T = DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<0> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<2> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB8_1
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<0> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<2> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<0> & P_NREQ<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & !$OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB8_2
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<0> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<2> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<3> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB8_17
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<2> & P_NREQ<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<0> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB8_16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<0> & !P_NREQ<1> & $OpTx$INV$62;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   THE_PCI_ARB/CURRENT_STATE<0>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !THE_PCI_ARB/CURRENT_STATE<0>.AR = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+THE_PCI_ARB/CURRENT_STATE<1>.T = DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_ACC<1> & I_ACC<0> & !P_NREQ<1> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !I_ACC<1> & I_ACC<0> & !P_NREQ<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<0> & P_NREQ<1> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & !P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_10
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !I_ACC<1> & I_ACC<0> & !P_NREQ<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<0> & P_NREQ<1> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<2> & !P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<1> & I_ACC<0> & !P_NREQ<2> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_ACC<1> & I_ACC<0> & !P_NREQ<0> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_9
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & !P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & !P_NREQ<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_8
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<2> & !P_NREQ<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_7
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<2> & !P_NREQ<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_6
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !I_ACC<1> & I_ACC<0> & P_NREQ<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<0> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & !I_ACC<1> & I_ACC<0> & P_NREQ<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<1> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<1> & I_ACC<0> & !P_NREQ<2> & P_NREQ<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<1> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_5
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<1> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<1> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_ACC<1> & I_ACC<0> & P_NREQ<2> & !P_NREQ<1> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NSLAVE & !Z_NDS<3> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NSLAVE & !Z_NDS<3> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NSLAVE & !Z_NDS<2> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NSLAVE & !Z_NDS<1> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NSLAVE & !Z_NDS<0> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_3
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NSLAVE & !Z_NDS<2> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NSLAVE & !Z_NDS<1> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_12
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & !P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<1> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<2> & !P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<2> & !P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & !P_NREQ<0> & P_NREQ<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_13
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & !P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & !P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & !P_NREQ<0> & P_NREQ<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & !P_NREQ<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<0> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_14
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<1> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<2> & !P_NREQ<0> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<1> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<0> & P_NREQ<1> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & P_NREQ<0> & P_NREQ<1> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_15
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<2> & !P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<2> & !P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<2> & !P_NREQ<1> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_ACC<1> & I_ACC<0> & !P_NREQ<1> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_ACC<1> & I_ACC<0> & P_NREQ<1> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<2> & !P_NREQ<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_17
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<2> & !P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_ACC<1> & I_ACC<0> & !P_NREQ<1> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!I_ACC<1> & I_ACC<0> & P_NREQ<1> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB2_18
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NSLAVE & !Z_NDS<3> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NSLAVE & !Z_NDS<2> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NSLAVE & !Z_NDS<1> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NSLAVE & !Z_NDS<0> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NSLAVE & !Z_NDS<0> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   THE_PCI_ARB/CURRENT_STATE<1>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !THE_PCI_ARB/CURRENT_STATE<1>.AR = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+THE_PCI_ARB/CURRENT_STATE<2>.T = !DEBUG<2> & !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<3> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<3> & !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<3> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<2> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<1> & !P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<3> & P_NREQ<2> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB8_6
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<0> & !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<3> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<1> & !P_NREQ<0> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<1> & !P_NREQ<2> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & !P_NREQ<3> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<0> & !P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB8_5
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & P_NREQ<2> & !P_NREQ<0> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & P_NREQ<0> & !P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<0> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & P_NREQ<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB8_4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<2> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !$OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<3> & !P_NREQ<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<3> & !P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & !P_NREQ<3> & P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB8_8
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<1> & !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<3> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<3> & P_NIRDY.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NFRAME.PIN & !$OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<3> & THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<3> & !P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & !P_NREQ<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB8_9
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<3> & !P_NREQ<2> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & P_NREQ<3> & !P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & !P_NREQ<2> & P_NREQ<0> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<0> & P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!P_NREQ<0> & P_NREQ<1> & $OpTx$INV$62
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<0> & !P_NREQ<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NREQ<2> & P_NREQ<0> & $OpTx$INV$62;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   THE_PCI_ARB/CURRENT_STATE<2>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !THE_PCI_ARB/CURRENT_STATE<2>.AR = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+THE_PCI_ARB/CURRENT_STATE<3>.D = Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<2> & !P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<2> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_2
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<2> & !P_NIRDY.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_ACC<0> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<0> & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<0> & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_1
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<1> & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<2> & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<2> & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<2> & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<2> & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_18
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<3> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<0> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<2> & P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<2> & P_NREQ<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<2> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_17
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<3> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<2> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<0> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_4
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<0> & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<0> & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<1> & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<1> & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<1> & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_5
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<3> & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<3> & THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<3> & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !DEBUG<3> & !THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<0> & P_NREQ<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_6
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<3> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<2> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<1> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<1> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<0> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB3_7
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<2> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_NSLAVE & !Z_NDS<1> & !Z_NCFGOUT & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cycend_x;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   THE_PCI_ARB/CURRENT_STATE<3>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !THE_PCI_ARB/CURRENT_STATE<3>.AR = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+!THE_PCI_SEQ/CURRENT_STATE<0>.D = THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_6
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NSLAVE & !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & !P_NIRDY.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & !P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_8
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_READ & !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & THE_PCI_ARB/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & !I_ACC<1> & I_ACC<0> & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   THE_PCI_SEQ/CURRENT_STATE<0>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !THE_PCI_SEQ/CURRENT_STATE<0>.AR = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+THE_PCI_SEQ/CURRENT_STATE<1>.D = !P_NTRDY & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# P_NSTOP & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_3
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_READ & !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_5
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NFRAME.PIN & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_ACC<0> & P_NIRDY.PIN & P_NFRAME.PIN & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & P_NFRAME.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   THE_PCI_SEQ/CURRENT_STATE<1>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !THE_PCI_SEQ/CURRENT_STATE<1>.AR = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+THE_PCI_SEQ/CURRENT_STATE<2>.D = Z_READ & !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !P_NTRDY & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !P_NSTOP & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & THE_PCI_SEQ/toc_ctr_x<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/toc_ctr_x<1>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_16
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !P_NTRDY & !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !P_NSTOP & !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<3> & THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3> & THE_PCI_SEQ/CURRENT_STATE<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NFRAME.PIN & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_18
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NSLAVE & !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NCFGOUT & !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & P_NFRAME.PIN & !cycend_x
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	I_ACC<0> & P_NIRDY.PIN & P_NFRAME.PIN & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<3> & THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3> & THE_PCI_SEQ/CURRENT_STATE<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & P_NFRAME.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB4_1
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<1> & I_ACC<0> & P_NIRDY.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NFRAME.PIN & I_ZMA
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	P_NFRAME.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   THE_PCI_SEQ/CURRENT_STATE<2>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !THE_PCI_SEQ/CURRENT_STATE<2>.AR = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+THE_PCI_SEQ/CURRENT_STATE<3>.D = THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   THE_PCI_SEQ/CURRENT_STATE<3>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !THE_PCI_SEQ/CURRENT_STATE<3>.AR = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+THE_PCI_SEQ/nirdy_x/THE_PCI_SEQ/nirdy_x_TRST = THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<1> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3> & THE_PCI_SEQ/CURRENT_STATE<2>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+THE_PCI_SEQ/toc_ctr_x<0>.D = THE_PCI_SEQ/toc_ctr_x<1>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   THE_PCI_SEQ/toc_ctr_x<0>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   THE_PCI_SEQ/toc_ctr_x<0>.AR = 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF;    
+</td></tr><tr><td>
+THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF = !P_NDEVSEL
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+THE_PCI_SEQ/toc_ctr_x<1>.D = !THE_PCI_SEQ/toc_ctr_x<0>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   THE_PCI_SEQ/toc_ctr_x<1>.CLK = I_PCICLK2;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   THE_PCI_SEQ/toc_ctr_x<1>.AR = 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF;    
+</td></tr><tr><td>
+!Z_ADA<28> = !Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_AA<4> & !Z_AA<3> & Z_AA<2> & !Z_AA<6> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_AA<5>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_AA<4> & !Z_AA<2> & !I_ZLA & !Z_AA<6> & !Z_AA<5>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_AA<4> & Z_AA<3> & Z_AA<2> & I_ZLA & !Z_AA<6> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_AA<5>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<28>.OE = Z_DOE & Z_READ & !Z_NSLAVE & Z_NBERR & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_DC$67;    
+</td></tr><tr><td>
+Z_ADA<29> = Z_AA<6> & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_AA<5> & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_AA<4> & Z_AA<3> & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_AA<4> & Z_AA<2> & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_8
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_AA<3> & I_ZLA & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_AA<4> & !Z_AA<2> & !I_ZLA & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB1_10
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# P_NINTD & P_NINTC & P_NINTB & P_NINTA & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_NCFGOUT;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<29>.OE = Z_DOE & Z_READ & !Z_NSLAVE & Z_NBERR & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_DC$67;    
+</td></tr><tr><td>
+!Z_ADA<30> = !pci_int_ena_x & !Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_AA<4> & !Z_AA<3> & !I_ZLA & !Z_AA<6> & !Z_AA<5> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# Z_AA<4> & !Z_AA<3> & !Z_AA<2> & I_ZLA & !Z_AA<6> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_AA<5> & Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_AA<4> & Z_AA<3> & Z_AA<2> & I_ZLA & !Z_AA<6> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_AA<5> & Z_NCFGOUT;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<30>.OE = Z_DOE & Z_READ & !Z_NSLAVE & Z_NBERR & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_DC$67;    
+</td></tr><tr><td>
+!Z_ADA<31> = !P_NRESET & !Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_AA<3> & I_ZLA & !Z_AA<6> & !Z_AA<5> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_NCFGOUT
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !Z_AA<4> & !Z_AA<3> & Z_AA<2> & !Z_AA<6> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!Z_AA<5> & Z_NCFGOUT;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_ADA<31>.OE = Z_DOE & Z_READ & !Z_NSLAVE & Z_NBERR & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$OpTx$FX_DC$67;    
+</td></tr><tr><td>
+Z_NCFGOUT.D = ncfg_x;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_NCFGOUT.CLK = Z_NFCS;	// GCK
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !Z_NCFGOUT.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+Z_NDTACK = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Z_NDTACK.OE = N0/N0_TRST;    
+</td></tr><tr><td>
+!cbe_p.D = P_CBE<0>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$ P_CBE<1>.PIN & P_CBE<3>.PIN & !P_CBE<2>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# P_CBE<1>.PIN & !P_CBE<3>.PIN & P_CBE<2>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !P_CBE<1>.PIN & P_CBE<3>.PIN & P_CBE<2>.PIN
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;Imported pterms FB8_13
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !P_CBE<1>.PIN & !P_CBE<3>.PIN & !P_CBE<2>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   cbe_p.CLK = I_PCICLK2;	// GCK    
+</td></tr><tr><td>
+!cbp_x<2>/cbp_x<2>_TRST = THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$ !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<2>;    
+</td></tr><tr><td>
+cycend_x.D = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   cycend_x.CLK = THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   cycend_x.AP = Z_NSLAVE;    
+</td></tr><tr><td>
+dat_p.D = I_DATPAR<0>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	$ I_DATPAR<1>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !dat_p.CLK = I_PCICLK2;	// GCK    
+</td></tr><tr><td>
+ncfg_x.D = Gnd;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   ncfg_x.CLK = !Z_NSLAVE & !Z_NDS<3> & !Z_AA<4> & !Z_AA<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Z_AA<2> & Z_AA<6> & !Z_AA<5> & Z_NCFGOUT & !Z_AA<7>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !ncfg_x.AP = Z_NIORST;	// GSR    
+</td></tr><tr><td>
+p_par_ena.D = !Z_READ & THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<1> & THE_PCI_SEQ/CURRENT_STATE<3> & 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	!THE_PCI_SEQ/CURRENT_STATE<2>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   p_par_ena.CLK = I_PCICLK2;	// GCK    
+</td></tr><tr><td>
+pci_int_ena_x.D = Z_ADA<30>.PIN;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   pci_int_ena_x.CLK = Z_DOE & !Z_READ & !Z_NSLAVE & !Z_NDS<3>;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   !pci_int_ena_x.AR = Z_NIORST;	// GSR
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   pci_int_ena_x.CE = !Z_NCFGOUT & !I_ACC<1> & I_ACC<0> & I_ZMA;    
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

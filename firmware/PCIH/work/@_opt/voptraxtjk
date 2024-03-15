@@ -1,0 +1,244 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\shanshe\Desktop\PCI\PCIH
+T_opt
+V7Cjb6g0_Y[8zGS_KhU9540
+04 4 10 work pcih behavioral 1
+=1-001c4293eccd-64e5fdd3-329-16ec
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+OE;O;10.1c;51
+Eacfg_rom
+Z1 w1386200070
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z3 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dC:\Users\shanshe\Desktop\PCI\PCIH
+Z7 8acfg_rom.vhd
+Z8 Facfg_rom.vhd
+l0
+L11
+VUaZ_QN=V7]<]lRUn>d>Wa0
+Z9 OE;C;10.1c;51
+31
+Z10 !s108 1692794319.528000
+Z11 !s90 -reportprogress|300|-explicit|-93|acfg_rom.vhd|
+Z12 !s107 acfg_rom.vhd|
+Z13 o-explicit -93
+Z14 tExplicit 1 NoCoverage 1
+!s100 [_dCZ;4>F^kLU3Uiddb1C1
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+R5
+DEx4 work 8 acfg_rom 0 22 UaZ_QN=V7]<]lRUn>d>Wa0
+l22
+L18
+V@i8k23;CjfDlQK7djidM=0
+R9
+31
+R10
+R11
+R12
+R13
+R14
+!s100 4c]JhFNGQ_4z]kW>NcL071
+!i10b 1
+Epci_arb
+Z15 w1692734218
+Z16 DPx6 unisim 11 vcomponents 0 22 HWU7k=4n8@c5Hb0ROMa:C1
+R2
+R3
+R4
+R5
+R6
+Z17 8pci_arb.vhd
+Z18 Fpci_arb.vhd
+l0
+L14
+VB@U@[fcC95OXgHPcMIGQ:2
+R9
+31
+Z19 !s108 1692794318.888000
+Z20 !s90 -reportprogress|300|-explicit|-93|pci_arb.vhd|
+Z21 !s107 pci_arb.vhd|
+R13
+R14
+!s100 gcL3lO?nE<MFKCzgD^b3<0
+!i10b 1
+Abehavioral
+R16
+R2
+R3
+R4
+R5
+DEx4 work 7 pci_arb 0 22 B@U@[fcC95OXgHPcMIGQ:2
+l44
+L28
+V=lk3`6AX8:2hKVi7VMmDl2
+R9
+31
+R19
+R20
+R21
+R13
+R14
+!s100 FC>zhn4^7^`LD14S7Ye]h2
+!i10b 1
+Epci_seq
+Z22 w1692734992
+R16
+Z23 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R4
+R5
+R6
+Z24 8pci_seq.vhd
+Z25 Fpci_seq.vhd
+l0
+L13
+Vn2mCWhH99Lze][k@9PhOQ2
+R9
+31
+Z26 !s108 1692794318.450000
+Z27 !s90 -reportprogress|300|-explicit|-93|pci_seq.vhd|
+Z28 !s107 pci_seq.vhd|
+R13
+R14
+!s100 7^dcS]SEC54@YFdf>UPzj2
+!i10b 1
+Abehavioral
+R16
+R23
+R4
+R5
+DEx4 work 7 pci_seq 0 22 n2mCWhH99Lze][k@9PhOQ2
+l55
+L34
+VIA1Zk^>?WG]Zb[fjil9nf2
+R9
+31
+R26
+R27
+R28
+R13
+R14
+!s100 =J>l8lAaBi3C@Zhh17C4J2
+!i10b 1
+Epcih
+Z29 w1692794251
+R16
+R23
+R4
+R5
+R6
+Z30 8pcih.vhd
+Z31 Fpcih.vhd
+l0
+L13
+V08F<za[hiG`7<kcgVYYz63
+R9
+31
+Z32 !s108 1692794319.794000
+Z33 !s90 -reportprogress|300|-explicit|-93|pcih.vhd|
+Z34 !s107 pcih.vhd|
+R13
+R14
+!s100 0h>8IYK377]3GDO:Nkn3=0
+!i10b 1
+Abehavioral
+R16
+R23
+R4
+R5
+DEx4 work 4 pcih 0 22 08F<za[hiG`7<kcgVYYz63
+l166
+L68
+VRncLDh2F@@TU3JBHA<Te70
+!s100 eolDN^aN;IMQN;E2;J]M11
+R9
+31
+R32
+R33
+R34
+R13
+R14
+!i10b 1
+Epcil
+Z35 w1692786383
+R16
+R23
+R4
+R5
+R6
+Z36 8C:/Users/shanshe/Desktop/PCI/PCIH/pcil.vhd
+Z37 FC:/Users/shanshe/Desktop/PCI/PCIH/pcil.vhd
+l0
+L13
+V1AifC@]i^g;N7zgf@M07R1
+R9
+31
+Z38 !s108 1692794206.012000
+Z39 !s90 -reportprogress|30|-work|work|C:/Users/shanshe/Desktop/PCI/PCIH/pcil.vhd|
+Z40 !s107 C:/Users/shanshe/Desktop/PCI/PCIH/pcil.vhd|
+Z41 o-work work
+R14
+!s100 l@jhEeQFN1NLo@jR63D]20
+!i10b 1
+Abehavioral
+R16
+R23
+R4
+R5
+DEx4 work 4 pcil 0 22 1AifC@]i^g;N7zgf@M07R1
+l80
+L49
+VZ2icm>H?UWnP9GcXQf7PZ2
+R9
+31
+R38
+R39
+R40
+R41
+R14
+!s100 jZR591gzQkXTl8]h`;O`]3
+!i10b 1
+Et_all
+Z42 w1692794185
+R4
+R5
+R6
+Z43 8C:/Users/shanshe/Desktop/PCI/PCIH/t_all.vhd
+Z44 FC:/Users/shanshe/Desktop/PCI/PCIH/t_all.vhd
+l0
+L8
+V^2LAKPa`5c>mU:AnL@VX82
+R9
+31
+Z45 !s108 1692794276.481000
+Z46 !s90 -reportprogress|300|-work|work|C:/Users/shanshe/Desktop/PCI/PCIH/t_all.vhd|
+Z47 !s107 C:/Users/shanshe/Desktop/PCI/PCIH/t_all.vhd|
+R41
+R14
+!s100 4KnIj08dK<M^_S^PfO?7F2
+!i10b 1
+Abehavior
+R4
+R5
+DEx4 work 5 t_all 0 22 ^2LAKPa`5c>mU:AnL@VX82
+l162
+L11
+V_73iJfb:?51c[lVk][i<:1
+R9
+31
+R45
+R46
+R47
+R41
+R14
+!s100 dXGXH9E`CFgHIZCMRSlN41
+!i10b 1

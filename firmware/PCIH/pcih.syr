@@ -1,0 +1,319 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.56 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.56 secs
+ 
+--> Reading design: pcih.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pcih.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pcih"
+Output Format                      : NGC
+Target Device                      : XC9500XL CPLDs
+
+---- Source Options
+Top Module Name                    : pcih
+Automatic FSM Extraction           : NO
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 2
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/shanshe/Desktop/PCI/PCIH/acfg_rom.vhd" in Library work.
+Architecture behavioral of Entity acfg_rom is up to date.
+Compiling vhdl file "C:/Users/shanshe/Desktop/PCI/PCIH/pci_arb.vhd" in Library work.
+Architecture behavioral of Entity pci_arb is up to date.
+Compiling vhdl file "C:/Users/shanshe/Desktop/PCI/PCIH/pci_seq.vhd" in Library work.
+Architecture behavioral of Entity pci_seq is up to date.
+Compiling vhdl file "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" in Library work.
+Entity <pcih> compiled.
+Entity <pcih> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <pcih> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <acfg_rom> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <pci_arb> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <pci_seq> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <pcih> in library <work> (Architecture <behavioral>).
+INFO:Xst:1561 - "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" line 223: Mux is complete : default of case is discarded
+WARNING:Xst:753 - "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" line 260: Unconnected output port 'STATE_OUT' of component 'pci_arb'.
+WARNING:Xst:753 - "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" line 283: Unconnected output port 'STATE_OUT' of component 'pci_seq'.
+INFO:Xst:1561 - "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" line 318: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" line 407: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" line 407: Mux is complete : default of case is discarded
+Entity <pcih> analyzed. Unit <pcih> generated.
+
+Analyzing Entity <acfg_rom> in library <work> (Architecture <behavioral>).
+Entity <acfg_rom> analyzed. Unit <acfg_rom> generated.
+
+Analyzing Entity <pci_arb> in library <work> (Architecture <behavioral>).
+Entity <pci_arb> analyzed. Unit <pci_arb> generated.
+
+Analyzing Entity <pci_seq> in library <work> (Architecture <behavioral>).
+Entity <pci_seq> analyzed. Unit <pci_seq> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <acfg_rom>.
+    Related source file is "C:/Users/shanshe/Desktop/PCI/PCIH/acfg_rom.vhd".
+Unit <acfg_rom> synthesized.
+
+
+Synthesizing Unit <pci_arb>.
+    Related source file is "C:/Users/shanshe/Desktop/PCI/PCIH/pci_arb.vhd".
+    Found 16x4-bit ROM for signal <state_x>.
+    Found 4-bit register for signal <CURRENT_STATE>.
+    Found 4-bit 16-to-1 multiplexer for signal <NEXT_STATE>.
+    Found 4-bit up counter for signal <toc_x>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+Unit <pci_arb> synthesized.
+
+
+Synthesizing Unit <pci_seq>.
+    Related source file is "C:/Users/shanshe/Desktop/PCI/PCIH/pci_seq.vhd".
+    Found 16x5-bit ROM for signal <CURRENT_STATE$rom0000>.
+    Found 1-bit tristate buffer for signal <NFRAME_OUT>.
+    Found 1-bit tristate buffer for signal <NIRDY_OUT>.
+    Found 4-bit register for signal <CURRENT_STATE>.
+    Found 2-bit register for signal <toc_ctr_x>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Tristate(s).
+Unit <pci_seq> synthesized.
+
+
+Synthesizing Unit <pcih>.
+    Related source file is "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd".
+WARNING:Xst:647 - Input <Z_Z3SENSE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <P_NSERR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <P_NPERR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16x2-bit ROM for signal <i_pla_x$mux0000> created at line 375.
+    Found 1-bit tristate buffer for signal <Z_NDTACK>.
+    Found 1-bit tristate buffer for signal <P_PAR>.
+    Found 4-bit tristate buffer for signal <$mux0000>.
+    Found 1-bit register for signal <cbe_p>.
+    Found 1-bit xor4 for signal <cbe_p_x>.
+    Found 1-bit xor2 for signal <cmd_x<3>>.
+    Found 1-bit register for signal <cycend_x>.
+    Found 1-bit register for signal <dat_p>.
+    Found 1-bit xor2 for signal <dat_p_x>.
+    Found 1-bit register for signal <ncfg_x>.
+    Found 1-bit register for signal <ncfg_xx>.
+    Found 4-bit tristate buffer for signal <p_cbe_x>.
+    Found 1-bit register for signal <p_nreset_x>.
+    Found 1-bit register for signal <p_par_ena>.
+    Found 1-bit xor2 for signal <p_par_x>.
+    Found 1-bit register for signal <pci_int_ena_x>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   3 Xor(s).
+	inferred  10 Tristate(s).
+Unit <pcih> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 16x2-bit ROM                                          : 1
+ 16x4-bit ROM                                          : 1
+ 16x5-bit ROM                                          : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 12
+ 1-bit register                                        : 10
+ 4-bit register                                        : 2
+# Multiplexers                                         : 1
+ 4-bit 16-to-1 multiplexer                             : 1
+# Tristates                                            : 6
+ 1-bit tristate buffer                                 : 4
+ 4-bit tristate buffer                                 : 2
+# Xors                                                 : 4
+ 1-bit xor2                                            : 3
+ 1-bit xor4                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 16x2-bit ROM                                          : 1
+ 16x4-bit ROM                                          : 1
+ 16x5-bit ROM                                          : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+# Multiplexers                                         : 1
+ 4-bit 16-to-1 multiplexer                             : 1
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1348 - Unit pci_seq is merged (output interface has tristates)
+
+Optimizing unit <pcih> ...
+  implementation constraint: INIT=r	 : THE_PCI_SEQ/CURRENT_STATE_0
+  implementation constraint: INIT=r	 : THE_PCI_SEQ/CURRENT_STATE_1
+  implementation constraint: INIT=r	 : THE_PCI_SEQ/CURRENT_STATE_2
+  implementation constraint: INIT=r	 : THE_PCI_SEQ/CURRENT_STATE_3
+
+Optimizing unit <acfg_rom> ...
+
+Optimizing unit <pci_arb> ...
+  implementation constraint: INIT=r	 : CURRENT_STATE_0
+  implementation constraint: INIT=r	 : CURRENT_STATE_1
+  implementation constraint: INIT=r	 : CURRENT_STATE_2
+  implementation constraint: INIT=r	 : CURRENT_STATE_3
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : pcih.ngr
+Top Level Output File Name         : pcih
+Output Format                      : NGC
+Optimization Goal                  : Area
+Keep Hierarchy                     : Yes
+Target Technology                  : XC9500XL CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 87
+
+Cell Usage :
+# BELS                             : 518
+#      AND2                        : 149
+#      AND3                        : 27
+#      AND4                        : 4
+#      GND                         : 1
+#      INV                         : 202
+#      OR2                         : 110
+#      OR3                         : 12
+#      OR4                         : 3
+#      VCC                         : 1
+#      XOR2                        : 9
+# FlipFlops/Latches                : 22
+#      FD                          : 3
+#      FDC                         : 10
+#      FDCE                        : 5
+#      FDP                         : 3
+#      FDPE                        : 1
+# IO Buffers                       : 84
+#      IBUF                        : 35
+#      IOBUFE                      : 8
+#      OBUF                        : 37
+#      OBUFE                       : 4
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.90 secs
+ 
+--> 
+
+Total memory usage is 224744 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

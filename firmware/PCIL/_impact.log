@@ -1,0 +1,1028 @@
+iMPACT Version: 14.7
+
+iMPACT log file Started on Sun Aug 27 11:43:56 2023
+
+Welcome to iMPACT
+iMPACT Version: 14.7
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : loadProjectFile -file"C:\Users\shanshe\Desktop\c64_pla_hdl\auto_project.ipf"
+'1': Loading file 'C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed' ...
+done.
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/14.7/ISE_DS/ISE/xc9500xl/data/xc95144xl.bsd...
+INFO:iMPACT:501 - '1': Added Device xc95144xl successfully.
+----------------------------------------------------------------------
+'2': Loading file 'C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed' ...
+done.
+INFO:iMPACT:501 - '2': Added Device xc95144xl successfully.
+----------------------------------------------------------------------
+Active mode is BS
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : cutDevice -p 2
+----------------------------------------------------------------------
+// *** BATCH CMD : assignFile -p 1 -file"C:/Users/shanshe/Desktop/Z3660/Z3660/z3660.jed"
+'1': Loading file 'C:/Users/shanshe/Desktop/Z3660/Z3660/z3660.jed' ...
+done.
+INFO:iMPACT:501 - '1': Added Device xc95144xl successfully.
+----------------------------------------------------------------------
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb22.sys found.
+ File C:/Xilinx/14.7/ISE_DS/ISE/bin/nt/xusb22.sys not found.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 X86 32bit SYS14:35:41, version = 1021.
+ Cable PID = 0008.
+ Max current requested during enumeration is 300 mA.
+Type = 0x0005.
+write (count, cmdBuffer, dataBuffer) failed C0000004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 2301.
+File version of C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex = 2401.
+Firmware hex file version = 2401.
+Downloading C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex.
+Downloaded firmware version = 2401.
+PLD file version = 200Dh.
+ PLD version = 200Dh.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Type = 0x0005.
+ESN option: 13724327082D01.
+INFO:iMPACT - Current time: 27/08/2023 11:46:04
+Updating config file C:/Users/shanshe/Desktop/Z3660/Z3660/z3660.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+ERROR:Cse - A reference voltage has not been detected on the ribbon cable   interface to the target system ( pin 2 ).  Check that power is applied to the   target system and that the ribbon cable is properly seated at both ends.  The   status LED on Platform Cable USB will be GREEN if target voltage is in the   proper range and applied to the correct pin.
+INFO:iMPACT - Current time: 27/08/2023 11:46:39
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+PROGRESS_START - Starting Operation.
+'1': Erasing device...
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      5 sec.
+INFO:iMPACT - Current time: 27/08/2023 11:53:16
+Updating config file C:/Users/shanshe/Desktop/Z3660/Z3660/z3660.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      5 sec.
+Cable is not connected.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file"C:\Users\shanshe\Desktop\c64_pla_hdl\auto_project.ipf"
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : loadProjectFile -file"C:/Users/shanshe/Desktop/c64_pla_hdl/auto_project_prometheus.ipf"
+'1': Loading file 'C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed' ...
+done.
+INFO:iMPACT:501 - '1': Added Device xc95144xl successfully.
+----------------------------------------------------------------------
+'2': Loading file 'C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed' ...
+done.
+INFO:iMPACT:501 - '2': Added Device xc95144xl successfully.
+----------------------------------------------------------------------
+Active mode is BS
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb22.sys found.
+ File C:/Xilinx/14.7/ISE_DS/ISE/bin/nt/xusb22.sys not found.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 X86 32bit SYS14:35:41, version = 1021.
+ Cable PID = 0008.
+ Max current requested during enumeration is 300 mA.
+Type = 0x0005.
+write (count, cmdBuffer, dataBuffer) failed C0000004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 2301.
+File version of C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex = 2401.
+Firmware hex file version = 2401.
+Downloading C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex.
+Downloaded firmware version = 2401.
+PLD file version = 200Dh.
+ PLD version = 200Dh.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+Type = 0x0005.
+ESN option: 13724327082D01.
+INFO:iMPACT - Current time: 29/08/2023 19:16:26
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =     18 sec.
+INFO:iMPACT - Current time: 29/08/2023 19:42:42
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 29/08/2023 19:46:05
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      9 sec.
+INFO:iMPACT - Current time: 29/08/2023 19:51:04
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      9 sec.
+INFO:iMPACT - Current time: 29/08/2023 19:55:58
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      9 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb22.sys found.
+ File C:/Xilinx/14.7/ISE_DS/ISE/bin/nt/xusb22.sys not found.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 X86 32bit SYS14:35:41, version = 1021.
+ Cable PID = 0008.
+ Max current requested during enumeration is 300 mA.
+Type = 0x0005.
+write (count, cmdBuffer, dataBuffer) failed C0000004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 2301.
+File version of C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex = 2401.
+Firmware hex file version = 2401.
+Downloading C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex.
+Downloaded firmware version = 2401.
+PLD file version = 200Dh.
+ PLD version = 200Dh.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+Type = 0x0005.
+ESN option: 13724327082D01.
+INFO:iMPACT - Current time: 01/09/2023 19:41:05
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+PROGRESS_START - Starting Operation.
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =     16 sec.
+INFO:iMPACT - Current time: 02/09/2023 20:23:28
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb22.sys found.
+ File C:/Xilinx/14.7/ISE_DS/ISE/bin/nt/xusb22.sys not found.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 X86 32bit SYS14:35:41, version = 1021.
+ Cable PID = 0008.
+ Max current requested during enumeration is 300 mA.
+Type = 0x0005.
+write (count, cmdBuffer, dataBuffer) failed C0000004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 2301.
+File version of C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex = 2401.
+Firmware hex file version = 2401.
+Downloading C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex.
+Downloaded firmware version = 2401.
+PLD file version = 200Dh.
+ PLD version = 200Dh.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Type = 0x0005.
+ESN option: 13724327082D01.
+INFO:iMPACT - Current time: 05/09/2023 13:37:56
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      9 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb22.sys found.
+ File C:/Xilinx/14.7/ISE_DS/ISE/bin/nt/xusb22.sys not found.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 X86 32bit SYS14:35:41, version = 1021.
+ Cable PID = 0008.
+ Max current requested during enumeration is 150 mA.
+Type = 0x0005.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 2401.
+File version of C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex = 2401.
+Firmware hex file version = 2401.
+PLD file version = 200Dh.
+ PLD version = 200Dh.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+Type = 0x0005.
+ESN option: 13724327082D01.
+INFO:iMPACT - Current time: 06/09/2023 11:21:31
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      5 sec.
+INFO:iMPACT - Current time: 06/09/2023 11:54:01
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      6 sec.
+INFO:iMPACT - Current time: 06/09/2023 13:00:00
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 06/09/2023 13:02:45
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 06/09/2023 13:19:18
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      6 sec.
+INFO:iMPACT - Current time: 06/09/2023 13:32:34
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+INFO:iMPACT - Current time: 06/09/2023 21:37:20
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 06/09/2023 21:37:31
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+PROGRESS_START - Starting Operation.
+'2': Erasing device...
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      5 sec.
+INFO:iMPACT - Current time: 06/09/2023 21:48:02
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      5 sec.
+INFO:iMPACT - Current time: 06/09/2023 22:01:29
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 06/09/2023 22:24:28
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      9 sec.
+INFO:iMPACT - Current time: 06/09/2023 22:30:53
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 06/09/2023 22:36:32
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 06/09/2023 22:43:19
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+INFO:iMPACT - Current time: 06/09/2023 22:48:22
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+PROGRESS_START - Starting Operation.
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      5 sec.
+INFO:iMPACT - Current time: 06/09/2023 23:12:05
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      6 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb22.sys found.
+ File C:/Xilinx/14.7/ISE_DS/ISE/bin/nt/xusb22.sys not found.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 X86 32bit SYS14:35:41, version = 1021.
+ Cable PID = 0008.
+ Max current requested during enumeration is 150 mA.
+Type = 0x0005.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 2401.
+File version of C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex = 2401.
+Firmware hex file version = 2401.
+PLD file version = 200Dh.
+ PLD version = 200Dh.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+Type = 0x0005.
+ESN option: 13724327082D01.
+INFO:iMPACT - Current time: 07/09/2023 13:14:53
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =     15 sec.
+INFO:iMPACT - Current time: 07/09/2023 13:19:13
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =     14 sec.
+INFO:iMPACT - Current time: 07/09/2023 14:57:25
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =     10 sec.
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusb22.sys found.
+ File C:/Xilinx/14.7/ISE_DS/ISE/bin/nt/xusb22.sys not found.
+ Driver file xusb_xlp.sys found.
+ Driver version: src=1029, dest=1029.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 X86 32bit SYS14:35:41, version = 1021.
+ Cable PID = 0008.
+ Max current requested during enumeration is 300 mA.
+Type = 0x0005.
+write (count, cmdBuffer, dataBuffer) failed C0000004.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 2301.
+File version of C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex = 2401.
+Firmware hex file version = 2401.
+Downloading C:/Xilinx/14.7/ISE_DS/ISE/data/xusb_xp2.hex.
+Downloaded firmware version = 2401.
+PLD file version = 200Dh.
+ PLD version = 200Dh.
+PROGRESS_END - End Operation.
+Elapsed time =      2 sec.
+Type = 0x0005.
+ESN option: 13724327082D01.
+INFO:iMPACT - Current time: 10/09/2023 16:06:33
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =     16 sec.
+INFO:iMPACT - Current time: 10/09/2023 16:10:58
+// *** BATCH CMD : Verify -p 2 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...PROGRESS_START - Starting Operation.
+INFO:iMPACT:2488 - The operation did not complete successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      3 sec.
+INFO:iMPACT - Current time: 10/09/2023 16:11:08
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+INFO:iMPACT:451 - The device 'xc95144xl' is in 'in-system programming' mode.
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =     14 sec.
+INFO:iMPACT - Current time: 10/09/2023 16:17:13
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      7 sec.
+INFO:iMPACT - Current time: 10/09/2023 16:22:40
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      9 sec.
+INFO:iMPACT - Current time: 11/09/2023 9:56:11
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      9 sec.
+INFO:iMPACT - Current time: 11/09/2023 10:39:24
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      6 sec.
+INFO:iMPACT - Current time: 11/09/2023 17:22:36
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIH\pcih.jed...
+// *** BATCH CMD : Program -p 2 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'2': Erasing device...
+PROGRESS_START - Starting Operation.
+'2': Erasure completed successfully.
+'2': Programming device...
+done.
+'2': Putting device in ISP mode...done.
+'2': Putting device in ISP mode...done.
+'2': Verifying device...done.
+'2': Verification completed successfully.
+'2': Putting device in ISP mode...done.
+'2': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      5 sec.
+INFO:iMPACT - Current time: 11/09/2023 17:22:46
+Updating config file C:\Users\shanshe\Desktop\PCI\PCIL\pcil.jed...
+// *** BATCH CMD : Program -p 1 -e -v 
+Maximum TCK operating frequency for this device chain: 10000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Erasing device...
+PROGRESS_START - Starting Operation.
+'1': Erasure completed successfully.
+'1': Programming device...
+done.
+'1': Putting device in ISP mode...done.
+'1': Putting device in ISP mode...done.
+'1': Verifying device...done.
+'1': Verification completed successfully.
+'1': Putting device in ISP mode...done.
+'1': Programming completed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      8 sec.
+Cable is not connected.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file"C:/Users/shanshe/Desktop/c64_pla_hdl/auto_project_prometheus.ipf"
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+----------------------------------------------------------------------
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff

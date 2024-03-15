@@ -371,23 +371,39 @@ begin
 		when b"00"  => i_pla_x <= b"00"; -- memory accesses
 		when b"01"  => i_pla_x <= b"00"; -- type 0 config
 		when b"10"  => i_pla_x <= b"01"; -- type 1 config
-		when b"11"  => 
+		when b"11"  =>                   -- type io
 			case Z_NDS is
+--				when b"0000" => i_pla_x <= b"00";
+--				when b"0001" => i_pla_x <= b"01";
+--				when b"0010" => i_pla_x <= b"00";
+--				when b"0011" => i_pla_x <= b"10";
+--				when b"0100" => i_pla_x <= b"00";
+--				when b"0101" => i_pla_x <= b"01";
+--				when b"0110" => i_pla_x <= b"00";
+--				when b"0111" => i_pla_x <= b"11";
+--				when b"1000" => i_pla_x <= b"00";
+--				when b"1001" => i_pla_x <= b"01";
+--				when b"1010" => i_pla_x <= b"00";
+--				when b"1011" => i_pla_x <= b"10";
+--				when b"1100" => i_pla_x <= b"00";
+--				when b"1101" => i_pla_x <= b"01";
+--				when b"1110" => i_pla_x <= b"00";
+--				when b"1111" => i_pla_x <= b"00";
 				when b"0000" => i_pla_x <= b"00";
-				when b"0001" => i_pla_x <= b"01";
-				when b"0010" => i_pla_x <= b"00";
-				when b"0011" => i_pla_x <= b"10";
+				when b"1000" => i_pla_x <= b"01";
 				when b"0100" => i_pla_x <= b"00";
-				when b"0101" => i_pla_x <= b"01";
+				when b"1100" => i_pla_x <= b"10";
+				when b"0010" => i_pla_x <= b"00";
+				when b"1010" => i_pla_x <= b"01";
 				when b"0110" => i_pla_x <= b"00";
-				when b"0111" => i_pla_x <= b"11";
-				when b"1000" => i_pla_x <= b"00";
+				when b"1110" => i_pla_x <= b"11";
+				when b"0001" => i_pla_x <= b"00";
 				when b"1001" => i_pla_x <= b"01";
-				when b"1010" => i_pla_x <= b"00";
-				when b"1011" => i_pla_x <= b"10";
-				when b"1100" => i_pla_x <= b"00";
-				when b"1101" => i_pla_x <= b"01";
-				when b"1110" => i_pla_x <= b"00";
+				when b"0101" => i_pla_x <= b"00";
+				when b"1101" => i_pla_x <= b"10";
+				when b"0011" => i_pla_x <= b"00";
+				when b"1011" => i_pla_x <= b"01";
+				when b"0111" => i_pla_x <= b"00";
 				when b"1111" => i_pla_x <= b"00";
 				when others  => i_pla_x <= (others => 'X');
 			end case;

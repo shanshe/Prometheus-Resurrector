@@ -1,0 +1,33 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/Users/shanshe/Desktop/PCI/PCIH/t_all_isim_beh.exe" -prj "C:/Users/shanshe/Desktop/PCI/PCIH/t_all_beh.prj" "work.t_all" 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/shanshe/Desktop/PCI/PCIH/pci_seq.vhd" into library work
+Parsing VHDL file "C:/Users/shanshe/Desktop/PCI/PCIH/pci_arb.vhd" into library work
+Parsing VHDL file "C:/Users/shanshe/Desktop/PCI/PCIH/acfg_rom.vhd" into library work
+Parsing VHDL file "C:/Users/shanshe/Desktop/PCI/PCIH/pcil.vhd" into library work
+Parsing VHDL file "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" into library work
+Parsing VHDL file "C:/Users/shanshe/Desktop/PCI/PCIH/t_all.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 136740 KB
+Fuse CPU Usage: 421 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity acfg_rom [acfg_rom_default]
+Compiling architecture behavioral of entity pci_arb [pci_arb_default]
+Compiling architecture behavioral of entity pci_seq [pci_seq_default]
+Compiling architecture behavioral of entity pcih [pcih_default]
+Compiling architecture behavioral of entity pcil [pcil_default]
+Compiling architecture behavior of entity t_all
+Time Resolution for simulation is 1ps.
+Waiting for 8 sub-compilation(s) to finish...
+Compiled 17 VHDL Units
+Built simulation executable C:/Users/shanshe/Desktop/PCI/PCIH/t_all_isim_beh.exe
+Fuse Memory Usage: 157476 KB
+Fuse CPU Usage: 796 ms
