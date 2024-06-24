@@ -260,7 +260,7 @@ begin
 									elsif( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= P1; -- silent regrant for current master
 									else
-										NEXT_STATE <= P1; -- no PCI requests, park P0 on bus
+										NEXT_STATE <= P1; -- no PCI requests, park P1 on bus
 									end if;
 								else
 									-- current PCI master normal operation
@@ -404,8 +404,8 @@ begin
 										NEXT_STATE <= B0;
 									elsif( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= B1;
---									elsif( NREQ_IN(2 downto 1) = b"011" ) then
---										NEXT_STATE <= B2;
+									elsif( NREQ_IN(2) = '0' ) then
+										NEXT_STATE <= B2;
 									elsif( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= B3;
 									else
