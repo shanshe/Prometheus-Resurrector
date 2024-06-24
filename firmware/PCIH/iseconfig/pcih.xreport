@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2024-03-15T16:54:17</DateModified>
+  <DateModified>2024-06-24T20:01:08</DateModified>
   <ModuleName>pcih</ModuleName>
-  <SummaryTimeStamp>2023-09-07T13:19:11</SummaryTimeStamp>
+  <SummaryTimeStamp>2024-06-24T19:15:06</SummaryTimeStamp>
   <SavedFilePath>C:/Users/shanshe/Desktop/PCI/PCIH/iseconfig/pcih.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/shanshe/Desktop/PCI/PCIH\</ImplementationReportsDirectory>
   <DateInitialized>2013-12-03T21:02:00</DateInitialized>
@@ -11,7 +11,7 @@
  </header>
  <body>
   <viewgroup label="Design Overview" >
-   <view inputState="Unknown" program="implementation" ShowPartitionData="false" type="FPGASummary" file="pcih_summary.html" label="Summary" >
+   <view inputState="Unknown" program="implementation" ExpandErrors="false" ShowPartitionData="false" type="FPGASummary" file="pcih_summary.html" label="Summary" ExpandWarnings="false" >
     <toc-item title="Design Overview" target="Design Overview" />
     <toc-item title="Design Utilization Summary" target="Design Utilization Summary" />
     <toc-item title="Performance Summary" target="Performance Summary" />

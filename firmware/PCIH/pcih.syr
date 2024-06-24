@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.56 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.56 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: pcih.prj
 
@@ -42,7 +42,9 @@ Target Device                      : XC9500XL CPLDs
 
 ---- Source Options
 Top Module Name                    : pcih
-Automatic FSM Extraction           : NO
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Compact
+Safe Implementation                : No
 Mux Extraction                     : Yes
 Resource Sharing                   : YES
 
@@ -69,6 +71,8 @@ wysiwyg                            : NO
 
 =========================================================================
 
+Setting FSM Encoding Algorithm to : OPT
+
 
 =========================================================================
 *                          HDL Compilation                              *
@@ -76,12 +80,12 @@ wysiwyg                            : NO
 Compiling vhdl file "C:/Users/shanshe/Desktop/PCI/PCIH/acfg_rom.vhd" in Library work.
 Architecture behavioral of Entity acfg_rom is up to date.
 Compiling vhdl file "C:/Users/shanshe/Desktop/PCI/PCIH/pci_arb.vhd" in Library work.
-Architecture behavioral of Entity pci_arb is up to date.
+Entity <pci_arb> compiled.
+Entity <pci_arb> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/shanshe/Desktop/PCI/PCIH/pci_seq.vhd" in Library work.
 Architecture behavioral of Entity pci_seq is up to date.
 Compiling vhdl file "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" in Library work.
-Entity <pcih> compiled.
-Entity <pcih> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity pcih is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -100,8 +104,6 @@ Analyzing hierarchy for entity <pci_seq> in library <work> (architecture <behavi
 =========================================================================
 Analyzing Entity <pcih> in library <work> (Architecture <behavioral>).
 INFO:Xst:1561 - "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" line 223: Mux is complete : default of case is discarded
-WARNING:Xst:753 - "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" line 260: Unconnected output port 'STATE_OUT' of component 'pci_arb'.
-WARNING:Xst:753 - "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" line 283: Unconnected output port 'STATE_OUT' of component 'pci_seq'.
 INFO:Xst:1561 - "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" line 318: Mux is complete : default of case is discarded
 INFO:Xst:1561 - "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" line 407: Mux is complete : default of case is discarded
 INFO:Xst:1561 - "C:/Users/shanshe/Desktop/PCI/PCIH/pcih.vhd" line 407: Mux is complete : default of case is discarded
@@ -130,25 +132,48 @@ Unit <acfg_rom> synthesized.
 
 Synthesizing Unit <pci_arb>.
     Related source file is "C:/Users/shanshe/Desktop/PCI/PCIH/pci_arb.vhd".
-    Found 16x4-bit ROM for signal <state_x>.
-    Found 4-bit register for signal <CURRENT_STATE>.
-    Found 4-bit 16-to-1 multiplexer for signal <NEXT_STATE>.
+    Found finite state machine <FSM_0> for signal <CURRENT_STATE>.
+    -----------------------------------------------------------------------
+    | States             | 16                                             |
+    | Transitions        | 108                                            |
+    | Inputs             | 7                                              |
+    | Outputs            | 10                                             |
+    | Clock              | PCICLK                    (rising_edge)        |
+    | Reset              | NIORST                    (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | z0                                             |
+    | Power Up State     | z0                                             |
+    | Encoding           | compact                                        |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
     Found 4-bit up counter for signal <toc_x>.
     Summary:
-	inferred   1 ROM(s).
+	inferred   1 Finite State Machine(s).
 	inferred   1 Counter(s).
 Unit <pci_arb> synthesized.
 
 
 Synthesizing Unit <pci_seq>.
     Related source file is "C:/Users/shanshe/Desktop/PCI/PCIH/pci_seq.vhd".
-    Found 16x5-bit ROM for signal <CURRENT_STATE$rom0000>.
+    Found finite state machine <FSM_1> for signal <CURRENT_STATE>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 20                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 16                                             |
+    | Clock              | PCICLK                    (rising_edge)        |
+    | Reset              | NIORST                    (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | compact                                        |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
     Found 1-bit tristate buffer for signal <NFRAME_OUT>.
     Found 1-bit tristate buffer for signal <NIRDY_OUT>.
-    Found 4-bit register for signal <CURRENT_STATE>.
     Found 2-bit register for signal <toc_ctr_x>.
     Summary:
-	inferred   1 ROM(s).
+	inferred   1 Finite State Machine(s).
 	inferred   2 D-type flip-flop(s).
 	inferred   2 Tristate(s).
 Unit <pci_seq> synthesized.
@@ -159,6 +184,7 @@ Synthesizing Unit <pcih>.
 WARNING:Xst:647 - Input <Z_Z3SENSE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <P_NSERR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <P_NPERR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <debug_x<15:12>> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
     Found 16x2-bit ROM for signal <i_pla_x$mux0000> created at line 375.
     Found 1-bit tristate buffer for signal <Z_NDTACK>.
     Found 1-bit tristate buffer for signal <P_PAR>.
@@ -188,17 +214,12 @@ Unit <pcih> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 3
+# ROMs                                                 : 1
  16x2-bit ROM                                          : 1
- 16x4-bit ROM                                          : 1
- 16x5-bit ROM                                          : 1
 # Counters                                             : 1
  4-bit up counter                                      : 1
-# Registers                                            : 12
+# Registers                                            : 10
  1-bit register                                        : 10
- 4-bit register                                        : 2
-# Multiplexers                                         : 1
- 4-bit 16-to-1 multiplexer                             : 1
 # Tristates                                            : 6
  1-bit tristate buffer                                 : 4
  4-bit tristate buffer                                 : 2
@@ -212,21 +233,53 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Optimizing FSM <THE_PCI_SEQ/CURRENT_STATE/FSM> on signal <CURRENT_STATE[1:4]> with compact encoding.
+-------------------
+ State | Encoding
+-------------------
+ idle  | 0000
+ step  | 1010
+ addr  | 1001
+ data  | 0101
+ dly   | 0001
+ retry | 0011
+ drive | 1000
+ turn  | 0100
+ relax | 0010
+-------------------
+Optimizing FSM <THE_PCI_ARB/CURRENT_STATE/FSM> on signal <CURRENT_STATE[1:4]> with compact encoding.
+-------------------
+ State | Encoding
+-------------------
+ z0    | 0000
+ z1    | 0010
+ z2    | 0110
+ z3    | 0100
+ b0    | 0001
+ b1    | 0011
+ b2    | 0111
+ b3    | 0101
+ p0    | 1000
+ p1    | 1010
+ p2    | 1110
+ p3    | 1100
+ a0    | 1001
+ a1    | 1011
+ a2    | 1111
+ a3    | 1101
+-------------------
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 3
+# FSMs                                                 : 2
+# ROMs                                                 : 1
  16x2-bit ROM                                          : 1
- 16x4-bit ROM                                          : 1
- 16x5-bit ROM                                          : 1
 # Counters                                             : 1
  4-bit up counter                                      : 1
 # Registers                                            : 10
  Flip-Flops                                            : 10
-# Multiplexers                                         : 1
- 4-bit 16-to-1 multiplexer                             : 1
 # Xors                                                 : 1
  1-bit xor4                                            : 1
 
@@ -238,18 +291,18 @@ Macro Statistics
 WARNING:Xst:1348 - Unit pci_seq is merged (output interface has tristates)
 
 Optimizing unit <pcih> ...
-  implementation constraint: INIT=r	 : THE_PCI_SEQ/CURRENT_STATE_0
-  implementation constraint: INIT=r	 : THE_PCI_SEQ/CURRENT_STATE_1
-  implementation constraint: INIT=r	 : THE_PCI_SEQ/CURRENT_STATE_2
-  implementation constraint: INIT=r	 : THE_PCI_SEQ/CURRENT_STATE_3
+  implementation constraint: INIT=r	 : THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1
+  implementation constraint: INIT=r	 : THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2
+  implementation constraint: INIT=r	 : THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3
+  implementation constraint: INIT=r	 : THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4
 
 Optimizing unit <acfg_rom> ...
 
 Optimizing unit <pci_arb> ...
-  implementation constraint: INIT=r	 : CURRENT_STATE_0
-  implementation constraint: INIT=r	 : CURRENT_STATE_1
-  implementation constraint: INIT=r	 : CURRENT_STATE_2
-  implementation constraint: INIT=r	 : CURRENT_STATE_3
+  implementation constraint: INIT=r	 : CURRENT_STATE_FSM_FFd1
+  implementation constraint: INIT=r	 : CURRENT_STATE_FSM_FFd2
+  implementation constraint: INIT=r	 : CURRENT_STATE_FSM_FFd3
+  implementation constraint: INIT=r	 : CURRENT_STATE_FSM_FFd4
 
 =========================================================================
 *                           Partition Report                            *
@@ -281,15 +334,15 @@ Design Statistics
 # IOs                              : 87
 
 Cell Usage :
-# BELS                             : 518
-#      AND2                        : 149
-#      AND3                        : 27
+# BELS                             : 492
+#      AND2                        : 140
+#      AND3                        : 21
 #      AND4                        : 4
 #      GND                         : 1
-#      INV                         : 202
-#      OR2                         : 110
-#      OR3                         : 12
-#      OR4                         : 3
+#      INV                         : 187
+#      OR2                         : 116
+#      OR3                         : 8
+#      OR4                         : 5
 #      VCC                         : 1
 #      XOR2                        : 9
 # FlipFlops/Latches                : 22
@@ -306,14 +359,14 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.90 secs
+Total REAL time to Xst completion: 75.00 secs
+Total CPU time to Xst completion: 74.20 secs
  
 --> 
 
-Total memory usage is 224744 kilobytes
+Total memory usage is 224296 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
 Number of infos    :    4 (   0 filtered)
 

@@ -166,16 +166,16 @@ begin
 
 -------------------------------------------------------------------------------
 -- debug signals
-debug_x(15) <= i_pciena_x;--idle_x;
-debug_x(14) <= dtack_pci_x;--reqz3_x;
-debug_x(13) <= dtack_ctrl_x;--gntz3_x;
-debug_x(12) <= dtack_cfg_x;--cycout_x;
-debug_x(11) <= ncycstart_x;--P_NTRDY;--
-debug_x(10) <= P_NDEVSEL;--cycend_x;
-debug_x(9)  <= Z_NSLAVE;--ncfg_x;
-debug_x(8)  <= i_data_x;--cbe_ena_x;
+--debug_x(15) <= i_pciena_x;--idle_x;
+--debug_x(14) <= dtack_pci_x;--reqz3_x;
+--debug_x(13) <= dtack_ctrl_x;--gntz3_x;
+--debug_x(12) <= dtack_cfg_x;--cycout_x;
+--debug_x(11) <= ncycstart_x;--P_NTRDY;--
+--debug_x(10) <= P_NDEVSEL;--cycend_x;
+--debug_x(9)  <= Z_NSLAVE;--ncfg_x;
+--debug_x(8)  <= i_data_x;--cbe_ena_x;
 -------------------------------------------------------------------------------
-debug_x(7 downto 4) <= p_cbe_x;
+--debug_x(7 downto 4) <= p_cbe_x;
 
 -------------------------------------------------------------------------------
 -- Cycle start / end recognition
@@ -265,7 +265,7 @@ port map(
 	GNTZ3_OUT	=> z3gnt_x,
 	NGNT_OUT		=> p_ngnt_x,
 	TOC_OUT		=> debug_x(3 downto 0), --open,
-	STATE_OUT	=> open,--debug_x(7 downto 4), --open,
+	STATE_OUT	=> debug_x(7 downto 4), --open,
 	NIORST		=> Z_NIORST,
 	PCICLK		=> I_PCICLK2
 );
@@ -288,7 +288,7 @@ port map(
 	NDEVSEL_IN	=> TO_X01(P_NDEVSEL),
 	NTRDY_IN		=> TO_X01(P_NTRDY),
 	NSTOP_IN		=> TO_X01(P_NSTOP),
-	STATE_OUT	=> open,
+	STATE_OUT	=> debug_x(11 downto 8), --open,
 	CYCOUT_OUT	=> cycout_x,
 	NFRAME_OUT	=> P_NFRAME,
 	NIRDY_OUT	=> P_NIRDY,

@@ -3,7 +3,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: pcih                                Date:  3-15-2024,  4:54PM
+Design Name: pcih                                Date:  6-24-2024,  8:03PM
 Device Used: XC95144XL-10-TQ144
 Fitting Status: Successful
 
@@ -11,22 +11,22 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-72 /144 ( 50%) 373 /720  ( 52%) 200/432 ( 46%)   22 /144 ( 15%) 84 /117 ( 72%)
+72 /144 ( 50%) 275 /720  ( 38%) 192/432 ( 44%)   22 /144 ( 15%) 84 /117 ( 72%)
 
 ** Function Block Resources **
 
 Function    Mcells      FB Inps     Pterms      IO          
 Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
-FB1          13/18       27/54       40/90      13/15
-FB2           1/18       22/54       77/90       6/15
-FB3           7/18       38/54       54/90      14/15
-FB4          17/18       33/54       72/90      11/15
+FB1           6/18       20/54       24/90      13/15
+FB2           3/18       35/54       55/90       6/15
+FB3          15/18       29/54       39/90      14/15
+FB4          12/18       22/54       47/90      11/15
 FB5           4/18       12/54        6/90       6/14
-FB6           6/18       11/54       13/90       6/13
-FB7          12/18       21/54       34/90      13/15
-FB8          12/18       36/54       77/90      15/15*
+FB6           7/18       12/54       17/90       6/13
+FB7          16/18       27/54       42/90      13/15
+FB8           9/18       35/54       45/90      15/15*
              -----       -----       -----      -----    
-             72/144     200/432     373/720     84/117
+             72/144     192/432     275/720     84/117
 
 * - Resource is exhausted
 
@@ -83,6 +83,10 @@ WARNING:Cpld:1007 - Removing unused input(s) 'Z_Z3SENSE'.  The input(s) are
 WARNING:Cpld:1239 - The global clock designation (BUFG) on signal 'I_33M_IBUF'
    is ignored. Most likely the signal is gated and therefore cannot be used as a
    global control signal.
+WARNING:Cpld:896 - Unable to map all desired signals into function block, FB4,
+   because too many function block product terms are required. Buffering output
+   signal DEBUG<7> to allow all signals assigned to this function block to be
+   placed.
 *************************  Summary of Mapped Logic  ************************
 
 ** 49 Outputs **
@@ -95,23 +99,23 @@ Z_ADA<29>                                               8     16    FB1_9   22  
 I_PCICLK                                                1     1     FB1_10  31   I/O     O       STD  FAST 
 Z_ADA<30>                                               5     13    FB1_11  24   I/O     I/O     STD  FAST 
 Z_ADA<28>                                               5     12    FB1_14  27   I/O     O       STD  FAST 
-I_PCIENA                                                4     5     FB3_7   46   I/O     O       STD  FAST 
-I_PCIDL                                                 2     5     FB3_10  48   I/O     O       STD  FAST 
+I_PCIENA                                                2     4     FB3_7   46   I/O     O       STD  FAST 
+I_PCIDL                                                 1     4     FB3_10  48   I/O     O       STD  FAST 
 I_DAOUT                                                 2     4     FB3_12  45   I/O     O       STD  FAST 
 I_DATA                                                  3     8     FB3_14  49   I/O     O       STD  FAST 
 I_CFLT                                                  1     9     FB3_15  50   I/O     O       STD  FAST 
 I_PLA<1>                                                2     6     FB3_17  51   I/O     O       STD  FAST 
 DEBUG<2>                                                3     5     FB4_1   118  I/O     O       STD  FAST RESET
-DEBUG<11>                                               2     5     FB4_3   133  I/O     O       STD  FAST 
-DEBUG<6>                                                1     1     FB4_5   128  I/O     O       STD  FAST 
+DEBUG<11>                                               1     3     FB4_3   133  I/O     O       STD  FAST 
+DEBUG<6>                                                16    13    FB4_5   128  I/O     O       STD  FAST RESET
 DEBUG<7>                                                1     1     FB4_6   129  I/O     O       STD  FAST 
-DEBUG<8>                                                3     8     FB4_8   130  I/O     O       STD  FAST 
-DEBUG<9>                                                1     1     FB4_9   131  I/O     O       STD  FAST 
-DEBUG<13>                                               1     5     FB4_10  135  I/O     O       STD  FAST 
-DEBUG<10>                                               1     1     FB4_11  132  I/O     O       STD  FAST 
-DEBUG<12>                                               1     4     FB4_12  134  I/O     O       STD  FAST 
-DEBUG<15>                                               4     5     FB4_13  137  I/O     O       STD  FAST 
-DEBUG<14>                                               1     3     FB4_14  136  I/O     O       STD  FAST 
+DEBUG<8>                                                2     3     FB4_8   130  I/O     O       STD  FAST 
+DEBUG<9>                                                2     3     FB4_9   131  I/O     O       STD  FAST 
+DEBUG<13>                                               0     0     FB4_10  135  I/O     O       STD  FAST 
+DEBUG<10>                                               4     4     FB4_11  132  I/O     O       STD  FAST 
+DEBUG<12>                                               0     0     FB4_12  134  I/O     O       STD  FAST 
+DEBUG<15>                                               0     0     FB4_13  137  I/O     O       STD  FAST 
+DEBUG<14>                                               0     0     FB4_14  136  I/O     O       STD  FAST 
 I_PLA<0>                                                3     6     FB5_2   52   I/O     O       STD  FAST 
 I_NINT6                                                 0     0     FB5_10  68   I/O     O       STD  FAST 
 Z_NCFGOUT                                               1     1     FB5_13  70   I/O     O       STD  FAST RESET
@@ -119,14 +123,14 @@ I_NINT2                                                 2     5     FB5_17  69  
 P_PAR                                                   3     3     FB6_2   106  I/O     O       STD  FAST 
 DEBUG<0>                                                2     3     FB6_9   116  I/O     O       STD  FAST RESET
 DEBUG<3>                                                3     6     FB6_11  119  I/O     O       STD  FAST RESET
-DEBUG<4>                                                1     1     FB6_12  120  I/O     O       STD  FAST 
-DEBUG<5>                                                1     1     FB6_14  121  I/O     O       STD  FAST 
+DEBUG<4>                                                2     2     FB6_12  120  I/O     O       STD  FAST 
+DEBUG<5>                                                3     3     FB6_14  121  I/O     O       STD  FAST 
 DEBUG<1>                                                3     4     FB6_16  117  I/O     O       STD  FAST RESET
-P_CBE<1>                                                3     6     FB7_5   74   I/O     I/O     STD  FAST 
+P_CBE<1>                                                3     5     FB7_5   74   I/O     I/O     STD  FAST 
 P_NLOCK                                                 0     0     FB7_7   77   I/O     O       STD  FAST 
-P_CBE<2>                                                7     8     FB7_9   80   I/O     I/O     STD  FAST 
-P_NIRDY                                                 3     5     FB7_10  79   I/O     I/O     STD  FAST 
-P_CBE<3>                                                11    8     FB7_13  81   I/O     I/O     STD  FAST 
+P_CBE<2>                                                6     7     FB7_9   80   I/O     I/O     STD  FAST 
+P_NIRDY                                                 2     4     FB7_10  79   I/O     I/O     STD  FAST 
+P_CBE<3>                                                9     7     FB7_13  81   I/O     I/O     STD  FAST 
 P_NGNT<0>                                               1     4     FB7_14  86   I/O     O       STD  FAST 
 P_CLKOUT<0>                                             1     1     FB7_15  87   I/O     O       STD  FAST 
 
@@ -139,36 +143,36 @@ P_NGNT<3>                                               1     4     FB8_4   97  
 P_CLKOUT<3>                                             1     1     FB8_9   96   I/O     O       STD  FAST 
 P_CLKOUT<2>                                             1     1     FB8_10  101  I/O     O       STD  FAST 
 P_NGNT<2>                                               1     4     FB8_12  100  I/O     O       STD  FAST 
-P_NFRAME                                                2     5     FB8_13  103  I/O     I/O     STD  FAST 
-P_CBE<0>                                                7     7     FB8_16  107  I/O     I/O     STD  FAST 
+P_NFRAME                                                2     4     FB8_13  103  I/O     I/O     STD  FAST 
+P_CBE<0>                                                6     6     FB8_16  107  I/O     I/O     STD  FAST 
 
 ** 23 Buried Nodes **
 
 Signal                                                  Total Total Loc     Pwr  Reg Init
 Name                                                    Pts   Inps          Mode State
-ncfg_x                                                  1     9     FB1_8   STD  RESET
-THE_PCI_SEQ/CURRENT_STATE<3>                            1     4     FB1_12  STD  RESET
-cycend_x                                                2     5     FB1_13  STD  RESET
-cbp_x<2>/cbp_x<2>_TRST                                  2     4     FB1_15  STD  
-THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF  2     5     FB1_16  STD  
-p_par_ena                                               4     5     FB1_17  STD  RESET
-THE_PCI_SEQ/nirdy_x/THE_PCI_SEQ/nirdy_x_TRST            4     4     FB1_18  STD  
-THE_PCI_ARB/CURRENT_STATE<1>                            77    22    FB2_11  STD  RESET
-THE_PCI_ARB/CURRENT_STATE<3>                            40    24    FB3_3   STD  RESET
-pci_int_ena_x                                           3     9     FB4_2   STD  RESET
-THE_PCI_SEQ/CURRENT_STATE<1>                            12    21    FB4_4   STD  RESET
-THE_PCI_SEQ/CURRENT_STATE<0>                            13    19    FB4_7   STD  RESET
-N0/N0_TRST                                              3     8     FB4_15  STD  
-$OpTx$INV$62                                            5     10    FB4_16  STD  
-THE_PCI_SEQ/CURRENT_STATE<2>                            17    23    FB4_17  STD  RESET
-dat_p                                                   2     2     FB7_11  STD  RESET
-THE_PCI_SEQ/toc_ctr_x<1>                                2     2     FB7_12  STD  RESET
-THE_PCI_SEQ/toc_ctr_x<0>                                2     2     FB7_18  STD  RESET
-THE_PCI_ARB/CURRENT_STATE<2>                            30    15    FB8_7   STD  RESET
-DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF                          2     3     FB8_11  STD  
-cbe_p                                                   5     4     FB8_14  STD  RESET
-$OpTx$FX_DC$67                                          2     4     FB8_15  STD  
-THE_PCI_ARB/CURRENT_STATE<0>                            22    13    FB8_18  STD  RESET
+$OpTx$FX_DC$1038                                        22    14    FB2_3   STD  
+THE_PCI_ARB/CURRENT_STATE_FSM_FFd1                      18    16    FB2_14  STD  RESET
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4                      15    22    FB2_17  STD  RESET
+ncfg_x                                                  1     9     FB3_4   STD  RESET
+p_par_ena                                               2     4     FB3_5   STD  RESET
+cycend_x                                                2     3     FB3_6   STD  RESET
+$OpTx$FX_DC$33                                          2     4     FB3_8   STD  
+pci_int_ena_x                                           3     9     FB3_9   STD  RESET
+DEBUG_12_OBUF/DEBUG_12_OBUF_TRST                        3     8     FB3_11  STD  
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2                      4     7     FB3_13  STD  RESET
+$OpTx$INV$27                                            5     10    FB3_16  STD  
+$OpTx$$OpTx$FX_DC$1027_INV$1127                         6     12    FB3_18  STD  
+THE_PCI_ARB/CURRENT_STATE_FSM_FFd4                      18    17    FB4_17  STD  RESET
+$OpTx$FX_DC$40                                          1     4     FB6_18  STD  
+dat_p                                                   2     2     FB7_3   STD  RESET
+THE_PCI_SEQ/toc_ctr_x<1>                                2     2     FB7_4   STD  RESET
+THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF  2     3     FB7_6   STD  
+THE_PCI_SEQ/toc_ctr_x<0>                                2     2     FB7_8   STD  RESET
+DEBUG_3_OBUF/DEBUG_3_OBUF_RSTF                          2     3     FB7_11  STD  
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1                      3     7     FB7_12  STD  RESET
+cbe_p                                                   5     4     FB7_18  STD  RESET
+DEBUG<7>_BUFR                                           16    13    FB8_1   STD  RESET
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3                      14    20    FB8_14  STD  RESET
 
 ** 35 Inputs **
 
@@ -226,8 +230,8 @@ Pin Type/Use - I  - Input             GCK - Global Clock
 X            - Signal used as input to the macrocell logic.
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
-Number of function block inputs used/remaining:               27/27
-Number of signals used by logic mapping into function block:  27
+Number of function block inputs used/remaining:               20/34
+Number of signals used by logic mapping into function block:  20
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 Z_NDTACK              1       0     0   4     FB1_1   23    I/O     O
@@ -237,209 +241,197 @@ Z_ADA<31>             4       0     0   1     FB1_4   25    I/O     I/O
 (unused)              0       0     0   5     FB1_5   19    I/O     
 (unused)              0       0     0   5     FB1_6   20    I/O     I
 (unused)              0       0     0   5     FB1_7         (b)     
-ncfg_x                1       0   \/2   2     FB1_8   21    I/O     I
+(unused)              0       0   \/2   3     FB1_8   21    I/O     I
 Z_ADA<29>             8       3<-   0   0     FB1_9   22    I/O     O
 I_PCICLK              1       0   /\1   3     FB1_10  31    I/O     O
 Z_ADA<30>             5       0     0   0     FB1_11  24    I/O     I/O
-THE_PCI_SEQ/CURRENT_STATE<3>
-                      1       0     0   4     FB1_12  26    I/O     I
-cycend_x              2       0     0   3     FB1_13        (b)     (b)
+(unused)              0       0     0   5     FB1_12  26    I/O     I
+(unused)              0       0     0   5     FB1_13        (b)     
 Z_ADA<28>             5       0     0   0     FB1_14  27    I/O     O
-cbp_x<2>/cbp_x<2>_TRST
-                      2       0     0   3     FB1_15  28    I/O     I
-THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF
-                      2       0     0   3     FB1_16  35    I/O     I
-p_par_ena             4       0     0   1     FB1_17  30    GCK/I/O I
-THE_PCI_SEQ/nirdy_x/THE_PCI_SEQ/nirdy_x_TRST
-                      4       0     0   1     FB1_18        (b)     (b)
+(unused)              0       0     0   5     FB1_15  28    I/O     I
+(unused)              0       0     0   5     FB1_16  35    I/O     I
+(unused)              0       0     0   5     FB1_17  30    GCK/I/O I
+(unused)              0       0     0   5     FB1_18        (b)     
 
 Signals Used by Logic in Function Block
-  1: $OpTx$FX_DC$67    10: P_NINTD                       19: Z_AA<5> 
-  2: P_NDEVSEL         11: P_NRESET                      20: Z_AA<6> 
-  3: Z_NSLAVE          12: THE_PCI_SEQ/CURRENT_STATE<0>  21: Z_AA<7> 
-  4: I_33M             13: THE_PCI_SEQ/CURRENT_STATE<1>  22: Z_DOE 
-  5: I_ZLA             14: THE_PCI_SEQ/CURRENT_STATE<2>  23: Z_NBERR 
-  6: N0/N0_TRST        15: THE_PCI_SEQ/CURRENT_STATE<3>  24: Z_NCFGOUT 
-  7: P_NINTA           16: Z_AA<2>                       25: Z_NDS<3> 
-  8: P_NINTB           17: Z_AA<3>                       26: Z_READ 
-  9: P_NINTC           18: Z_AA<4>                       27: pci_int_ena_x 
+  1: $OpTx$FX_DC$33                     8: P_NINTD           15: Z_DOE 
+  2: DEBUG_12_OBUF/DEBUG_12_OBUF_TRST   9: P_NRESET          16: Z_NBERR 
+  3: I_33M                             10: Z_AA<2>           17: Z_NCFGOUT 
+  4: I_ZLA                             11: Z_AA<3>           18: Z_NSLAVE 
+  5: P_NINTA                           12: Z_AA<4>           19: Z_READ 
+  6: P_NINTB                           13: Z_AA<5>           20: pci_int_ena_x 
+  7: P_NINTC                           14: Z_AA<6>          
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-Z_NDTACK             .....X.................................. 1
-Z_ADA<31>            X.X.X.....X....XXXXX.XXX.X.............. 13
-ncfg_x               ..X............XXXXXX..XX............... 9
-Z_ADA<29>            X.X.X.XXXX.....XXXXX.XXX.X.............. 16
-I_PCICLK             ...X.................................... 1
-Z_ADA<30>            X.X.X..........XXXXX.XXX.XX............. 13
-THE_PCI_SEQ/CURRENT_STATE<3> 
-                     ...........XXXX......................... 4
-cycend_x             ..X........XXXX......................... 5
-Z_ADA<28>            X.X.X..........XXXXX.XXX.X.............. 12
-cbp_x<2>/cbp_x<2>_TRST 
-                     ...........XXXX......................... 4
-THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF 
-                     .X.........XXXX......................... 5
-p_par_ena            ...........XXXX..........X.............. 5
-THE_PCI_SEQ/nirdy_x/THE_PCI_SEQ/nirdy_x_TRST 
-                     ...........XXXX......................... 4
+Z_NDTACK             .X...................................... 1
+Z_ADA<31>            X..X....XXXXXXXXXXX..................... 13
+Z_ADA<29>            X..XXXXX.XXXXXXXXXX..................... 16
+I_PCICLK             ..X..................................... 1
+Z_ADA<30>            X..X.....XXXXXXXXXXX.................... 13
+Z_ADA<28>            X..X.....XXXXXXXXXX..................... 12
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               35/19
+Number of signals used by logic mapping into function block:  35
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0   \/5   0     FB2_1   142   I/O     (b)
+(unused)              0       0   \/5   0     FB2_2   143   GSR/I/O GSR/I
+$OpTx$FX_DC$1038     22      17<-   0   0     FB2_3         (b)     (b)
+(unused)              0       0   /\5   0     FB2_4   4     I/O     (b)
+(unused)              0       0   /\2   3     FB2_5   2     GTS/I/O (b)
+(unused)              0       0     0   5     FB2_6   3     GTS/I/O 
+(unused)              0       0     0   5     FB2_7         (b)     
+(unused)              0       0     0   5     FB2_8   5     GTS/I/O 
+(unused)              0       0     0   5     FB2_9   6     GTS/I/O 
+(unused)              0       0     0   5     FB2_10  7     I/O     
+(unused)              0       0     0   5     FB2_11  9     I/O     I
+(unused)              0       0   \/3   2     FB2_12  10    I/O     (b)
+(unused)              0       0   \/5   0     FB2_13  12    I/O     I
+THE_PCI_ARB/CURRENT_STATE_FSM_FFd1
+                     18      13<-   0   0     FB2_14  11    I/O     I
+(unused)              0       0   /\5   0     FB2_15  13    I/O     I
+(unused)              0       0   \/5   0     FB2_16  14    I/O     (b)
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4
+                     15      10<-   0   0     FB2_17  15    I/O     I
+(unused)              0       0   /\5   0     FB2_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$$OpTx$FX_DC$1027_INV$1127  13: P_NFRAME.PIN                        25: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 
+  2: $OpTx$FX_DC$1038                 14: P_NIRDY.PIN                         26: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 
+  3: $OpTx$INV$27                     15: P_NREQ<0>                           27: THE_PCI_SEQ/toc_ctr_x<0> 
+  4: DEBUG<0>                         16: P_NREQ<1>                           28: THE_PCI_SEQ/toc_ctr_x<1> 
+  5: DEBUG<1>                         17: P_NREQ<2>                           29: Z_NCFGOUT 
+  6: DEBUG<2>                         18: P_NREQ<3>                           30: Z_NDS<0> 
+  7: DEBUG<3>                         19: P_NSTOP                             31: Z_NDS<1> 
+  8: DEBUG<6>                         20: P_NTRDY                             32: Z_NDS<2> 
+  9: DEBUG<7>_BUFR                    21: THE_PCI_ARB/CURRENT_STATE_FSM_FFd1  33: Z_NDS<3> 
+ 10: I_ACC<0>                         22: THE_PCI_ARB/CURRENT_STATE_FSM_FFd4  34: Z_NSLAVE 
+ 11: I_ACC<1>                         23: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1  35: cycend_x 
+ 12: I_ZMA                            24: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+$OpTx$FX_DC$1038     X.XXXXXXX.....XXXX..XX.................. 14
+THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 
+                     .XXXXXXXX...XXXXXX..XX.................. 16
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 
+                     .........XXXXX....XXXXXXXXXXXXXXXXX..... 22
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               29/25
+Number of signals used by logic mapping into function block:  29
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB3_1   39    I/O     I
+(unused)              0       0     0   5     FB3_2   32    GCK/I/O GCK
+(unused)              0       0     0   5     FB3_3   41    I/O     I
+ncfg_x                1       0     0   4     FB3_4   44    I/O     I
+p_par_ena             2       0     0   3     FB3_5   33    I/O     I
+cycend_x              2       0     0   3     FB3_6   34    I/O     (b)
+I_PCIENA              2       0     0   3     FB3_7   46    I/O     O
+$OpTx$FX_DC$33        2       0     0   3     FB3_8   38    GCK/I/O GCK/I
+pci_int_ena_x         3       0     0   2     FB3_9   40    I/O     I
+I_PCIDL               1       0     0   4     FB3_10  48    I/O     O
+DEBUG_12_OBUF/DEBUG_12_OBUF_TRST
+                      3       0     0   2     FB3_11  43    I/O     I
+I_DAOUT               2       0     0   3     FB3_12  45    I/O     O
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2
+                      4       0     0   1     FB3_13        (b)     (b)
+I_DATA                3       0     0   2     FB3_14  49    I/O     O
+I_CFLT                1       0     0   4     FB3_15  50    I/O     O
+$OpTx$INV$27          5       0     0   0     FB3_16        (b)     (b)
+I_PLA<1>              2       0   \/1   2     FB3_17  51    I/O     O
+$OpTx$$OpTx$FX_DC$1027_INV$1127
+                      6       1<-   0   0     FB3_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: I_ACC<0>                            11: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3  21: Z_NCFGOUT 
+  2: I_ACC<1>                            12: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4  22: Z_NDS<0> 
+  3: I_ZMA                               13: Z_AA<2>                             23: Z_NDS<1> 
+  4: Z_ADA<30>.PIN                       14: Z_AA<3>                             24: Z_NDS<2> 
+  5: P_NSTOP                             15: Z_AA<4>                             25: Z_NDS<3> 
+  6: P_NTRDY                             16: Z_AA<5>                             26: Z_NFCS 
+  7: THE_PCI_ARB/CURRENT_STATE_FSM_FFd1  17: Z_AA<6>                             27: Z_NSLAVE 
+  8: THE_PCI_ARB/CURRENT_STATE_FSM_FFd4  18: Z_AA<7>                             28: Z_READ 
+  9: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1  19: Z_DOE                               29: cycend_x 
+ 10: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2  20: Z_NBERR                            
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+ncfg_x               ............XXXXXX..X...X.X............. 9
+p_par_ena            ........XXX................X............ 4
+cycend_x             .........X.X..............X............. 3
+I_PCIENA             ........XXX................X............ 4
+$OpTx$FX_DC$33       XXX.................X................... 4
+pci_int_ena_x        XXXX..............X.X...X.XX............ 9
+I_PCIDL              .....X..X.XX............................ 4
+DEBUG_12_OBUF/DEBUG_12_OBUF_TRST 
+                     XXX.................X...XXX.X........... 8
+I_DAOUT              ........XXXX............................ 4
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 
+                     ....XX..XXXX...............X............ 7
+I_DATA               XXX...............XXX.....XX............ 8
+I_CFLT               ............XXXXXX..X...X.X............. 9
+$OpTx$INV$27         XXX.................XXXXX.X.X........... 10
+I_PLA<1>             XX...................XXXX............... 6
+$OpTx$$OpTx$FX_DC$1027_INV$1127 
+                     XXX...XX............XXXXX.X.X........... 12
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB4  ***********************************
 Number of function block inputs used/remaining:               22/32
 Number of signals used by logic mapping into function block:  22
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0     0   5     FB2_1   142   I/O     
-(unused)              0       0     0   5     FB2_2   143   GSR/I/O GSR/I
-(unused)              0       0   \/2   3     FB2_3         (b)     (b)
-(unused)              0       0   \/5   0     FB2_4   4     I/O     (b)
-(unused)              0       0   \/5   0     FB2_5   2     GTS/I/O (b)
-(unused)              0       0   \/5   0     FB2_6   3     GTS/I/O (b)
-(unused)              0       0   \/5   0     FB2_7         (b)     (b)
-(unused)              0       0   \/5   0     FB2_8   5     GTS/I/O (b)
-(unused)              0       0   \/5   0     FB2_9   6     GTS/I/O (b)
-(unused)              0       0   \/5   0     FB2_10  7     I/O     (b)
-THE_PCI_ARB/CURRENT_STATE<1>
-                     77      72<-   0   0     FB2_11  9     I/O     I
-(unused)              0       0   /\5   0     FB2_12  10    I/O     (b)
-(unused)              0       0   /\5   0     FB2_13  12    I/O     I
-(unused)              0       0   /\5   0     FB2_14  11    I/O     I
-(unused)              0       0   /\5   0     FB2_15  13    I/O     I
-(unused)              0       0   /\5   0     FB2_16  14    I/O     (b)
-(unused)              0       0   /\5   0     FB2_17  15    I/O     I
-(unused)              0       0   /\5   0     FB2_18        (b)     (b)
-
-Signals Used by Logic in Function Block
-  1: DEBUG<0>           9: P_NREQ<0>                     16: THE_PCI_ARB/CURRENT_STATE<3> 
-  2: DEBUG<1>          10: P_NREQ<1>                     17: Z_NCFGOUT 
-  3: DEBUG<2>          11: P_NREQ<2>                     18: Z_NDS<0> 
-  4: DEBUG<3>          12: P_NREQ<3>                     19: Z_NDS<1> 
-  5: Z_NSLAVE          13: THE_PCI_ARB/CURRENT_STATE<0>  20: Z_NDS<2> 
-  6: I_ACC<0>          14: THE_PCI_ARB/CURRENT_STATE<1>  21: Z_NDS<3> 
-  7: I_ACC<1>          15: THE_PCI_ARB/CURRENT_STATE<2>  22: cycend_x 
-  8: I_ZMA            
-
-Signal                        1         2         3         4 FB
-Name                0----+----0----+----0----+----0----+----0 Inputs
-THE_PCI_ARB/CURRENT_STATE<1> 
-                     XXXXXXXXXXXXXXXXXXXXXX.................. 22
-                    0----+----1----+----2----+----3----+----4
-                              0         0         0         0
-*********************************** FB3  ***********************************
-Number of function block inputs used/remaining:               38/16
-Number of signals used by logic mapping into function block:  38
-Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
-Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0   \/5   0     FB3_1   39    I/O     I
-(unused)              0       0   \/5   0     FB3_2   32    GCK/I/O GCK
-THE_PCI_ARB/CURRENT_STATE<3>
-                     40      35<-   0   0     FB3_3   41    I/O     I
-(unused)              0       0   /\5   0     FB3_4   44    I/O     I
-(unused)              0       0   /\5   0     FB3_5   33    I/O     I
-(unused)              0       0   /\5   0     FB3_6   34    I/O     (b)
-I_PCIENA              4       1<- /\2   0     FB3_7   46    I/O     O
-(unused)              0       0   /\1   4     FB3_8   38    GCK/I/O GCK/I
-(unused)              0       0     0   5     FB3_9   40    I/O     I
-I_PCIDL               2       0     0   3     FB3_10  48    I/O     O
-(unused)              0       0     0   5     FB3_11  43    I/O     I
-I_DAOUT               2       0     0   3     FB3_12  45    I/O     O
-(unused)              0       0     0   5     FB3_13        (b)     
-I_DATA                3       0     0   2     FB3_14  49    I/O     O
-I_CFLT                1       0     0   4     FB3_15  50    I/O     O
-(unused)              0       0     0   5     FB3_16        (b)     
-I_PLA<1>              2       0   \/3   0     FB3_17  51    I/O     O
-(unused)              0       0   \/5   0     FB3_18        (b)     (b)
-
-Signals Used by Logic in Function Block
-  1: DEBUG<0>          14: P_NREQ<3>                     27: Z_AA<5> 
-  2: DEBUG<1>          15: P_NTRDY                       28: Z_AA<6> 
-  3: DEBUG<2>          16: THE_PCI_ARB/CURRENT_STATE<0>  29: Z_AA<7> 
-  4: DEBUG<3>          17: THE_PCI_ARB/CURRENT_STATE<1>  30: Z_DOE 
-  5: Z_NSLAVE          18: THE_PCI_ARB/CURRENT_STATE<2>  31: Z_NBERR 
-  6: I_ACC<0>          19: THE_PCI_ARB/CURRENT_STATE<3>  32: Z_NCFGOUT 
-  7: I_ACC<1>          20: THE_PCI_SEQ/CURRENT_STATE<0>  33: Z_NDS<0> 
-  8: I_ZMA             21: THE_PCI_SEQ/CURRENT_STATE<1>  34: Z_NDS<1> 
-  9: P_NFRAME.PIN      22: THE_PCI_SEQ/CURRENT_STATE<2>  35: Z_NDS<2> 
- 10: P_NIRDY.PIN       23: THE_PCI_SEQ/CURRENT_STATE<3>  36: Z_NDS<3> 
- 11: P_NREQ<0>         24: Z_AA<2>                       37: Z_READ 
- 12: P_NREQ<1>         25: Z_AA<3>                       38: cycend_x 
- 13: P_NREQ<2>         26: Z_AA<4>                      
-
-Signal                        1         2         3         4 FB
-Name                0----+----0----+----0----+----0----+----0 Inputs
-THE_PCI_ARB/CURRENT_STATE<3> 
-                     XXXXXXXXXXXXXX.XXXX............XXXXX.X.. 24
-I_PCIENA             ...................XXXX.............X... 5
-I_PCIDL              ..............X....XXXX................. 5
-I_DAOUT              ...................XXXX................. 4
-I_DATA               ....XXXX.....................XXX....X... 8
-I_CFLT               ....X..................XXXXXX..X...X.... 9
-I_PLA<1>             .....XX.........................XXXX.... 6
-                    0----+----1----+----2----+----3----+----4
-                              0         0         0         0
-*********************************** FB4  ***********************************
-Number of function block inputs used/remaining:               33/21
-Number of signals used by logic mapping into function block:  33
-Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
-Name                Pt      Pt    Pt  Pt               #    Type    Use
-DEBUG<2>              3       0   /\2   0     FB4_1   118   I/O     O
-pci_int_ena_x         3       0     0   2     FB4_2   126   I/O     (b)
-DEBUG<11>             2       0   \/3   0     FB4_3   133   I/O     O
-THE_PCI_SEQ/CURRENT_STATE<1>
-                     12       7<-   0   0     FB4_4         (b)     (b)
-DEBUG<6>              1       0   /\4   0     FB4_5   128   I/O     O
-DEBUG<7>              1       0   \/4   0     FB4_6   129   I/O     O
-THE_PCI_SEQ/CURRENT_STATE<0>
-                     13       8<-   0   0     FB4_7         (b)     (b)
-DEBUG<8>              3       2<- /\4   0     FB4_8   130   I/O     O
-DEBUG<9>              1       0   /\2   2     FB4_9   131   I/O     O
-DEBUG<13>             1       0     0   4     FB4_10  135   I/O     O
-DEBUG<10>             1       0     0   4     FB4_11  132   I/O     O
-DEBUG<12>             1       0     0   4     FB4_12  134   I/O     O
-DEBUG<15>             4       0     0   1     FB4_13  137   I/O     O
-DEBUG<14>             1       0   \/3   1     FB4_14  136   I/O     O
-N0/N0_TRST            3       3<- \/5   0     FB4_15  138   I/O     (b)
-$OpTx$INV$62          5       5<- \/5   0     FB4_16  139   I/O     (b)
-THE_PCI_SEQ/CURRENT_STATE<2>
-                     17      12<-   0   0     FB4_17  140   I/O     (b)
+DEBUG<2>              3       0     0   2     FB4_1   118   I/O     O
+(unused)              0       0     0   5     FB4_2   126   I/O     
+DEBUG<11>             1       0   \/1   3     FB4_3   133   I/O     O
+(unused)              0       0   \/5   0     FB4_4         (b)     (b)
+DEBUG<6>             16      11<-   0   0     FB4_5   128   I/O     O
+DEBUG<7>              1       1<- /\5   0     FB4_6   129   I/O     O
+(unused)              0       0   /\1   4     FB4_7         (b)     (b)
+DEBUG<8>              2       0     0   3     FB4_8   130   I/O     O
+DEBUG<9>              2       0     0   3     FB4_9   131   I/O     O
+DEBUG<13>             0       0     0   5     FB4_10  135   I/O     O
+DEBUG<10>             4       0     0   1     FB4_11  132   I/O     O
+DEBUG<12>             0       0     0   5     FB4_12  134   I/O     O
+DEBUG<15>             0       0     0   5     FB4_13  137   I/O     O
+DEBUG<14>             0       0     0   5     FB4_14  136   I/O     O
+(unused)              0       0   \/3   2     FB4_15  138   I/O     (b)
+(unused)              0       0   \/5   0     FB4_16  139   I/O     (b)
+THE_PCI_ARB/CURRENT_STATE_FSM_FFd4
+                     18      13<-   0   0     FB4_17  140   I/O     (b)
 (unused)              0       0   /\5   0     FB4_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: DEBUG<0>                        12: P_NIRDY.PIN                   23: THE_PCI_SEQ/toc_ctr_x<1> 
-  2: DEBUG<1>                        13: Z_ADA<30>.PIN                 24: Z_DOE 
-  3: P_NDEVSEL                       14: P_NSTOP                       25: Z_NBERR 
-  4: DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF  15: P_NTRDY                       26: Z_NCFGOUT 
-  5: P_CBE<2>.PIN                    16: THE_PCI_ARB/CURRENT_STATE<2>  27: Z_NDS<0> 
-  6: P_CBE<3>.PIN                    17: THE_PCI_ARB/CURRENT_STATE<3>  28: Z_NDS<1> 
-  7: Z_NSLAVE                        18: THE_PCI_SEQ/CURRENT_STATE<0>  29: Z_NDS<2> 
-  8: I_ACC<0>                        19: THE_PCI_SEQ/CURRENT_STATE<1>  30: Z_NDS<3> 
-  9: I_ACC<1>                        20: THE_PCI_SEQ/CURRENT_STATE<2>  31: Z_NFCS 
- 10: I_ZMA                           21: THE_PCI_SEQ/CURRENT_STATE<3>  32: Z_READ 
- 11: P_NFRAME.PIN                    22: THE_PCI_SEQ/toc_ctr_x<0>      33: cycend_x 
+  1: $OpTx$FX_DC$1038   9: DEBUG<7>_BUFR                   16: P_NREQ<3> 
+  2: $OpTx$FX_DC$40    10: DEBUG_3_OBUF/DEBUG_3_OBUF_RSTF  17: THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 
+  3: $OpTx$INV$27      11: P_NFRAME.PIN                    18: THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 
+  4: DEBUG<0>          12: P_NIRDY.PIN                     19: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 
+  5: DEBUG<1>          13: P_NREQ<0>                       20: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 
+  6: DEBUG<2>          14: P_NREQ<1>                       21: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 
+  7: DEBUG<3>          15: P_NREQ<2>                       22: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 
+  8: DEBUG<6>         
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-DEBUG<2>             XX.X...........XX....................... 5
-pci_int_ena_x        ......XXXX..X..........X.X...X.X........ 9
-DEBUG<11>            ......X...................XXXX.......... 5
-THE_PCI_SEQ/CURRENT_STATE<1> 
-                     ......XXXXXX.XXXXXXXX....XXXXX.XX....... 21
-DEBUG<6>             ....X................................... 1
-DEBUG<7>             .....X.................................. 1
-THE_PCI_SEQ/CURRENT_STATE<0> 
-                     ......XXXXXX...XXXXXX....XXXXX.XX....... 19
-DEBUG<8>             ......XXXX.............XXX.....X........ 8
-DEBUG<9>             ......X................................. 1
-DEBUG<13>            .......XXX...............X....X......... 5
-DEBUG<10>            ..X..................................... 1
-DEBUG<12>            ......X..................X...XX......... 4
-DEBUG<15>            .................XXXX..........X........ 5
-DEBUG<14>            .........................X....X.X....... 3
-N0/N0_TRST           ......XXXX...............X...XX.X....... 8
-$OpTx$INV$62         ......XXXX...............XXXXX..X....... 10
-THE_PCI_SEQ/CURRENT_STATE<2> 
-                     ......XXXXXX.XXXXXXXXXX..XXXXX.XX....... 23
+DEBUG<2>             ...XX....X......XX...................... 5
+DEBUG<11>            ..................X.XX.................. 3
+DEBUG<6>             ..XXXXXXX...XXXXXX...................... 13
+DEBUG<7>             ........X............................... 1
+DEBUG<8>             ..................X.XX.................. 3
+DEBUG<9>             ..................X.XX.................. 3
+DEBUG<13>            ........................................ 0
+DEBUG<10>            ..................XXXX.................. 4
+DEBUG<12>            ........................................ 0
+DEBUG<15>            ........................................ 0
+DEBUG<14>            ........................................ 0
+THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 
+                     XXXXXXXXX.XXXXXXXX...................... 17
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB5  ***********************************
@@ -481,8 +473,8 @@ I_NINT2              ..XXXX.....X............................ 5
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB6  ***********************************
-Number of function block inputs used/remaining:               11/43
-Number of signals used by logic mapping into function block:  11
+Number of function block inputs used/remaining:               12/42
+Number of signals used by logic mapping into function block:  12
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB6_1         (b)     
@@ -496,1177 +488,866 @@ P_PAR                 3       0     0   2     FB6_2   106   I/O     O
 DEBUG<0>              2       0     0   3     FB6_9   116   I/O     O
 (unused)              0       0     0   5     FB6_10  115   I/O     
 DEBUG<3>              3       0     0   2     FB6_11  119   I/O     O
-DEBUG<4>              1       0     0   4     FB6_12  120   I/O     O
+DEBUG<4>              2       0     0   3     FB6_12  120   I/O     O
 (unused)              0       0     0   5     FB6_13        (b)     
-DEBUG<5>              1       0     0   4     FB6_14  121   I/O     O
+DEBUG<5>              3       0     0   2     FB6_14  121   I/O     O
 (unused)              0       0     0   5     FB6_15  124   I/O     
 DEBUG<1>              3       0     0   2     FB6_16  117   I/O     O
 (unused)              0       0     0   5     FB6_17  125   I/O     
-(unused)              0       0     0   5     FB6_18        (b)     
+$OpTx$FX_DC$40        1       0     0   4     FB6_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: DEBUG<0>                         5: P_CBE<0>.PIN                   9: cbe_p 
-  2: DEBUG<1>                         6: P_CBE<1>.PIN                  10: dat_p 
-  3: DEBUG<2>                         7: THE_PCI_ARB/CURRENT_STATE<2>  11: p_par_ena 
-  4: DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF   8: THE_PCI_ARB/CURRENT_STATE<3> 
+  1: DEBUG<0>           5: DEBUG<6>                             9: THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 
+  2: DEBUG<1>           6: DEBUG<7>_BUFR                       10: cbe_p 
+  3: DEBUG<2>           7: DEBUG_3_OBUF/DEBUG_3_OBUF_RSTF      11: dat_p 
+  4: DEBUG<3>           8: THE_PCI_ARB/CURRENT_STATE_FSM_FFd1  12: p_par_ena 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-P_PAR                ........XXX............................. 3
-DEBUG<0>             ...X..XX................................ 3
-DEBUG<3>             XXXX..XX................................ 6
-DEBUG<4>             ....X................................... 1
-DEBUG<5>             .....X.................................. 1
-DEBUG<1>             X..X..XX................................ 4
+P_PAR                .........XXX............................ 3
+DEBUG<0>             ......XXX............................... 3
+DEBUG<3>             XXX...XXX............................... 6
+DEBUG<4>             .......XX............................... 2
+DEBUG<5>             ....XX.X................................ 3
+DEBUG<1>             X.....XXX............................... 4
+$OpTx$FX_DC$40       XXXX.................................... 4
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB7  ***********************************
-Number of function block inputs used/remaining:               21/33
-Number of signals used by logic mapping into function block:  21
+Number of function block inputs used/remaining:               27/27
+Number of signals used by logic mapping into function block:  27
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB7_1         (b)     
 (unused)              0       0     0   5     FB7_2   71    I/O     I
-(unused)              0       0     0   5     FB7_3   75    I/O     
-(unused)              0       0     0   5     FB7_4         (b)     
-P_CBE<1>              3       0     0   2     FB7_5   74    I/O     I/O
-(unused)              0       0     0   5     FB7_6   76    I/O     
-P_NLOCK               0       0     0   5     FB7_7   77    I/O     O
-(unused)              0       0   \/1   4     FB7_8   78    I/O     I
-P_CBE<2>              7       2<-   0   0     FB7_9   80    I/O     I/O
-P_NIRDY               3       0   /\1   1     FB7_10  79    I/O     I/O
-dat_p                 2       0     0   3     FB7_11  82    I/O     I
+dat_p                 2       0     0   3     FB7_3   75    I/O     (b)
 THE_PCI_SEQ/toc_ctr_x<1>
-                      2       0   \/2   1     FB7_12  85    I/O     I
-P_CBE<3>             11       6<-   0   0     FB7_13  81    I/O     I/O
-P_NGNT<0>             1       0   /\4   0     FB7_14  86    I/O     O
+                      2       0     0   3     FB7_4         (b)     (b)
+P_CBE<1>              3       0     0   2     FB7_5   74    I/O     I/O
+THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF
+                      2       0     0   3     FB7_6   76    I/O     (b)
+P_NLOCK               0       0     0   5     FB7_7   77    I/O     O
+THE_PCI_SEQ/toc_ctr_x<0>
+                      2       0   \/1   2     FB7_8   78    I/O     I
+P_CBE<2>              6       1<-   0   0     FB7_9   80    I/O     I/O
+P_NIRDY               2       0     0   3     FB7_10  79    I/O     I/O
+DEBUG_3_OBUF/DEBUG_3_OBUF_RSTF
+                      2       0     0   3     FB7_11  82    I/O     I
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1
+                      3       0   \/1   1     FB7_12  85    I/O     I
+P_CBE<3>              9       4<-   0   0     FB7_13  81    I/O     I/O
+P_NGNT<0>             1       0   /\3   1     FB7_14  86    I/O     O
 P_CLKOUT<0>           1       0     0   4     FB7_15  87    I/O     O
 P_NGNT<1>             1       0     0   4     FB7_16  83    I/O     O
 P_CLKOUT<1>           1       0     0   4     FB7_17  88    I/O     O
-THE_PCI_SEQ/toc_ctr_x<0>
-                      2       0     0   3     FB7_18        (b)     (b)
+cbe_p                 5       0     0   0     FB7_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: I_33M                          8: THE_PCI_ARB/CURRENT_STATE<2>                  15: THE_PCI_SEQ/toc_ctr_x<0> 
-  2: I_ACC<0>                       9: THE_PCI_ARB/CURRENT_STATE<3>                  16: THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF 
-  3: I_ACC<1>                      10: THE_PCI_SEQ/CURRENT_STATE<0>                  17: THE_PCI_SEQ/toc_ctr_x<1> 
-  4: I_DATPAR<0>                   11: THE_PCI_SEQ/CURRENT_STATE<1>                  18: Z_NDS<0> 
-  5: I_DATPAR<1>                   12: THE_PCI_SEQ/CURRENT_STATE<2>                  19: Z_NDS<1> 
-  6: THE_PCI_ARB/CURRENT_STATE<0>  13: THE_PCI_SEQ/CURRENT_STATE<3>                  20: Z_NDS<2> 
-  7: THE_PCI_ARB/CURRENT_STATE<1>  14: THE_PCI_SEQ/nirdy_x/THE_PCI_SEQ/nirdy_x_TRST  21: cbp_x<2>/cbp_x<2>_TRST 
+  1: DEBUG<6>          10: P_CBE<3>.PIN                        19: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 
+  2: DEBUG<7>_BUFR     11: P_CBE<2>.PIN                        20: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 
+  3: I_33M             12: P_CBE<1>.PIN                        21: THE_PCI_SEQ/toc_ctr_x<0> 
+  4: I_ACC<0>          13: P_CBE<0>.PIN                        22: THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF 
+  5: I_ACC<1>          14: P_NDEVSEL                           23: THE_PCI_SEQ/toc_ctr_x<1> 
+  6: I_DATPAR<0>       15: THE_PCI_ARB/CURRENT_STATE_FSM_FFd1  24: Z_NDS<0> 
+  7: I_DATPAR<1>       16: THE_PCI_ARB/CURRENT_STATE_FSM_FFd4  25: Z_NDS<1> 
+  8: P_NFRAME.PIN      17: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1  26: Z_NDS<2> 
+  9: P_NIRDY.PIN       18: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2  27: Z_NIORST 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-P_CBE<1>             .........XXXX......XX................... 6
-P_NLOCK              ........................................ 0
-P_CBE<2>             .XX......XXXX.....X.X................... 8
-P_NIRDY              .........XXXXX.......................... 5
-dat_p                ...XX................................... 2
+dat_p                .....XX................................. 2
 THE_PCI_SEQ/toc_ctr_x<1> 
-                     ..............XX........................ 2
-P_CBE<3>             .XX......XXXX....X..X................... 8
-P_NGNT<0>            .....XXXX............................... 4
-P_CLKOUT<0>          X....................................... 1
-P_NGNT<1>            .....XXXX............................... 4
-P_CLKOUT<1>          X....................................... 1
+                     ....................XX.................. 2
+P_CBE<1>             ................XXXX.....X.............. 5
+THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF 
+                     .............X..X..X.................... 3
+P_NLOCK              ........................................ 0
 THE_PCI_SEQ/toc_ctr_x<0> 
-                     ...............XX....................... 2
+                     .....................XX................. 2
+P_CBE<2>             ...XX...........XXXX....X............... 7
+P_NIRDY              ................XXXX.................... 4
+DEBUG_3_OBUF/DEBUG_3_OBUF_RSTF 
+                     ..............XX..........X............. 3
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 
+                     .......XX.....XXX.XX.................... 7
+P_CBE<3>             ...XX...........XXXX...X................ 7
+P_NGNT<0>            XX............XX........................ 4
+P_CLKOUT<0>          ..X..................................... 1
+P_NGNT<1>            XX............XX........................ 4
+P_CLKOUT<1>          ..X..................................... 1
+cbe_p                .........XXXX........................... 4
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB8  ***********************************
-Number of function block inputs used/remaining:               36/18
-Number of signals used by logic mapping into function block:  36
+Number of function block inputs used/remaining:               35/19
+Number of signals used by logic mapping into function block:  35
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0   /\5   0     FB8_1         (b)     (b)
+DEBUG<7>_BUFR        16      11<-   0   0     FB8_1         (b)     (b)
 (unused)              0       0   /\5   0     FB8_2   91    I/O     I
-P_NRESET              3       0   \/1   1     FB8_3   95    I/O     O
-P_NGNT<3>             1       1<- \/5   0     FB8_4   97    I/O     O
-(unused)              0       0   \/5   0     FB8_5   92    I/O     I
-(unused)              0       0   \/5   0     FB8_6   93    I/O     I
-THE_PCI_ARB/CURRENT_STATE<2>
-                     30      25<-   0   0     FB8_7         (b)     (b)
-(unused)              0       0   /\5   0     FB8_8   94    I/O     I
-P_CLKOUT<3>           1       1<- /\5   0     FB8_9   96    I/O     O
-P_CLKOUT<2>           1       0   /\1   3     FB8_10  101   I/O     O
-DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF
-                      2       0     0   3     FB8_11  98    I/O     I
+P_NRESET              3       0   /\1   1     FB8_3   95    I/O     O
+P_NGNT<3>             1       0     0   4     FB8_4   97    I/O     O
+(unused)              0       0     0   5     FB8_5   92    I/O     I
+(unused)              0       0     0   5     FB8_6   93    I/O     I
+(unused)              0       0     0   5     FB8_7         (b)     
+(unused)              0       0     0   5     FB8_8   94    I/O     I
+P_CLKOUT<3>           1       0     0   4     FB8_9   96    I/O     O
+P_CLKOUT<2>           1       0     0   4     FB8_10  101   I/O     O
+(unused)              0       0     0   5     FB8_11  98    I/O     I
 P_NGNT<2>             1       0     0   4     FB8_12  100   I/O     O
-P_NFRAME              2       0   \/1   2     FB8_13  103   I/O     I/O
-cbe_p                 5       1<- \/1   0     FB8_14  102   I/O     I
-$OpTx$FX_DC$67        2       1<- \/4   0     FB8_15  104   I/O     I
-P_CBE<0>              7       4<- \/2   0     FB8_16  107   I/O     I/O
-(unused)              0       0   \/5   0     FB8_17  105   I/O     I
-THE_PCI_ARB/CURRENT_STATE<0>
-                     22      17<-   0   0     FB8_18        (b)     (b)
+P_NFRAME              2       0   \/3   0     FB8_13  103   I/O     I/O
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3
+                     14       9<-   0   0     FB8_14  102   I/O     I
+(unused)              0       0   /\5   0     FB8_15  104   I/O     I
+P_CBE<0>              6       2<- /\1   0     FB8_16  107   I/O     I/O
+(unused)              0       0   /\2   3     FB8_17  105   I/O     I
+(unused)              0       0   \/5   0     FB8_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: $OpTx$INV$62      13: I_ACC<1>                      25: THE_PCI_ARB/CURRENT_STATE<3> 
-  2: DEBUG<0>          14: I_ZMA                         26: THE_PCI_SEQ/CURRENT_STATE<0> 
-  3: DEBUG<1>          15: P_NFRAME.PIN                  27: THE_PCI_SEQ/CURRENT_STATE<1> 
-  4: DEBUG<2>          16: P_NIRDY.PIN                   28: THE_PCI_SEQ/CURRENT_STATE<2> 
-  5: DEBUG<3>          17: Z_ADA<31>.PIN                 29: THE_PCI_SEQ/CURRENT_STATE<3> 
-  6: P_CBE<0>.PIN      18: P_NREQ<0>                     30: THE_PCI_SEQ/nirdy_x/THE_PCI_SEQ/nirdy_x_TRST 
-  7: P_CBE<1>.PIN      19: P_NREQ<1>                     31: Z_DOE 
-  8: P_CBE<2>.PIN      20: P_NREQ<2>                     32: Z_NCFGOUT 
-  9: P_CBE<3>.PIN      21: P_NREQ<3>                     33: Z_NDS<3> 
- 10: Z_NSLAVE          22: THE_PCI_ARB/CURRENT_STATE<0>  34: Z_NIORST 
- 11: I_33M             23: THE_PCI_ARB/CURRENT_STATE<1>  35: Z_READ 
- 12: I_ACC<0>          24: THE_PCI_ARB/CURRENT_STATE<2>  36: cbp_x<2>/cbp_x<2>_TRST 
+  1: $OpTx$INV$27      13: P_NIRDY.PIN                         25: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 
+  2: DEBUG<0>          14: Z_ADA<31>.PIN                       26: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 
+  3: DEBUG<1>          15: P_NREQ<0>                           27: Z_DOE 
+  4: DEBUG<2>          16: P_NREQ<1>                           28: Z_NCFGOUT 
+  5: DEBUG<3>          17: P_NREQ<2>                           29: Z_NDS<0> 
+  6: DEBUG<6>          18: P_NREQ<3>                           30: Z_NDS<1> 
+  7: DEBUG<7>_BUFR     19: P_NSTOP                             31: Z_NDS<2> 
+  8: I_33M             20: P_NTRDY                             32: Z_NDS<3> 
+  9: I_ACC<0>          21: THE_PCI_ARB/CURRENT_STATE_FSM_FFd1  33: Z_NSLAVE 
+ 10: I_ACC<1>          22: THE_PCI_ARB/CURRENT_STATE_FSM_FFd4  34: Z_READ 
+ 11: I_ZMA             23: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1  35: cycend_x 
+ 12: P_NFRAME.PIN      24: THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-P_NRESET             .........X.XXX..X.............XXX.X..... 9
-P_NGNT<3>            .....................XXXX............... 4
-THE_PCI_ARB/CURRENT_STATE<2> 
-                     XXXXX.........XX.XXXXXXXX............... 15
-P_CLKOUT<3>          ..........X............................. 1
-P_CLKOUT<2>          ..........X............................. 1
-DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF 
-                     .......................XX........X...... 3
-P_NGNT<2>            .....................XXXX............... 4
-P_NFRAME             .........................XXXXX.......... 5
-cbe_p                .....XXXX............................... 4
-$OpTx$FX_DC$67       ...........XXX.................X........ 4
-P_CBE<0>             .........................XXXX...X.XX.... 7
-THE_PCI_ARB/CURRENT_STATE<0> 
-                     XXXXX............XXXXXXXX............... 13
+DEBUG<7>_BUFR        XXXXXXX.......XXXX..XX.................. 13
+P_NRESET             ........XXX..X............XX...XXX...... 9
+P_NGNT<3>            .....XX.............XX.................. 4
+P_CLKOUT<3>          .......X................................ 1
+P_CLKOUT<2>          .......X................................ 1
+P_NGNT<2>            .....XX.............XX.................. 4
+P_NFRAME             ......................XXXX.............. 4
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 
+                     ........XXXXX.....XXXXXXXX.XXXXXX.X..... 20
+P_CBE<0>             ......................XXXX.....X.X...... 6
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *******************************  Equations  ********************************
 
 ********** Mapped Logic **********
 
-$OpTx$FX_DC$67 = Z_NCFGOUT
-;Imported pterms FB8_14
-	# !I_ACC<1> & I_ACC<0> & I_ZMA;    
-
-$OpTx$INV$62 = ;Imported pterms FB4_15
-	  Z_NSLAVE
-	# Z_NCFGOUT
-	# !cycend_x
-	# !I_ACC<1> & I_ACC<0> & I_ZMA
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0>;    
-
-DEBUG<0>.T = Vcc;
-   DEBUG<0>.CLK = I_PCICLK2;	// GCK
-   DEBUG<0>.AR = DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF;
-   DEBUG<0>.CE = THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2>;    
-
-DEBUG<1>.T = DEBUG<0>;
-   DEBUG<1>.CLK = I_PCICLK2;	// GCK
-   DEBUG<1>.AR = DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF;
-   DEBUG<1>.CE = THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2>;    
-
-DEBUG<2>.T = DEBUG<0> & DEBUG<1>;
-   DEBUG<2>.CLK = I_PCICLK2;	// GCK
-   DEBUG<2>.AR = DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF;
-   DEBUG<2>.CE = THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2>;    
-
-DEBUG<3>.T = DEBUG<0> & DEBUG<1> & DEBUG<2>;
-   DEBUG<3>.CLK = I_PCICLK2;	// GCK
-   DEBUG<3>.AR = DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF;
-   DEBUG<3>.CE = THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2>;    
-
-DEBUG<4> = P_CBE<0>.PIN;    
-
-DEBUG<5> = P_CBE<1>.PIN;    
-
-DEBUG<6> = P_CBE<2>.PIN;    
-
-DEBUG<7> = P_CBE<3>.PIN;    
-
-DEBUG<8> = Z_DOE & Z_READ & !Z_NSLAVE & !Z_NCFGOUT & 
-	!I_ACC<0> & Z_NBERR
-;Imported pterms FB4_9
-	# Z_DOE & Z_READ & !Z_NSLAVE & !Z_NCFGOUT & 
-	I_ACC<1> & Z_NBERR
-	# Z_DOE & Z_READ & !Z_NSLAVE & !Z_NCFGOUT & 
-	Z_NBERR & !I_ZMA;    
-
-DEBUG<9> = Z_NSLAVE;    
-
-DEBUG<10> = P_NDEVSEL;    
-
-DEBUG<11> = Z_NSLAVE
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0>;    
-
-!DEBUG<12> = !Z_NSLAVE & !Z_NDS<3> & !Z_NFCS & Z_NCFGOUT;    
-
-!DEBUG<13> = !Z_NFCS & !Z_NCFGOUT & !I_ACC<1> & I_ACC<0> & 
-	I_ZMA;    
-
-!DEBUG<14> = !Z_NFCS & !Z_NCFGOUT & !cycend_x;    
-
-DEBUG<15> = !Z_READ & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3>
-	# THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>;    
-
-DEBUG_2_OBUF/DEBUG_2_OBUF_RSTF = !Z_NIORST
-	# !THE_PCI_ARB/CURRENT_STATE<3> & 
-	THE_PCI_ARB/CURRENT_STATE<2>;    
-
-I_CFLT = !Z_NSLAVE & !Z_NDS<3> & !Z_AA<4> & !Z_AA<3> & 
-	Z_AA<2> & Z_AA<6> & !Z_AA<5> & Z_NCFGOUT & !Z_AA<7>;    
-
-I_DAOUT = THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2>;    
-
-I_DATA = Z_DOE & Z_READ & !Z_NSLAVE & !Z_NCFGOUT & 
-	I_ACC<1> & Z_NBERR
-	# Z_DOE & Z_READ & !Z_NSLAVE & !Z_NCFGOUT & 
-	!I_ACC<0> & Z_NBERR
-	# Z_DOE & Z_READ & !Z_NSLAVE & !Z_NCFGOUT & 
-	Z_NBERR & !I_ZMA;    
-
-I_NINT2 = !pci_int_ena_x
-	# P_NINTD & P_NINTC & P_NINTB & P_NINTA;    
-
-I_NINT6 = Vcc;    
-
-I_PCICLK = !I_33M;    
-
-I_PCIDL = !P_NTRDY & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>
-	# !P_NTRDY & !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2>;    
-
-I_PCIENA = !Z_READ & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3>
-	# THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
-;Imported pterms FB3_8
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>;    
-
-I_PLA<0> = I_ACC<1> & !I_ACC<0>
-	# Z_NDS<3> & !Z_NDS<2> & I_ACC<1>
-	# Z_NDS<3> & Z_NDS<1> & !Z_NDS<0> & I_ACC<1>;    
-
-I_PLA<1> = Z_NDS<3> & Z_NDS<2> & !Z_NDS<1> & I_ACC<1> & 
-	I_ACC<0>
-	# Z_NDS<3> & Z_NDS<2> & !Z_NDS<0> & I_ACC<1> & 
-	I_ACC<0>;    
-
-N0/N0_TRST = ;Imported pterms FB4_14
-	  !Z_NFCS & !Z_NCFGOUT & !cycend_x
-	# !Z_NSLAVE & !Z_NDS<3> & !Z_NFCS & Z_NCFGOUT
-	# !Z_NFCS & !Z_NCFGOUT & !I_ACC<1> & I_ACC<0> & 
-	I_ZMA;    
-
-P_CBE<0> = !Z_READ & THE_PCI_SEQ/CURRENT_STATE<3>
-	# !Z_READ & !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1>
-;Imported pterms FB8_15
-	# !Z_READ & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1>
-	# !Z_READ & !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>
-	# Z_NDS<3> & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
-	# Z_NDS<3> & !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2>;
-   P_CBE<0>.OE = cbp_x<2>/cbp_x<2>_TRST;    
-
-!P_CBE<1> = !Z_NDS<2> & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
-	# !Z_NDS<2> & !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2>;
-   P_CBE<1>.OE = cbp_x<2>/cbp_x<2>_TRST;    
-
-P_CBE<2> = THE_PCI_SEQ/CURRENT_STATE<3> & !I_ACC<1> & 
-	!I_ACC<0>
-	# THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !I_ACC<1> & !I_ACC<0>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !I_ACC<1> & !I_ACC<0>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & !I_ACC<1> & !I_ACC<0>
-;Imported pterms FB7_8
-	# Z_NDS<1> & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
-;Imported pterms FB7_10
-	# Z_NDS<1> & !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2>;
-   P_CBE<2>.OE = cbp_x<2>/cbp_x<2>_TRST;    
-
-P_CBE<3> = THE_PCI_SEQ/CURRENT_STATE<3> & I_ACC<1> & 
-	!I_ACC<0>
-	# THE_PCI_SEQ/CURRENT_STATE<3> & !I_ACC<1> & 
-	I_ACC<0>
-	# THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !I_ACC<1> & I_ACC<0>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !I_ACC<1> & I_ACC<0>
-;Imported pterms FB7_12
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & I_ACC<1> & !I_ACC<0>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & !I_ACC<1> & I_ACC<0>
-;Imported pterms FB7_14
-	# Z_NDS<0> & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
-	# THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & I_ACC<1> & !I_ACC<0>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & I_ACC<1> & !I_ACC<0>
-	# Z_NDS<0> & !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2>;
-   P_CBE<3>.OE = cbp_x<2>/cbp_x<2>_TRST;    
-
-P_CLKOUT<0> = !I_33M;    
-
-P_CLKOUT<1> = !I_33M;    
-
-P_CLKOUT<2> = !I_33M;    
-
-P_CLKOUT<3> = ;Imported pterms FB8_10
-	  !I_33M;    
-
-!P_NFRAME = !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>;
-   P_NFRAME.OE = THE_PCI_SEQ/nirdy_x/THE_PCI_SEQ/nirdy_x_TRST;    
-
-!P_NGNT<0> = !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2>;    
-
-!P_NGNT<1> = !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2>;    
-
-!P_NGNT<2> = THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2>;    
-
-!P_NGNT<3> = ;Imported pterms FB8_3
-	  THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2>;    
-
-!P_NIRDY = THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2>;
-   P_NIRDY.OE = THE_PCI_SEQ/nirdy_x/THE_PCI_SEQ/nirdy_x_TRST;    
-
-P_NLOCK = Vcc;    
-
-P_NRESET.D = Z_ADA<31>.PIN;
-   P_NRESET.CLK = Z_DOE & !Z_READ & !Z_NSLAVE & !Z_NDS<3>;
-   !P_NRESET.AP = Z_NIORST;	// GSR
-   P_NRESET.CE = !Z_NCFGOUT & !I_ACC<1> & I_ACC<0> & I_ZMA;    
-
-P_PAR = dat_p
-	$ cbe_p;
-   P_PAR.OE = p_par_ena;    
-
-THE_PCI_ARB/CURRENT_STATE<0>.T = DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & P_NREQ<1>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!P_NREQ<0> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	P_NREQ<2> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<2> & 
-	P_NREQ<1> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	P_NREQ<1> & $OpTx$INV$62
-;Imported pterms FB8_1
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!P_NREQ<0> & $OpTx$INV$62
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	P_NREQ<2> & $OpTx$INV$62
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & 
-	P_NREQ<1> & $OpTx$INV$62
-	# THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<0> & P_NREQ<1> & 
-	$OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & !$OpTx$INV$62
-;Imported pterms FB8_2
-	# !DEBUG<0> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & 
-	$OpTx$INV$62
-	# !DEBUG<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & 
-	$OpTx$INV$62
-	# !DEBUG<2> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & 
-	$OpTx$INV$62
-	# !DEBUG<3> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & 
-	$OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & $OpTx$INV$62
-;Imported pterms FB8_17
-	# !THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<2> & P_NREQ<0> & 
-	$OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	!P_NREQ<0> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<1> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & 
-	!P_NREQ<1> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<0> & 
-	!P_NREQ<1> & $OpTx$INV$62
-;Imported pterms FB8_16
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<0> & 
-	!P_NREQ<1> & $OpTx$INV$62
-	# !THE_PCI_ARB/CURRENT_STATE<0> & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<2> & 
-	P_NREQ<0> & !P_NREQ<1> & $OpTx$INV$62;
-   THE_PCI_ARB/CURRENT_STATE<0>.CLK = I_PCICLK2;	// GCK
-   !THE_PCI_ARB/CURRENT_STATE<0>.AR = Z_NIORST;	// GSR    
-
-THE_PCI_ARB/CURRENT_STATE<1>.T = DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	!I_ACC<1> & I_ACC<0> & !P_NREQ<1> & I_ZMA
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	!P_NREQ<1>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !I_ACC<1> & I_ACC<0> & !P_NREQ<2> & 
-	!P_NREQ<0> & P_NREQ<1> & I_ZMA
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & !P_NREQ<0> & P_NREQ<1>
-;Imported pterms FB2_10
-	# THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !I_ACC<1> & I_ACC<0> & !P_NREQ<2> & 
-	!P_NREQ<0> & P_NREQ<1> & I_ZMA
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!P_NREQ<2> & !P_NREQ<0> & P_NREQ<1>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<1> & I_ACC<0> & !P_NREQ<2> & I_ZMA
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	!I_ACC<1> & I_ACC<0> & !P_NREQ<0> & I_ZMA
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	!P_NREQ<0>
-;Imported pterms FB2_9
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & !P_NREQ<1>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & !P_NREQ<0>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & !cycend_x
-;Imported pterms FB2_8
-	# Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!P_NREQ<1>
-	# Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<2> & !P_NREQ<0>
-	# Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	P_NREQ<1>
-	# Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<0> & P_NREQ<1>
-	# Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & P_NREQ<0> & P_NREQ<1>
-;Imported pterms FB2_7
-	# Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!P_NREQ<1>
-	# Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<2> & !P_NREQ<0>
-	# Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	P_NREQ<1>
-	# Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<0> & P_NREQ<1>
-	# Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & P_NREQ<0> & P_NREQ<1>
-;Imported pterms FB2_6
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !I_ACC<1> & I_ACC<0> & P_NREQ<2> & 
-	!P_NREQ<0> & I_ZMA
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & !I_ACC<1> & I_ACC<0> & P_NREQ<0> & 
-	P_NREQ<1> & I_ZMA
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<1> & I_ACC<0> & !P_NREQ<2> & P_NREQ<0> & 
-	P_NREQ<1> & I_ZMA
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<1>
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<1>
-;Imported pterms FB2_5
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<1>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<1>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!P_NREQ<1> & !cycend_x
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	P_NREQ<1> & !cycend_x
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!I_ACC<1> & I_ACC<0> & P_NREQ<2> & !P_NREQ<1> & I_ZMA
-;Imported pterms FB2_4
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!Z_NSLAVE & !Z_NDS<3> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & cycend_x
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!Z_NSLAVE & !Z_NDS<3> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!Z_NSLAVE & !Z_NDS<2> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & cycend_x
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!Z_NSLAVE & !Z_NDS<1> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & cycend_x
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!Z_NSLAVE & !Z_NDS<0> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & cycend_x
-;Imported pterms FB2_3
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!Z_NSLAVE & !Z_NDS<2> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & cycend_x
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!Z_NSLAVE & !Z_NDS<1> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & cycend_x
-;Imported pterms FB2_12
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & !P_NREQ<1>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	!P_NREQ<1> & !cycend_x
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!P_NREQ<2> & !P_NREQ<0> & P_NREQ<1>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!P_NREQ<2> & !P_NREQ<0> & P_NREQ<1>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & !P_NREQ<0> & P_NREQ<1> & 
-	!cycend_x
-;Imported pterms FB2_13
-	# Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & !P_NREQ<0> & P_NREQ<1>
-	# Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & !P_NREQ<0> & P_NREQ<1>
-	# THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<2> & !P_NREQ<0> & P_NREQ<1> & 
-	!cycend_x
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & !P_NREQ<0>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	!P_NREQ<0> & !cycend_x
-;Imported pterms FB2_14
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!P_NREQ<1> & !cycend_x
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<2> & !P_NREQ<0> & !cycend_x
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	P_NREQ<1> & !cycend_x
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<0> & P_NREQ<1> & !cycend_x
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & P_NREQ<0> & P_NREQ<1> & !cycend_x
-;Imported pterms FB2_15
-	# Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	P_NREQ<2> & !P_NREQ<1>
-	# Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	P_NREQ<2> & !P_NREQ<1>
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	P_NREQ<2> & !P_NREQ<1> & !cycend_x
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!I_ACC<1> & I_ACC<0> & !P_NREQ<1> & I_ZMA
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	!I_ACC<1> & I_ACC<0> & P_NREQ<1> & I_ZMA
-;Imported pterms FB2_16
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & !P_NREQ<1>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & P_NREQ<1>
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	P_NREQ<2> & !P_NREQ<0>
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	P_NREQ<0> & P_NREQ<1>
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2> & 
-	P_NREQ<0> & P_NREQ<1>
-;Imported pterms FB2_17
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<2> & !P_NREQ<1>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!I_ACC<1> & I_ACC<0> & !P_NREQ<1> & I_ZMA
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	!I_ACC<1> & I_ACC<0> & P_NREQ<1> & I_ZMA
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & 
-	!P_NREQ<1>
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & !THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3> & 
-	P_NREQ<1>
-;Imported pterms FB2_18
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!Z_NSLAVE & !Z_NDS<3> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & cycend_x
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!Z_NSLAVE & !Z_NDS<2> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!Z_NSLAVE & !Z_NDS<1> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!Z_NSLAVE & !Z_NDS<0> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & cycend_x
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!Z_NSLAVE & !Z_NDS<0> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA;
-   THE_PCI_ARB/CURRENT_STATE<1>.CLK = I_PCICLK2;	// GCK
-   !THE_PCI_ARB/CURRENT_STATE<1>.AR = Z_NIORST;	// GSR    
-
-THE_PCI_ARB/CURRENT_STATE<2>.T = !DEBUG<2> & !THE_PCI_ARB/CURRENT_STATE<3> & 
-	!P_NREQ<3> & $OpTx$INV$62
-	# !DEBUG<3> & !THE_PCI_ARB/CURRENT_STATE<3> & 
-	!P_NREQ<3> & $OpTx$INV$62
-	# !DEBUG<2> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<1> & !P_NREQ<1> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<3> & P_NREQ<2> & $OpTx$INV$62
-;Imported pterms FB8_6
-	# !DEBUG<0> & !THE_PCI_ARB/CURRENT_STATE<3> & 
-	!P_NREQ<3> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<1> & !P_NREQ<0> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<1> & !P_NREQ<2> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & !P_NREQ<3> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!P_NREQ<0> & !P_NREQ<1> & $OpTx$INV$62
-;Imported pterms FB8_5
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & P_NREQ<2> & !P_NREQ<0> & $OpTx$INV$62
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & P_NREQ<0> & !P_NREQ<1> & $OpTx$INV$62
-	# !DEBUG<0> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & $OpTx$INV$62
-	# !DEBUG<1> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & $OpTx$INV$62
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & P_NREQ<2> & 
-	!P_NREQ<1> & $OpTx$INV$62
-;Imported pterms FB8_4
-	# THE_PCI_ARB/CURRENT_STATE<2> & $OpTx$INV$62
-	# THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !$OpTx$INV$62
-	# !THE_PCI_ARB/CURRENT_STATE<3> & !P_NREQ<0> & 
-	$OpTx$INV$62
-	# THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<3> & !P_NREQ<1> & $OpTx$INV$62
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & !P_NREQ<3> & P_NREQ<1> & $OpTx$INV$62
-;Imported pterms FB8_8
-	# !DEBUG<1> & !THE_PCI_ARB/CURRENT_STATE<3> & 
-	!P_NREQ<3> & $OpTx$INV$62
-	# THE_PCI_ARB/CURRENT_STATE<3> & P_NIRDY.PIN & 
-	P_NFRAME.PIN & !$OpTx$INV$62
-	# !DEBUG<3> & THE_PCI_ARB/CURRENT_STATE<0> & 
-	P_NREQ<3> & !P_NREQ<2> & P_NREQ<1> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	!P_NREQ<3> & !P_NREQ<1> & $OpTx$INV$62
-	# DEBUG<0> & DEBUG<1> & DEBUG<2> & DEBUG<3> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & !P_NREQ<2> & 
-	$OpTx$INV$62
-;Imported pterms FB8_9
-	# !THE_PCI_ARB/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<3> & !P_NREQ<2> & $OpTx$INV$62
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & P_NREQ<3> & !P_NREQ<1> & $OpTx$INV$62
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & !P_NREQ<2> & P_NREQ<0> & $OpTx$INV$62
-	# THE_PCI_ARB/CURRENT_STATE<0> & P_NREQ<3> & 
-	!P_NREQ<0> & P_NREQ<1> & $OpTx$INV$62
-	# !THE_PCI_ARB/CURRENT_STATE<0> & !P_NREQ<3> & 
-	P_NREQ<2> & P_NREQ<0> & $OpTx$INV$62;
-   THE_PCI_ARB/CURRENT_STATE<2>.CLK = I_PCICLK2;	// GCK
-   !THE_PCI_ARB/CURRENT_STATE<2>.AR = Z_NIORST;	// GSR    
-
-THE_PCI_ARB/CURRENT_STATE<3>.D = Z_NSLAVE & THE_PCI_ARB/CURRENT_STATE<2>
-	# Z_NCFGOUT & THE_PCI_ARB/CURRENT_STATE<2>
-	# !THE_PCI_ARB/CURRENT_STATE<3> & 
-	THE_PCI_ARB/CURRENT_STATE<2>
-	# THE_PCI_ARB/CURRENT_STATE<2> & !P_NFRAME.PIN
-	# THE_PCI_ARB/CURRENT_STATE<2> & !cycend_x
-;Imported pterms FB3_2
-	# THE_PCI_ARB/CURRENT_STATE<2> & !P_NIRDY.PIN
-	# THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<1> & 
-	I_ACC<0> & I_ZMA
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	THE_PCI_ARB/CURRENT_STATE<2>
-	# !DEBUG<0> & THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3>
-	# !DEBUG<0> & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<1>
-;Imported pterms FB3_1
-	# !DEBUG<1> & THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
-	# !DEBUG<2> & THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3>
-	# !DEBUG<2> & THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
-	# !DEBUG<2> & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<1>
-	# !DEBUG<2> & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<0>
-;Imported pterms FB3_18
-	# !Z_NSLAVE & !Z_NDS<3> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & 
-	cycend_x
-	# !Z_NSLAVE & !Z_NDS<0> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & 
-	cycend_x
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<2> & P_NREQ<0> & P_NREQ<1>
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<2> & P_NREQ<0>
-	# !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<2> & P_NREQ<1>
-;Imported pterms FB3_17
-	# !Z_NSLAVE & !Z_NDS<3> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & 
-	cycend_x
-	# !Z_NSLAVE & !Z_NDS<2> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
-	# !Z_NSLAVE & !Z_NDS<0> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & 
-	cycend_x
-;Imported pterms FB3_4
-	# !DEBUG<0> & THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
-	# !DEBUG<0> & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<0>
-	# !DEBUG<1> & THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3>
-	# !DEBUG<1> & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<1>
-	# !DEBUG<1> & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<0>
-;Imported pterms FB3_5
-	# !DEBUG<3> & THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<3>
-	# !DEBUG<3> & THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<2>
-	# !DEBUG<3> & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<1>
-	# !DEBUG<3> & !THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !P_NREQ<0>
-	# THE_PCI_ARB/CURRENT_STATE<1> & 
-	!THE_PCI_ARB/CURRENT_STATE<0> & THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NREQ<3> & P_NREQ<0> & P_NREQ<1>
-;Imported pterms FB3_6
-	# !Z_NSLAVE & !Z_NDS<3> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
-	# !Z_NSLAVE & !Z_NDS<2> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & 
-	cycend_x
-	# !Z_NSLAVE & !Z_NDS<1> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<0> & 
-	cycend_x
-	# !Z_NSLAVE & !Z_NDS<1> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
-	# !Z_NSLAVE & !Z_NDS<0> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & cycend_x & !I_ZMA
-;Imported pterms FB3_7
-	# !Z_NSLAVE & !Z_NDS<2> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & 
-	cycend_x
-	# !Z_NSLAVE & !Z_NDS<1> & !Z_NCFGOUT & 
-	THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_ARB/CURRENT_STATE<2> & I_ACC<1> & 
-	cycend_x;
-   THE_PCI_ARB/CURRENT_STATE<3>.CLK = I_PCICLK2;	// GCK
-   !THE_PCI_ARB/CURRENT_STATE<3>.AR = Z_NIORST;	// GSR    
-
-!THE_PCI_SEQ/CURRENT_STATE<0>.D = THE_PCI_SEQ/CURRENT_STATE<3>
-	# THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1>
-	# THE_PCI_SEQ/CURRENT_STATE<1> & 
-	THE_PCI_SEQ/CURRENT_STATE<2>
-	# Z_NCFGOUT & !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>
-	# !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & !cycend_x
-;Imported pterms FB4_6
-	# Z_NSLAVE & !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>
-	# THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<2>
-	# !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & !P_NIRDY.PIN
-	# !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & !P_NFRAME.PIN
-;Imported pterms FB4_8
-	# Z_READ & !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1>
-	# !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & THE_PCI_ARB/CURRENT_STATE<2>
-	# !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & !I_ACC<1> & I_ACC<0> & I_ZMA
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<2>;
-   THE_PCI_SEQ/CURRENT_STATE<0>.CLK = I_PCICLK2;	// GCK
-   !THE_PCI_SEQ/CURRENT_STATE<0>.AR = Z_NIORST;	// GSR    
-
-THE_PCI_SEQ/CURRENT_STATE<1>.D = !P_NTRDY & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2>
-	# P_NSTOP & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2>
-	# THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2>
-;Imported pterms FB4_3
-	# !Z_READ & !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>
-	# !THE_PCI_ARB/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
-	P_NFRAME.PIN
-	# Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
-	P_NFRAME.PIN
-;Imported pterms FB4_5
-	# Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
-	P_NFRAME.PIN
-	# !THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
-	P_NFRAME.PIN & !cycend_x
-	# !THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<1> & 
-	I_ACC<0> & P_NIRDY.PIN & P_NFRAME.PIN & I_ZMA
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & P_NFRAME.PIN;
-   THE_PCI_SEQ/CURRENT_STATE<1>.CLK = I_PCICLK2;	// GCK
-   !THE_PCI_SEQ/CURRENT_STATE<1>.AR = Z_NIORST;	// GSR    
-
-THE_PCI_SEQ/CURRENT_STATE<2>.D = Z_READ & !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>
-	# !P_NTRDY & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>
-	# !P_NSTOP & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>
-	# THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & THE_PCI_SEQ/toc_ctr_x<0> & 
-	THE_PCI_SEQ/toc_ctr_x<1>
-	# Z_NCFGOUT & !THE_PCI_ARB/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
-	P_NFRAME.PIN
-;Imported pterms FB4_16
-	# Z_NSLAVE & !THE_PCI_ARB/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
-	P_NFRAME.PIN
-	# !P_NTRDY & !THE_PCI_ARB/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
-	P_NFRAME.PIN
-	# !P_NSTOP & !THE_PCI_ARB/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
-	P_NFRAME.PIN
-	# THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<3> & THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3> & THE_PCI_SEQ/CURRENT_STATE<2> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & P_NFRAME.PIN
-	# !THE_PCI_ARB/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
-	P_NFRAME.PIN & !cycend_x
-;Imported pterms FB4_18
-	# Z_NSLAVE & !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & P_NFRAME.PIN
-	# Z_NCFGOUT & !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & P_NFRAME.PIN
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & P_NFRAME.PIN & !cycend_x
-	# !THE_PCI_ARB/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<1> & 
-	I_ACC<0> & P_NIRDY.PIN & P_NFRAME.PIN & I_ZMA
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<3> & THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3> & THE_PCI_SEQ/CURRENT_STATE<2> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & P_NFRAME.PIN
-;Imported pterms FB4_1
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_ARB/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2> & 
-	!THE_PCI_ARB/CURRENT_STATE<2> & !I_ACC<1> & I_ACC<0> & P_NIRDY.PIN & 
-	P_NFRAME.PIN & I_ZMA
-	# Z_NDS<3> & Z_NDS<2> & Z_NDS<1> & Z_NDS<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<0> & !THE_PCI_ARB/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2> & !THE_PCI_ARB/CURRENT_STATE<2> & P_NIRDY.PIN & 
-	P_NFRAME.PIN;
-   THE_PCI_SEQ/CURRENT_STATE<2>.CLK = I_PCICLK2;	// GCK
-   !THE_PCI_SEQ/CURRENT_STATE<2>.AR = Z_NIORST;	// GSR    
-
-THE_PCI_SEQ/CURRENT_STATE<3>.D = THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2>;
-   THE_PCI_SEQ/CURRENT_STATE<3>.CLK = I_PCICLK2;	// GCK
-   !THE_PCI_SEQ/CURRENT_STATE<3>.AR = Z_NIORST;	// GSR    
-
-THE_PCI_SEQ/nirdy_x/THE_PCI_SEQ/nirdy_x_TRST = THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3>
-	# THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3> & !THE_PCI_SEQ/CURRENT_STATE<2>
-	# !THE_PCI_SEQ/CURRENT_STATE<1> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3> & THE_PCI_SEQ/CURRENT_STATE<2>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>;    
-
-THE_PCI_SEQ/toc_ctr_x<0>.D = THE_PCI_SEQ/toc_ctr_x<1>;
-   THE_PCI_SEQ/toc_ctr_x<0>.CLK = I_PCICLK2;	// GCK
-   THE_PCI_SEQ/toc_ctr_x<0>.AR = 
-	THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF;    
-
-THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF = !P_NDEVSEL
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>;    
-
-THE_PCI_SEQ/toc_ctr_x<1>.D = !THE_PCI_SEQ/toc_ctr_x<0>;
-   THE_PCI_SEQ/toc_ctr_x<1>.CLK = I_PCICLK2;	// GCK
-   THE_PCI_SEQ/toc_ctr_x<1>.AR = 
-	THE_PCI_SEQ/toc_ctr_x<0>/THE_PCI_SEQ/toc_ctr_x<0>_RSTF;    
-
-!Z_ADA<28> = !Z_NCFGOUT
-	# Z_AA<4> & !Z_AA<3> & Z_AA<2> & !Z_AA<6> & 
-	!Z_AA<5>
-	# !Z_AA<4> & !Z_AA<2> & !I_ZLA & !Z_AA<6> & !Z_AA<5>
-	# !Z_AA<4> & Z_AA<3> & Z_AA<2> & I_ZLA & !Z_AA<6> & 
-	Z_AA<5>;
-   Z_ADA<28>.OE = Z_DOE & Z_READ & !Z_NSLAVE & Z_NBERR & 
-	$OpTx$FX_DC$67;    
-
-Z_ADA<29> = Z_AA<6> & Z_NCFGOUT
-	# Z_AA<5> & Z_NCFGOUT
-	# Z_AA<4> & Z_AA<3> & Z_NCFGOUT
-	# !Z_AA<4> & Z_AA<2> & Z_NCFGOUT
-;Imported pterms FB1_8
-	# Z_AA<3> & I_ZLA & Z_NCFGOUT
-	# Z_AA<4> & !Z_AA<2> & !I_ZLA & Z_NCFGOUT
-;Imported pterms FB1_10
-	# P_NINTD & P_NINTC & P_NINTB & P_NINTA & 
-	!Z_NCFGOUT;
-   Z_ADA<29>.OE = Z_DOE & Z_READ & !Z_NSLAVE & Z_NBERR & 
-	$OpTx$FX_DC$67;    
-
-!Z_ADA<30> = !pci_int_ena_x & !Z_NCFGOUT
-	# !Z_AA<4> & !Z_AA<3> & !I_ZLA & !Z_AA<6> & !Z_AA<5> & 
-	Z_NCFGOUT
-	# Z_AA<4> & !Z_AA<3> & !Z_AA<2> & I_ZLA & !Z_AA<6> & 
-	!Z_AA<5> & Z_NCFGOUT
-	# !Z_AA<4> & Z_AA<3> & Z_AA<2> & I_ZLA & !Z_AA<6> & 
-	Z_AA<5> & Z_NCFGOUT;
-   Z_ADA<30>.OE = Z_DOE & Z_READ & !Z_NSLAVE & Z_NBERR & 
-	$OpTx$FX_DC$67;    
-
-!Z_ADA<31> = !P_NRESET & !Z_NCFGOUT
-	# !Z_AA<3> & I_ZLA & !Z_AA<6> & !Z_AA<5> & 
-	Z_NCFGOUT
-	# !Z_AA<4> & !Z_AA<3> & Z_AA<2> & !Z_AA<6> & 
-	!Z_AA<5> & Z_NCFGOUT;
-   Z_ADA<31>.OE = Z_DOE & Z_READ & !Z_NSLAVE & Z_NBERR & 
-	$OpTx$FX_DC$67;    
-
-Z_NCFGOUT.D = ncfg_x;
-   Z_NCFGOUT.CLK = Z_NFCS;	// GCK
-   !Z_NCFGOUT.AP = Z_NIORST;	// GSR    
-
-Z_NDTACK = Gnd;
-   Z_NDTACK.OE = N0/N0_TRST;    
-
-!cbe_p.D = P_CBE<0>.PIN
-	$ P_CBE<1>.PIN & P_CBE<3>.PIN & !P_CBE<2>.PIN
-	# P_CBE<1>.PIN & !P_CBE<3>.PIN & P_CBE<2>.PIN
-	# !P_CBE<1>.PIN & P_CBE<3>.PIN & P_CBE<2>.PIN
-;Imported pterms FB8_13
-	# !P_CBE<1>.PIN & !P_CBE<3>.PIN & !P_CBE<2>.PIN;
-   cbe_p.CLK = I_PCICLK2;	// GCK    
-
-!cbp_x<2>/cbp_x<2>_TRST = THE_PCI_SEQ/CURRENT_STATE<3>
-	$ !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<2>;    
-
-cycend_x.D = Gnd;
-   cycend_x.CLK = THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3> & 
-	THE_PCI_SEQ/CURRENT_STATE<2>;
-   cycend_x.AP = Z_NSLAVE;    
-
-dat_p.D = I_DATPAR<0>
-	$ I_DATPAR<1>;
-   !dat_p.CLK = I_PCICLK2;	// GCK    
-
-ncfg_x.D = Gnd;
-   ncfg_x.CLK = !Z_NSLAVE & !Z_NDS<3> & !Z_AA<4> & !Z_AA<3> & 
-	Z_AA<2> & Z_AA<6> & !Z_AA<5> & Z_NCFGOUT & !Z_AA<7>;
-   !ncfg_x.AP = Z_NIORST;	// GSR    
-
-p_par_ena.D = !Z_READ & THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<3>
-	# THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	THE_PCI_SEQ/CURRENT_STATE<1> & !THE_PCI_SEQ/CURRENT_STATE<3>
-	# !THE_PCI_SEQ/CURRENT_STATE<0> & 
-	!THE_PCI_SEQ/CURRENT_STATE<1> & THE_PCI_SEQ/CURRENT_STATE<3> & 
-	!THE_PCI_SEQ/CURRENT_STATE<2>;
-   p_par_ena.CLK = I_PCICLK2;	// GCK    
-
-pci_int_ena_x.D = Z_ADA<30>.PIN;
-   pci_int_ena_x.CLK = Z_DOE & !Z_READ & !Z_NSLAVE & !Z_NDS<3>;
-   !pci_int_ena_x.AR = Z_NIORST;	// GSR
-   pci_int_ena_x.CE = !Z_NCFGOUT & !I_ACC<1> & I_ACC<0> & I_ZMA;    
+
+$OpTx$$OpTx$FX_DC$1027_INV$1127 <= ((Z_NDS(3) AND Z_NDS(2) AND Z_NDS(1) AND Z_NDS(0) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4)
+	OR (Z_NSLAVE AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4)
+	OR (Z_NCFGOUT AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4)
+	OR (THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4)
+	OR (NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT cycend_x)
+	OR (NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT I_ACC(1) AND 
+	I_ACC(0) AND I_ZMA));
+
+
+$OpTx$FX_DC$1038 <= NOT (((EXP16_.EXP)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(1) AND DEBUG(7)_BUFR AND NOT DEBUG(6) AND 
+	$OpTx$$OpTx$FX_DC$1027_INV$1127)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(1) AND DEBUG(7)_BUFR AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$$OpTx$FX_DC$1027_INV$1127)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(0) AND DEBUG(7)_BUFR AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$$OpTx$FX_DC$1027_INV$1127)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	DEBUG(7)_BUFR AND NOT DEBUG(6) AND NOT $OpTx$INV$27 AND 
+	$OpTx$$OpTx$FX_DC$1027_INV$1127)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	DEBUG(7)_BUFR AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND NOT $OpTx$INV$27 AND 
+	$OpTx$$OpTx$FX_DC$1027_INV$1127)
+	OR (EXP19_.EXP)
+	OR (NOT P_NREQ(3) AND P_NREQ(1) AND NOT DEBUG(7)_BUFR AND 
+	DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT P_NREQ(2) AND P_NREQ(1) AND NOT DEBUG(7)_BUFR AND 
+	DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	DEBUG(7)_BUFR AND THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT $OpTx$INV$27 AND 
+	$OpTx$$OpTx$FX_DC$1027_INV$1127)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	P_NREQ(3) AND NOT P_NREQ(1) AND DEBUG(7)_BUFR AND $OpTx$INV$27 AND 
+	$OpTx$$OpTx$FX_DC$1027_INV$1127)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	P_NREQ(3) AND NOT P_NREQ(0) AND DEBUG(7)_BUFR AND $OpTx$INV$27 AND 
+	$OpTx$$OpTx$FX_DC$1027_INV$1127)
+	OR (P_NREQ(3) AND P_NREQ(2) AND NOT P_NREQ(1) AND 
+	DEBUG(7)_BUFR AND $OpTx$INV$27 AND $OpTx$$OpTx$FX_DC$1027_INV$1127)
+	OR (P_NREQ(3) AND P_NREQ(2) AND NOT P_NREQ(0) AND 
+	DEBUG(7)_BUFR AND $OpTx$INV$27 AND $OpTx$$OpTx$FX_DC$1027_INV$1127)
+	OR (P_NREQ(3) AND NOT P_NREQ(1) AND DEBUG(7)_BUFR AND 
+	NOT DEBUG(6) AND $OpTx$INV$27 AND $OpTx$$OpTx$FX_DC$1027_INV$1127)
+	OR (P_NREQ(3) AND NOT P_NREQ(0) AND DEBUG(7)_BUFR AND 
+	NOT DEBUG(6) AND $OpTx$INV$27 AND $OpTx$$OpTx$FX_DC$1027_INV$1127)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(0) AND DEBUG(7)_BUFR AND NOT DEBUG(6) AND 
+	$OpTx$$OpTx$FX_DC$1027_INV$1127)));
+
+
+$OpTx$FX_DC$33 <= ((Z_NCFGOUT)
+	OR (NOT I_ACC(1) AND I_ACC(0) AND I_ZMA));
+
+
+$OpTx$FX_DC$40 <= (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3));
+
+
+$OpTx$INV$27 <= ((Z_NSLAVE)
+	OR (Z_NCFGOUT)
+	OR (NOT cycend_x)
+	OR (NOT I_ACC(1) AND I_ACC(0) AND I_ZMA)
+	OR (Z_NDS(3) AND Z_NDS(2) AND Z_NDS(1) AND Z_NDS(0)));
+
+FTCPE_DEBUG0: FTCPE port map (DEBUG(0),'1',I_PCICLK2,DEBUG_3_OBUF/DEBUG_3_OBUF_RSTF,'0',DEBUG_CE(0));
+DEBUG_CE(0) <= (THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4);
+
+FTCPE_DEBUG1: FTCPE port map (DEBUG(1),DEBUG(0),I_PCICLK2,DEBUG_3_OBUF/DEBUG_3_OBUF_RSTF,'0',DEBUG_CE(1));
+DEBUG_CE(1) <= (THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4);
+
+FTCPE_DEBUG2: FTCPE port map (DEBUG(2),DEBUG_T(2),I_PCICLK2,DEBUG_3_OBUF/DEBUG_3_OBUF_RSTF,'0',DEBUG_CE(2));
+DEBUG_T(2) <= (DEBUG(0) AND DEBUG(1));
+DEBUG_CE(2) <= (THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4);
+
+FTCPE_DEBUG3: FTCPE port map (DEBUG(3),DEBUG_T(3),I_PCICLK2,DEBUG_3_OBUF/DEBUG_3_OBUF_RSTF,'0',DEBUG_CE(3));
+DEBUG_T(3) <= (DEBUG(0) AND DEBUG(1) AND DEBUG(2));
+DEBUG_CE(3) <= (THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4);
+
+
+DEBUG(4) <= THE_PCI_ARB/CURRENT_STATE_FSM_FFd1
+	 XOR 
+DEBUG(4) <= THE_PCI_ARB/CURRENT_STATE_FSM_FFd4;
+
+
+DEBUG(5) <= NOT (DEBUG(7)_BUFR
+	 XOR 
+DEBUG(5) <= NOT (((DEBUG(6) AND THE_PCI_ARB/CURRENT_STATE_FSM_FFd1)
+	OR (NOT DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1)));
+
+FTCPE_DEBUG6: FTCPE port map (DEBUG(6),DEBUG_T(6),I_PCICLK2,NOT Z_NIORST,'0');
+DEBUG_T(6) <= ((DEBUG_11_OBUF.EXP)
+	OR (P_NREQ(3) AND NOT P_NREQ(2) AND P_NREQ(0) AND NOT DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT P_NREQ(3) AND P_NREQ(2) AND P_NREQ(1) AND DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT P_NREQ(3) AND P_NREQ(2) AND DEBUG(7)_BUFR AND 
+	DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (P_NREQ(2) AND P_NREQ(1) AND NOT P_NREQ(0) AND DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT P_NREQ(2) AND P_NREQ(0) AND NOT DEBUG(7)_BUFR AND 
+	NOT DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (P_NREQ(3) AND NOT P_NREQ(1) AND P_NREQ(0) AND NOT DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT P_NREQ(1) AND P_NREQ(0) AND NOT DEBUG(7)_BUFR AND 
+	NOT DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(0) AND DEBUG(7)_BUFR AND DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	DEBUG(7)_BUFR AND DEBUG(6) AND THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT DEBUG(7)_BUFR AND NOT DEBUG(6) AND THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT $OpTx$INV$27)
+	OR (P_NREQ(2) AND NOT P_NREQ(0) AND DEBUG(7)_BUFR AND 
+	DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(3) AND P_NREQ(2) AND DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(1) AND P_NREQ(0) AND NOT DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(3) AND NOT P_NREQ(2) AND P_NREQ(0) AND DEBUG(7)_BUFR AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	P_NREQ(2) AND NOT P_NREQ(1) AND NOT P_NREQ(0) AND NOT DEBUG(7)_BUFR AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27));
+
+FTCPE_DEBUG7_BUFR: FTCPE port map (DEBUG(7)_BUFR,DEBUG_T(7)_BUFR,I_PCICLK2,NOT Z_NIORST,'0');
+DEBUG_T(7)_BUFR <= ((p_nreset_x.EXP)
+	OR (P_NREQ(3) AND P_NREQ(2) AND NOT P_NREQ(0) AND 
+	DEBUG(7)_BUFR AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (P_NREQ(3) AND NOT P_NREQ(0) AND DEBUG(7)_BUFR AND 
+	NOT DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(3) AND NOT DEBUG(7)_BUFR AND DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(1) AND DEBUG(7)_BUFR AND NOT DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT DEBUG(7)_BUFR AND DEBUG(6) AND THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT $OpTx$INV$27)
+	OR (P_NREQ(3) AND P_NREQ(2) AND NOT P_NREQ(1) AND 
+	DEBUG(7)_BUFR AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (P_NREQ(3) AND NOT P_NREQ(1) AND DEBUG(7)_BUFR AND 
+	NOT DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT P_NREQ(3) AND P_NREQ(1) AND P_NREQ(0) AND 
+	NOT DEBUG(7)_BUFR AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT P_NREQ(2) AND P_NREQ(1) AND P_NREQ(0) AND 
+	NOT DEBUG(7)_BUFR AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT P_NREQ(2) AND P_NREQ(1) AND NOT DEBUG(7)_BUFR AND 
+	DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT P_NREQ(3) AND P_NREQ(1) AND NOT DEBUG(7)_BUFR AND 
+	DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	P_NREQ(3) AND NOT P_NREQ(0) AND DEBUG(7)_BUFR AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(2) AND P_NREQ(1) AND NOT DEBUG(7)_BUFR AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	P_NREQ(3) AND NOT P_NREQ(2) AND NOT P_NREQ(1) AND DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(3) AND P_NREQ(1) AND NOT P_NREQ(0) AND NOT DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27));
+
+
+DEBUG(7) <= DEBUG(7)_BUFR;
+
+
+DEBUG(8) <= ((THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3));
+
+
+DEBUG(9) <= ((THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3));
+
+
+DEBUG(10) <= ((THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3));
+
+
+DEBUG(11) <= (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3);
+
+
+DEBUG(12) <= '0';
+
+
+DEBUG(13) <= '0';
+
+
+DEBUG(14) <= '0';
+
+
+DEBUG(15) <= '0';
+
+
+DEBUG_12_OBUF/DEBUG_12_OBUF_TRST <= ((NOT Z_NFCS AND NOT Z_NCFGOUT AND NOT cycend_x)
+	OR (NOT Z_NSLAVE AND NOT Z_NDS(3) AND NOT Z_NFCS AND Z_NCFGOUT)
+	OR (NOT Z_NFCS AND NOT Z_NCFGOUT AND NOT I_ACC(1) AND I_ACC(0) AND 
+	I_ZMA));
+
+
+DEBUG_3_OBUF/DEBUG_3_OBUF_RSTF <= ((NOT Z_NIORST)
+	OR (NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd4));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I_CFLT <= (NOT Z_NSLAVE AND NOT Z_NDS(3) AND NOT Z_AA(4) AND NOT Z_AA(3) AND 
+	Z_AA(2) AND Z_AA(6) AND NOT Z_AA(5) AND Z_NCFGOUT AND NOT Z_AA(7));
+
+
+I_DAOUT <= ((THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3));
+
+
+I_DATA <= ((Z_DOE AND Z_READ AND NOT Z_NSLAVE AND NOT Z_NCFGOUT AND 
+	I_ACC(1) AND Z_NBERR)
+	OR (Z_DOE AND Z_READ AND NOT Z_NSLAVE AND NOT Z_NCFGOUT AND 
+	NOT I_ACC(0) AND Z_NBERR)
+	OR (Z_DOE AND Z_READ AND NOT Z_NSLAVE AND NOT Z_NCFGOUT AND 
+	Z_NBERR AND NOT I_ZMA));
+
+
+I_NINT2 <= ((NOT pci_int_ena_x)
+	OR (P_NINTD AND P_NINTC AND P_NINTB AND P_NINTA));
+
+
+I_NINT6 <= '1';
+
+
+I_PCICLK <= NOT I_33M;
+
+
+I_PCIDL <= (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT P_NTRDY);
+
+
+I_PCIENA <= NOT (((Z_READ AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2)));
+
+
+I_PLA(0) <= ((I_ACC(1) AND NOT I_ACC(0))
+	OR (Z_NDS(3) AND NOT Z_NDS(2) AND I_ACC(1))
+	OR (Z_NDS(3) AND Z_NDS(1) AND NOT Z_NDS(0) AND I_ACC(1)));
+
+
+I_PLA(1) <= ((Z_NDS(3) AND Z_NDS(2) AND NOT Z_NDS(1) AND I_ACC(1) AND 
+	I_ACC(0))
+	OR (Z_NDS(3) AND Z_NDS(2) AND NOT Z_NDS(0) AND I_ACC(1) AND 
+	I_ACC(0)));
+
+
+P_CBE_I(0) <= ((NOT Z_READ AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2)
+	OR (Z_NDS(3) AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (Z_NDS(3) AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2)
+	OR (NOT Z_READ AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2)
+	OR (NOT Z_READ AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2));
+P_CBE(0) <= P_CBE_I(0) when P_CBE_OE(0) = '1' else 'Z';
+P_CBE_OE(0) <= NOT ((NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2));
+
+
+P_CBE_I(1) <= NOT (((NOT Z_NDS(2) AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2)
+	OR (NOT Z_NDS(2) AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)));
+P_CBE(1) <= P_CBE_I(1) when P_CBE_OE(1) = '1' else 'Z';
+P_CBE_OE(1) <= NOT ((NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2));
+
+
+P_CBE_I(2) <= ((Z_NDS(1) AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (Z_NDS(1) AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT I_ACC(1) AND NOT I_ACC(0))
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT I_ACC(1) AND NOT I_ACC(0))
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT I_ACC(1) AND NOT I_ACC(0)));
+P_CBE(2) <= P_CBE_I(2) when P_CBE_OE(2) = '1' else 'Z';
+P_CBE_OE(2) <= NOT ((NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2));
+
+
+P_CBE_I(3) <= ((NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND I_ACC(1) AND NOT I_ACC(0))
+	OR (Z_NDS(0) AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND I_ACC(1) AND NOT I_ACC(0))
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND I_ACC(1) AND NOT I_ACC(0))
+	OR (Z_NDS(0) AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT I_ACC(1) AND I_ACC(0))
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT I_ACC(1) AND I_ACC(0))
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT I_ACC(1) AND I_ACC(0)));
+P_CBE(3) <= P_CBE_I(3) when P_CBE_OE(3) = '1' else 'Z';
+P_CBE_OE(3) <= NOT ((NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2));
+
+
+P_CLKOUT(0) <= NOT I_33M;
+
+
+P_CLKOUT(1) <= NOT I_33M;
+
+
+P_CLKOUT(2) <= NOT I_33M;
+
+
+P_CLKOUT(3) <= NOT I_33M;
+
+
+P_NFRAME_I <= NOT ((THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2));
+P_NFRAME <= P_NFRAME_I when P_NFRAME_OE = '1' else 'Z';
+P_NFRAME_OE <= NOT ((NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2));
+
+
+P_NGNT(0) <= NOT ((NOT DEBUG(7)_BUFR AND NOT DEBUG(6) AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4));
+
+
+P_NGNT(1) <= NOT ((NOT DEBUG(7)_BUFR AND DEBUG(6) AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4));
+
+
+P_NGNT(2) <= NOT ((DEBUG(7)_BUFR AND DEBUG(6) AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4));
+
+
+P_NGNT(3) <= NOT ((DEBUG(7)_BUFR AND NOT DEBUG(6) AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4));
+
+
+P_NIRDY_I <= NOT ((THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3));
+P_NIRDY <= P_NIRDY_I when P_NIRDY_OE = '1' else 'Z';
+P_NIRDY_OE <= NOT ((NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2));
+
+
+P_NLOCK <= '1';
+
+FDCPE_P_NRESET: FDCPE port map (P_NRESET,Z_ADA(31).PIN,P_NRESET_C,'0',NOT Z_NIORST,P_NRESET_CE);
+P_NRESET_C <= (Z_DOE AND NOT Z_READ AND NOT Z_NSLAVE AND NOT Z_NDS(3));
+P_NRESET_CE <= (NOT Z_NCFGOUT AND NOT I_ACC(1) AND I_ACC(0) AND I_ZMA);
+
+
+P_PAR_I <= dat_p
+	 XOR 
+P_PAR_I <= cbe_p;
+P_PAR <= P_PAR_I when P_PAR_OE = '1' else 'Z';
+P_PAR_OE <= p_par_ena;
+
+FDCPE_THE_PCI_ARB/CURRENT_STATE_FSM_FFd1: FDCPE port map (THE_PCI_ARB/CURRENT_STATE_FSM_FFd1,THE_PCI_ARB/CURRENT_STATE_FSM_FFd1_D,I_PCICLK2,NOT Z_NIORST,'0');
+THE_PCI_ARB/CURRENT_STATE_FSM_FFd1_D <= ((EXP20_.EXP)
+	OR (NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4)
+	OR (NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27 AND 
+	NOT $OpTx$FX_DC$1038)
+	OR (THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND P_NIRDY.PIN AND P_NFRAME.PIN AND NOT $OpTx$INV$27)
+	OR (NOT P_NREQ(3) AND P_NREQ(2) AND DEBUG(7)_BUFR AND 
+	DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (P_NREQ(2) AND NOT P_NREQ(0) AND DEBUG(7)_BUFR AND 
+	DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (P_NREQ(3) AND NOT P_NREQ(2) AND P_NREQ(0) AND NOT DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT P_NREQ(3) AND P_NREQ(2) AND P_NREQ(1) AND DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (P_NREQ(2) AND P_NREQ(1) AND NOT P_NREQ(0) AND DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT P_NREQ(2) AND P_NREQ(0) AND NOT DEBUG(7)_BUFR AND 
+	NOT DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT P_NREQ(1) AND P_NREQ(0) AND NOT DEBUG(7)_BUFR AND 
+	NOT DEBUG(6) AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND P_NIRDY.PIN AND 
+	P_NFRAME.PIN AND $OpTx$INV$27 AND NOT $OpTx$FX_DC$1038)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(3) AND P_NREQ(2) AND DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(1) AND P_NREQ(0) AND NOT DEBUG(6) AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	NOT P_NREQ(3) AND NOT P_NREQ(2) AND P_NREQ(0) AND DEBUG(7)_BUFR AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (DEBUG(0) AND DEBUG(1) AND DEBUG(2) AND DEBUG(3) AND 
+	P_NREQ(2) AND NOT P_NREQ(1) AND NOT P_NREQ(0) AND NOT DEBUG(7)_BUFR AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27));
+
+FDCPE_THE_PCI_ARB/CURRENT_STATE_FSM_FFd4: FDCPE port map (THE_PCI_ARB/CURRENT_STATE_FSM_FFd4,THE_PCI_ARB/CURRENT_STATE_FSM_FFd4_D,I_PCICLK2,NOT Z_NIORST,'0');
+THE_PCI_ARB/CURRENT_STATE_FSM_FFd4_D <= ((EXP27_.EXP)
+	OR (P_NREQ(3) AND P_NREQ(2) AND P_NREQ(1) AND P_NREQ(0) AND 
+	$OpTx$INV$27)
+	OR (THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND P_NIRDY.PIN AND P_NFRAME.PIN AND NOT $OpTx$INV$27)
+	OR (P_NREQ(3) AND P_NREQ(0) AND DEBUG(6) AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND $OpTx$INV$27 AND $OpTx$FX_DC$1038)
+	OR (NOT P_NREQ(0) AND DEBUG(7)_BUFR AND NOT DEBUG(6) AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND $OpTx$INV$27 AND $OpTx$FX_DC$1038)
+	OR (NOT P_NREQ(0) AND NOT DEBUG(6) AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND $OpTx$INV$27 AND $OpTx$FX_DC$1038 AND NOT $OpTx$FX_DC$40)
+	OR (P_NREQ(2) AND P_NREQ(1) AND NOT DEBUG(6) AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND $OpTx$INV$27 AND $OpTx$FX_DC$1038)
+	OR (NOT P_NREQ(2) AND NOT DEBUG(7)_BUFR AND DEBUG(6) AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND $OpTx$INV$27 AND $OpTx$FX_DC$1038)
+	OR (NOT P_NREQ(2) AND DEBUG(6) AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND $OpTx$INV$27 AND $OpTx$FX_DC$1038 AND NOT $OpTx$FX_DC$40)
+	OR (NOT DEBUG(0) AND NOT P_NREQ(3) AND DEBUG(7)_BUFR AND NOT DEBUG(6) AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND $OpTx$INV$27 AND $OpTx$FX_DC$1038)
+	OR (NOT P_NREQ(1) AND NOT DEBUG(7)_BUFR AND DEBUG(6) AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND $OpTx$INV$27 AND $OpTx$FX_DC$1038 AND NOT $OpTx$FX_DC$40)
+	OR (NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27)
+	OR (NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT $OpTx$INV$27)
+	OR (THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT P_NIRDY.PIN AND 
+	$OpTx$INV$27)
+	OR (THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT P_NFRAME.PIN AND 
+	$OpTx$INV$27)
+	OR (THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND $OpTx$INV$27 AND 
+	$OpTx$FX_DC$1038));
+
+FDCPE_THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1: FDCPE port map (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1,THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1_D,I_PCICLK2,NOT Z_NIORST,'0');
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1_D <= ((NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND P_NIRDY.PIN AND 
+	P_NFRAME.PIN));
+
+FDCPE_THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2: FDCPE port map (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2,THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2_D,I_PCICLK2,NOT Z_NIORST,'0');
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2_D <= ((NOT Z_READ AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND P_NSTOP)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT P_NTRDY)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2));
+
+FDCPE_THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3: FDCPE port map (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3,THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3_D,I_PCICLK2,NOT Z_NIORST,'0');
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3_D <= ((NOT Z_NSLAVE AND NOT Z_NDS(3) AND NOT Z_NCFGOUT AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND P_NIRDY.PIN AND 
+	P_NFRAME.PIN AND cycend_x AND NOT I_ZMA)
+	OR (NOT Z_NSLAVE AND NOT Z_NDS(2) AND NOT Z_NCFGOUT AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT I_ACC(0) AND 
+	P_NIRDY.PIN AND P_NFRAME.PIN AND cycend_x)
+	OR (NOT Z_NSLAVE AND NOT Z_NDS(0) AND NOT Z_NCFGOUT AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND P_NIRDY.PIN AND 
+	P_NFRAME.PIN AND cycend_x AND NOT I_ZMA)
+	OR (cbp_x(0).EXP)
+	OR (NOT Z_NSLAVE AND NOT Z_NDS(3) AND NOT Z_NCFGOUT AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND I_ACC(1) AND 
+	P_NIRDY.PIN AND P_NFRAME.PIN AND cycend_x)
+	OR (NOT Z_NSLAVE AND NOT Z_NDS(2) AND NOT Z_NCFGOUT AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND P_NIRDY.PIN AND 
+	P_NFRAME.PIN AND cycend_x AND NOT I_ZMA)
+	OR (NOT Z_NSLAVE AND NOT Z_NDS(1) AND NOT Z_NCFGOUT AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND I_ACC(1) AND 
+	P_NIRDY.PIN AND P_NFRAME.PIN AND cycend_x)
+	OR (NOT Z_NSLAVE AND NOT Z_NDS(1) AND NOT Z_NCFGOUT AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND P_NIRDY.PIN AND 
+	P_NFRAME.PIN AND cycend_x AND NOT I_ZMA)
+	OR (NOT Z_NSLAVE AND NOT Z_NDS(0) AND NOT Z_NCFGOUT AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND I_ACC(1) AND 
+	P_NIRDY.PIN AND P_NFRAME.PIN AND cycend_x)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT P_NSTOP AND P_NTRDY)
+	OR (NOT Z_NSLAVE AND NOT Z_NDS(3) AND NOT Z_NCFGOUT AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT I_ACC(0) AND 
+	P_NIRDY.PIN AND P_NFRAME.PIN AND cycend_x)
+	OR (NOT Z_NSLAVE AND NOT Z_NDS(1) AND NOT Z_NCFGOUT AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT I_ACC(0) AND 
+	P_NIRDY.PIN AND P_NFRAME.PIN AND cycend_x)
+	OR (NOT Z_NSLAVE AND NOT Z_NDS(0) AND NOT Z_NCFGOUT AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_ARB/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT I_ACC(0) AND 
+	P_NIRDY.PIN AND P_NFRAME.PIN AND cycend_x));
+
+FDCPE_THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4: FDCPE port map (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4,THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4_D,I_PCICLK2,NOT Z_NIORST,'0');
+THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4_D <= ((NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND THE_PCI_ARB/CURRENT_STATE_FSM_FFd1)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND THE_PCI_ARB/CURRENT_STATE_FSM_FFd4)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT P_NIRDY.PIN)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT P_NFRAME.PIN)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND NOT P_NTRDY)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT I_ACC(1) AND I_ACC(0) AND I_ZMA)
+	OR (Z_NDS(3) AND Z_NDS(2) AND Z_NDS(1) AND Z_NDS(0) AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2 AND 
+	THE_PCI_SEQ/toc_ctr_x(0) AND THE_PCI_SEQ/toc_ctr_x(1) AND P_NSTOP)
+	OR (Z_NSLAVE AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (Z_NCFGOUT AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT P_NSTOP)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT P_NTRDY)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT cycend_x));
+
+FDCPE_THE_PCI_SEQ/toc_ctr_x0: FDCPE port map (THE_PCI_SEQ/toc_ctr_x(0),THE_PCI_SEQ/toc_ctr_x(1),I_PCICLK2,THE_PCI_SEQ/toc_ctr_x(0)/THE_PCI_SEQ/toc_ctr_x(0)_RSTF,'0');
+
+
+THE_PCI_SEQ/toc_ctr_x(0)/THE_PCI_SEQ/toc_ctr_x(0)_RSTF <= ((NOT P_NDEVSEL)
+	OR (THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1));
+
+FDCPE_THE_PCI_SEQ/toc_ctr_x1: FDCPE port map (THE_PCI_SEQ/toc_ctr_x(1),NOT THE_PCI_SEQ/toc_ctr_x(0),I_PCICLK2,THE_PCI_SEQ/toc_ctr_x(0)/THE_PCI_SEQ/toc_ctr_x(0)_RSTF,'0');
+
+
+Z_ADA_I(28) <= NOT (((NOT Z_NCFGOUT)
+	OR (Z_AA(4) AND NOT Z_AA(3) AND Z_AA(2) AND NOT Z_AA(6) AND 
+	NOT Z_AA(5))
+	OR (NOT Z_AA(4) AND NOT Z_AA(2) AND NOT I_ZLA AND NOT Z_AA(6) AND NOT Z_AA(5))
+	OR (NOT Z_AA(4) AND Z_AA(3) AND Z_AA(2) AND I_ZLA AND NOT Z_AA(6) AND 
+	Z_AA(5))));
+Z_ADA(28) <= Z_ADA_I(28) when Z_ADA_OE(28) = '1' else 'Z';
+Z_ADA_OE(28) <= (Z_DOE AND Z_READ AND NOT Z_NSLAVE AND Z_NBERR AND 
+	$OpTx$FX_DC$33);
+
+
+Z_ADA_I(29) <= ((Z_AA(3) AND I_ZLA AND Z_NCFGOUT)
+	OR (Z_AA(4) AND NOT Z_AA(2) AND NOT I_ZLA AND Z_NCFGOUT)
+	OR (P_NINTD AND P_NINTC AND P_NINTB AND P_NINTA AND 
+	NOT Z_NCFGOUT)
+	OR (Z_AA(6) AND Z_NCFGOUT)
+	OR (Z_AA(5) AND Z_NCFGOUT)
+	OR (Z_AA(4) AND Z_AA(3) AND Z_NCFGOUT)
+	OR (NOT Z_AA(4) AND Z_AA(2) AND Z_NCFGOUT));
+Z_ADA(29) <= Z_ADA_I(29) when Z_ADA_OE(29) = '1' else 'Z';
+Z_ADA_OE(29) <= (Z_DOE AND Z_READ AND NOT Z_NSLAVE AND Z_NBERR AND 
+	$OpTx$FX_DC$33);
+
+
+Z_ADA_I(30) <= NOT (((NOT pci_int_ena_x AND NOT Z_NCFGOUT)
+	OR (NOT Z_AA(4) AND NOT Z_AA(3) AND NOT I_ZLA AND NOT Z_AA(6) AND NOT Z_AA(5) AND 
+	Z_NCFGOUT)
+	OR (Z_AA(4) AND NOT Z_AA(3) AND NOT Z_AA(2) AND I_ZLA AND NOT Z_AA(6) AND 
+	NOT Z_AA(5) AND Z_NCFGOUT)
+	OR (NOT Z_AA(4) AND Z_AA(3) AND Z_AA(2) AND I_ZLA AND NOT Z_AA(6) AND 
+	Z_AA(5) AND Z_NCFGOUT)));
+Z_ADA(30) <= Z_ADA_I(30) when Z_ADA_OE(30) = '1' else 'Z';
+Z_ADA_OE(30) <= (Z_DOE AND Z_READ AND NOT Z_NSLAVE AND Z_NBERR AND 
+	$OpTx$FX_DC$33);
+
+
+Z_ADA_I(31) <= NOT (((NOT P_NRESET AND NOT Z_NCFGOUT)
+	OR (NOT Z_AA(3) AND I_ZLA AND NOT Z_AA(6) AND NOT Z_AA(5) AND 
+	Z_NCFGOUT)
+	OR (NOT Z_AA(4) AND NOT Z_AA(3) AND Z_AA(2) AND NOT Z_AA(6) AND 
+	NOT Z_AA(5) AND Z_NCFGOUT)));
+Z_ADA(31) <= Z_ADA_I(31) when Z_ADA_OE(31) = '1' else 'Z';
+Z_ADA_OE(31) <= (Z_DOE AND Z_READ AND NOT Z_NSLAVE AND Z_NBERR AND 
+	$OpTx$FX_DC$33);
+
+FDCPE_Z_NCFGOUT: FDCPE port map (Z_NCFGOUT,ncfg_x,Z_NFCS,'0',NOT Z_NIORST);
+
+
+Z_NDTACK_I <= '0';
+Z_NDTACK <= Z_NDTACK_I when Z_NDTACK_OE = '1' else 'Z';
+Z_NDTACK_OE <= DEBUG_12_OBUF/DEBUG_12_OBUF_TRST;
+
+FDCPE_cbe_p: FDCPE port map (cbe_p,cbe_p_D,I_PCICLK2,'0','0');
+cbe_p_D <= P_CBE(3).PIN
+	 XOR 
+cbe_p_D <= ((P_CBE(1).PIN AND P_CBE(0).PIN AND NOT P_CBE(2).PIN)
+	OR (P_CBE(1).PIN AND NOT P_CBE(0).PIN AND P_CBE(2).PIN)
+	OR (NOT P_CBE(1).PIN AND P_CBE(0).PIN AND P_CBE(2).PIN)
+	OR (NOT P_CBE(1).PIN AND NOT P_CBE(0).PIN AND NOT P_CBE(2).PIN));
+
+FDCPE_cycend_x: FDCPE port map (cycend_x,'0',cycend_x_C,'0',Z_NSLAVE);
+cycend_x_C <= (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd4 AND 
+	THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2);
+
+FDCPE_dat_p: FDCPE port map (dat_p,dat_p_D,NOT I_PCICLK2,'0','0');
+dat_p_D <= I_DATPAR(0)
+	 XOR 
+dat_p_D <= I_DATPAR(1);
+
+FDCPE_ncfg_x: FDCPE port map (ncfg_x,'0',ncfg_x_C,'0',NOT Z_NIORST);
+ncfg_x_C <= (NOT Z_NSLAVE AND NOT Z_NDS(3) AND NOT Z_AA(4) AND NOT Z_AA(3) AND 
+	Z_AA(2) AND Z_AA(6) AND NOT Z_AA(5) AND Z_NCFGOUT AND NOT Z_AA(7));
+
+FDCPE_p_par_ena: FDCPE port map (p_par_ena,p_par_ena_D,I_PCICLK2,'0','0');
+p_par_ena_D <= ((Z_READ AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3)
+	OR (NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd1 AND 
+	NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd3 AND NOT THE_PCI_SEQ/CURRENT_STATE_FSM_FFd2));
+
+FDCPE_pci_int_ena_x: FDCPE port map (pci_int_ena_x,Z_ADA(30).PIN,pci_int_ena_x_C,NOT Z_NIORST,'0',pci_int_ena_x_CE);
+pci_int_ena_x_C <= (Z_DOE AND NOT Z_READ AND NOT Z_NSLAVE AND NOT Z_NDS(3));
+pci_int_ena_x_CE <= (NOT Z_NCFGOUT AND NOT I_ACC(1) AND I_ACC(0) AND I_ZMA);
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
 
 ******************************  Device Pin Out *****************************
 
@@ -1781,7 +1462,7 @@ Global Clock Optimization                   : ON
 Global Set/Reset Optimization               : ON
 Global Ouput Enable Optimization            : ON
 Input Limit                                 : 54
-Pterm Limit                                 : 90
+Pterm Limit                                 : 25
 </pre>
 <form><span class="pgRef"><table width="90%" align="center"><tr>
 <td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
