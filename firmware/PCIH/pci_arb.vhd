@@ -88,11 +88,11 @@ begin
 									-- last PCI master has some bus time left
 									if   ( NREQ_IN(0) = '0' ) then
 										NEXT_STATE <= B0; -- BUG! resets timer, full grant!!!
-									elsif( NREQ_IN(1 downto 0) = b"01" ) then 
+									elsif( NREQ_IN(1) = '0' ) then 
 										NEXT_STATE <= B1;
-									elsif( NREQ_IN(2 downto 0) = b"011" ) then 
+									elsif( NREQ_IN(2) = '0' ) then 
 										NEXT_STATE <= B2;
-									elsif( NREQ_IN(3 downto 0) = b"0111" ) then 
+									elsif( NREQ_IN(3) = '0' ) then 
 										NEXT_STATE <= B3;
 									else
 										NEXT_STATE <= Z0; -- no PCI requests, park Zorro III on bus
@@ -101,11 +101,11 @@ begin
 									-- forced PCI master change, if requested
 									if   ( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= B1;
-									elsif( NREQ_IN(2 downto 1) = b"01" ) then
+									elsif( NREQ_IN(2) = '0' ) then
 										NEXT_STATE <= B2;
-									elsif( NREQ_IN(3 downto 1) = b"011" ) then
+									elsif( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= B3;
-									elsif( NREQ_IN(3 downto 0) = b"1110" ) then
+									elsif( NREQ_IN(0) = '0' ) then
 										NEXT_STATE <= B0;
 									else
 										NEXT_STATE <= Z0; -- no PCI requests, park Zorro III on bus
@@ -152,11 +152,11 @@ begin
 									-- forced re-arbitration
 									if   ( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= B1;
-									elsif( NREQ_IN(2 downto 1) = b"01" ) then
+									elsif( NREQ_IN(2) = '0' ) then
 										NEXT_STATE <= B2;
-									elsif( NREQ_IN(3 downto 1) = b"011" ) then
+									elsif( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= B3;
-									elsif( NREQ_IN(3 downto 0) = b"1110" ) then
+									elsif( NREQ_IN(0) = '0' ) then
 										NEXT_STATE <= P0; -- silent regrant for current master
 									else
 										NEXT_STATE <= P0; -- no PCI requests, park P0 on bus
@@ -167,9 +167,9 @@ begin
 										NEXT_STATE <= P0;
 									elsif( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= B1;
-									elsif( NREQ_IN(2 downto 1) = b"01" ) then
+									elsif( NREQ_IN(2) = '0' ) then
 										NEXT_STATE <= B2;
-									elsif( NREQ_IN(3 downto 1) = B"011" ) then
+									elsif( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= B3;
 									else
 										NEXT_STATE <= P0; -- current master parked
@@ -189,11 +189,11 @@ begin
 									-- last PCI master has some bus time left
 									if   ( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= B1;
-									elsif( NREQ_IN(2 downto 1) = b"01" ) then 
+									elsif( NREQ_IN(2) = '0' ) then 
 										NEXT_STATE <= B2;
-									elsif( NREQ_IN(3 downto 1) = b"011" ) then 
+									elsif( NREQ_IN(3) = '0' ) then 
 										NEXT_STATE <= B3;
-									elsif( NREQ_IN(3 downto 0) = b"1110" ) then 
+									elsif( NREQ_IN(0) = '0' ) then 
 										NEXT_STATE <= B0;
 									else
 										NEXT_STATE <= Z1; -- no PCI requests, park Zorro III on bus
@@ -202,14 +202,14 @@ begin
 									-- forced PCI master change, if requested
 									if   ( NREQ_IN(2) = '0' ) then
 										NEXT_STATE <= B2;
-									elsif( NREQ_IN(3 downto 2) = b"01" ) then
+									elsif( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= B3;
-									elsif( (NREQ_IN(3 downto 2) = b"11") and (NREQ_IN(0) = '0') ) then
+									elsif( NREQ_IN(0) = '0' ) then
 										NEXT_STATE <= B0;
-									elsif( NREQ_IN(3 downto 0) = b"1101" ) then
+									elsif( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= B1;
 									else
-										NEXT_STATE <= Z0; -- no PCI requests, park Zorro III on bus
+										NEXT_STATE <= Z1; -- no PCI requests, park Zorro III on bus
 									end if;
 								end if;
 							end if;
@@ -253,11 +253,11 @@ begin
 									-- forced re-arbitration
 									if   ( NREQ_IN(2) = '0' ) then
 										NEXT_STATE <= B2;
-									elsif( NREQ_IN(3 downto 2) = b"01" ) then
+									elsif( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= B3;
-									elsif( (NREQ_IN(3 downto 2) = b"11") and (NREQ_IN(0) = '0') ) then
+									elsif( NREQ_IN(0) = '0' ) then
 										NEXT_STATE <= B0;
-									elsif( NREQ_IN(3 downto 0) = b"1101" ) then
+									elsif( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= P1; -- silent regrant for current master
 									else
 										NEXT_STATE <= P1; -- no PCI requests, park P0 on bus
@@ -268,9 +268,9 @@ begin
 										NEXT_STATE <= P1;
 									elsif( NREQ_IN(2) = '0' ) then
 										NEXT_STATE <= B2;
-									elsif( NREQ_IN(3 downto 2) = b"01" ) then
+									elsif( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= B3;
-									elsif( (NREQ_IN(3 downto 2) = B"11") and (NREQ_IN(0) = '0') ) then
+									elsif( NREQ_IN(0) = '0' ) then
 										NEXT_STATE <= B0;
 									else
 										NEXT_STATE <= P1; -- current master parked
@@ -289,11 +289,11 @@ begin
 									-- last PCI master has some bus time left
 									if   ( NREQ_IN(2) = '0' ) then
 										NEXT_STATE <= B2;
-									elsif( NREQ_IN(3 downto 2) = b"01" ) then 
+									elsif( NREQ_IN(3) = '0' ) then 
 										NEXT_STATE <= B3;
-									elsif( (NREQ_IN(3 downto 2) = b"11") and (NREQ_IN(0) = '0') ) then 
+									elsif( NREQ_IN(0) = '0' ) then 
 										NEXT_STATE <= B0;
-									elsif( NREQ_IN(3 downto 0) = b"11101" ) then 
+									elsif( NREQ_IN(1) = '0' ) then 
 										NEXT_STATE <= B1;
 									else
 										NEXT_STATE <= Z2; -- no PCI requests, park Zorro III on bus
@@ -302,11 +302,11 @@ begin
 									-- forced PCI master change, if requested
 									if   ( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= B3;
-									elsif( (NREQ_IN(3) = '1') and (NREQ_IN(0) = '0') ) then
+									elsif( NREQ_IN(0) = '0' ) then
 										NEXT_STATE <= B0;
-									elsif( (NREQ_IN(3) = '1') and (NREQ_IN(1 downto 0) = b"01") ) then
+									elsif( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= B1;
-									elsif( NREQ_IN(3 downto 0) = b"1011" ) then
+									elsif( NREQ_IN(2) = '0' ) then
 										NEXT_STATE <= B2;
 									else
 										NEXT_STATE <= Z2; -- no PCI requests, park Zorro III on bus
@@ -353,11 +353,11 @@ begin
 									-- forced re-arbitration
 									if   ( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= B3;
-									elsif( (NREQ_IN(3) = '1') and (NREQ_IN(0) = '0') ) then
+									elsif( NREQ_IN(0) = '0' ) then
 										NEXT_STATE <= B0;
-									elsif( (NREQ_IN(3) = '1') and (NREQ_IN(1 downto 0) = b"01") ) then
+									elsif( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= B1;
-									elsif( NREQ_IN(3 downto 0) = b"1011" ) then
+									elsif( NREQ_IN(2) = '0' ) then
 										NEXT_STATE <= P2; -- silent regrant for current master
 									else
 										NEXT_STATE <= P2; -- no PCI requests, park P2 on bus
@@ -368,9 +368,9 @@ begin
 										NEXT_STATE <= P2;
 									elsif( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= B3;
-									elsif( (NREQ_IN(3) = '1') and (NREQ_IN(0) = '0') ) then
+									elsif( NREQ_IN(0) = '0' ) then
 										NEXT_STATE <= B0;
-									elsif( (NREQ_IN(3) = '1') and (NREQ_IN(1 downto 0) = B"01") ) then
+									elsif( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= B1;
 									else
 										NEXT_STATE <= P2; -- current master parked
@@ -389,11 +389,11 @@ begin
 									-- last PCI master has some bus time left
 									if   ( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= B3;
-									elsif( (NREQ_IN(3) = '1') and (NREQ_IN(0) = '0') ) then 
+									elsif( NREQ_IN(0) = '0' ) then 
 										NEXT_STATE <= B0;
-									elsif( (NREQ_IN(3) = '1') and (NREQ_IN(1 downto 0) = b"01") ) then 
+									elsif( NREQ_IN(1) = '0' ) then 
 										NEXT_STATE <= B1;
-									elsif( NREQ_IN(3 downto 0) = b"1011" ) then 
+									elsif( NREQ_IN(2) = '0' ) then 
 										NEXT_STATE <= B2;
 									else
 										NEXT_STATE <= Z3; -- no PCI requests, park Zorro III on bus
@@ -402,11 +402,11 @@ begin
 									-- forced PCI master change, if requested
 									if   ( NREQ_IN(0) = '0' ) then
 										NEXT_STATE <= B0;
-									elsif( NREQ_IN(1 downto 0) = b"01" ) then
+									elsif( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= B1;
-									elsif( NREQ_IN(2 downto 1) = b"011" ) then
-										NEXT_STATE <= B2;
-									elsif( NREQ_IN(3 downto 0) = b"0111" ) then
+--									elsif( NREQ_IN(2 downto 1) = b"011" ) then
+--										NEXT_STATE <= B2;
+									elsif( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= B3;
 									else
 										NEXT_STATE <= Z3; -- no PCI requests, park Zorro III on bus
@@ -453,11 +453,11 @@ begin
 									-- forced re-arbitration
 									if   ( NREQ_IN(0) = '0' ) then
 										NEXT_STATE <= B0;
-									elsif( NREQ_IN(1 downto 0) = b"01" ) then
+									elsif( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= B1;
-									elsif( NREQ_IN(2 downto 0) = b"011" ) then
+									elsif( NREQ_IN(2) = '0' ) then
 										NEXT_STATE <= B2;
-									elsif( NREQ_IN(3 downto 0) = b"0111" ) then
+									elsif( NREQ_IN(3) = '0' ) then
 										NEXT_STATE <= P3; -- silent regrant for current master
 									else
 										NEXT_STATE <= P3; -- no PCI requests, park P3 on bus
@@ -468,9 +468,9 @@ begin
 										NEXT_STATE <= P3;
 									elsif( NREQ_IN(0) = '0' ) then
 										NEXT_STATE <= B0;
-									elsif( NREQ_IN(1 downto 0) = b"01" ) then
+									elsif( NREQ_IN(1) = '0' ) then
 										NEXT_STATE <= B1;
-									elsif( NREQ_IN(2 downto 0) = B"011" ) then
+									elsif( NREQ_IN(2) = '0' ) then
 										NEXT_STATE <= B2;
 									else
 										NEXT_STATE <= P3; -- current master parked
@@ -490,4 +490,3 @@ NGNT_OUT    <= ngnt_x;
 TOC_OUT     <= toc_x;
 
 end Behavioral;
-
