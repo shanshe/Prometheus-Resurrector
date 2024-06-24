@@ -178,7 +178,6 @@ begin
 							end if;
 
 		-- Slot 1 stuff
---		when Z1		=>	state_x <= x"c";
 		when Z1		=>	state_x <= x"6";
 							gntz3_x <= '1';
 							if   ( REQZ3_IN = '1' ) then
