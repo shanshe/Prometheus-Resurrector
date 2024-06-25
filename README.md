@@ -24,7 +24,7 @@ I have done the following:
 
     2.- Comparing original prometheus firmware, and the new one, I saw a byteswap in two multiplexers.
 
-    3.- There were some bit swap ih the IO (found because voodoo 3 card didn't want to show video signal).
+    3.- There were some bit swap in the IO (found because voodoo 3 card didn't want to show video signal).
 
     4.- And finally, reworked the equations of the inputs in the arbiter state machine (SLOT1 X301 didn't work with PPC boards).
 
