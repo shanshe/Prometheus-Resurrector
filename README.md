@@ -26,7 +26,7 @@ I have done the following:
 
     3.- There were some bit swap ih the IO (found because voodoo 3 card didn't want to show video signal).
 
-    4.- And finally, reworked the equations of the inputs in the arbiter state machine.
+    4.- And finally, reworked the equations of the inputs in the arbiter state machine (SLOT1 X301 didn't work with PPC boards).
 
     Only a few little mistakes, from a huge project that was only at simulation phase... This was a great engineer job!!!
 
