@@ -1,4 +1,4 @@
-# Prometheus-Resurrector
+# Prometheus-Resurrector (a.k.a. PrometheusX)
 
 This is a contribution to the project <a href="http://www.e3b.de/prometheus/">Prometheus Open Source</a>. (Based on Xilinx CPLDs).
 
